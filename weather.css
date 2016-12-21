@@ -1,0 +1,45 @@
+.navbar-weather {
+	background-color: #336699; 
+	color:#eee; 
+	border-radius:0;
+}
+
+.navbar-weather .navbar-nav > li > a {
+	color:#dcdcdc; 
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.navbar-weather .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+	color: #B0C4DE; 
+	background-color: transparent;
+}
+
+.navbar-weather .navbar-nav > li > a:hover, .nav > li > a:focus {
+	text-decoration: none;
+	color: #000; 
+	background-color: #B0C4DE; 
+}
+
+.navbar-weather .navbar-brand {
+	color :#eee; 
+}
+
+.navbar-weather .navbar-toggle {
+	color: #eee 
+	background-color: transparent; 
+}
+
+.navbar-weather .icon-bar {
+	background-color: #dcdcdc; 
+}
+     
+.panel-weather {
+	border-color: #B0C4DE;
+}
+
+.panel-weather > .panel-heading {
+    color: #eee;
+ 	background-color: #B0C4DE; 
+    border-color: #B0C4DE;
+}

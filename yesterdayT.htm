@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="<#location> weather data" />
+	<meta name="keywords" content="Cumulus, <#location> weather data, weather, data, weather station" />
+	<meta name="author" content="Chris Hudson">
+	<link rel="icon" href="../../favicon.ico">
+	
+	<title>Latham Weather</title>
+	
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+	<!-- Fonts -->
+	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen:400">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../bootstrap/css/sticky-footer-navbar.css">
+	<link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+	<nav id="top" class="navbar navbar-weather navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" style="color: #E8E8E8; font-size: 22px;" href="http://weather.hudsondarling.net/index.htm">Latham Weather</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="http://weather.hudsondarling.net/index.htm"><span class="fa fa-home fa-lg"></span>  Home</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Historical<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="http://weather.hudsondarling.net/today.htm">Today</a></li>
+							<li><a href="http://weather.hudsondarling.net/yesterday.htm">Yesterday</a></li>
+							<li><a href="http://weather.hudsondarling.net/thismonth.htm">This Month</a></li>
+							<li><a href="http://weather.hudsondarling.net/thisyear.htm">This Year</a></li>
+						</ul>
+					</li>	
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Graphics<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="http://weather.hudsondarling.net/gauges.htm">Gauges</a></li>
+							<li><a href="http://weather.hudsondarling.net/trends.htm">Trends</a></li>
+						</ul>
+					</li>	
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Records<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="http://weather.hudsondarling.net/monthlyrecord.htm">Monthly</a></li>
+							<li><a href="http://weather.hudsondarling.net/record.htm">Alltime</a></li>
+						</ul>
+					</li>	
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Testing<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="http://weather.hudsondarling.net/trendscaro.htm">Trends [Carousel]</a></li>
+							<li><a href="http://weather.hudsondarling.net/gauges-ss.htm">Gauges [Stainless Steel]</a></li>
+						</ul>
+					</li>	
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Sites <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="http://bom.gov.au/act">BOM ACT Site</a></li>
+							<li><a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=I90580966">Historical</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="http://weather.hudsondarling.net/about.htm"><span class="glyphicon glyphicon-info-sign"></span>  About</a></li>
+				</ul>
+			</div> <!--/.nav-collapse -->
+		</div>
+    </nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<h4>&nbsp;</h4>
+				<h4 class ="text-info">Yesterday&#39;s data</h4>
+			</div>
+			<div class="col-sm-4">
+				<h4 class="text-info">A summary of yesterdays weather<br><small>(for the 24 hrs up to <#rollovertime> local time)</small></h4>
+			</div>
+			<div class="col-sm-4">
+				<div class="alert alert-info text-center fade-in">
+					<div id="weatherquote"></div>			
+				</div>					
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<table class="table table-bordered table-condensed table-hover">
+					<tbody>
+						<tr class="info">
+							<th colspan="3">Temperature</th>
+						</tr>
+						<tr>
+							<td class="col-sm-8 col-xs-8">High&nbsp;Temperature</td>
+							<td class="col-sm-2 col-xs-2 text-center"><#tempYH>&nbsp;<#tempunit></td>
+							<td class="col-sm-2 col-xs-2 text-center">at&nbsp;<#TtempYH>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>Low&nbsp;Temperature</td>
+							<td class="text-center"><#tempYL>&nbsp;<#tempunit></td>
+							<td class="text-center">at&nbsp;<#TtempYL></td>
+						</tr>
+						<tr>
+							<td>Temperature&nbsp;Range</td>
+							<td class="text-center"><#temprangeY>&nbsp;<#tempunit></td>
+							<td class="text-center">&nbsp;</td>
+						</tr>
+						<tr>
+							<td>High&nbsp;Apparent&nbsp;Temperature</td>
+							<td class="text-center"><#apptempYH>&nbsp;<#tempunit></td>
+							<td class="text-center">at&nbsp;<#TapptempYH>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>Low&nbsp;Apparent&nbsp;Temperature</td>
+							<td class="text-center"><#apptempYL>&nbsp;<#tempunit></td>
+							<td class="text-center">at&nbsp;<#TapptempYL></td>
+						</tr>
+						<tr>
+							<td>Low&nbsp;Wind&nbsp;Chill</td>
+							<td class="text-center"><#wchillYL>&nbsp;<#tempunit></td>
+							<td class="text-center">at&nbsp;<#TwchillYL></td>
+						</tr>
+						<tr>
+							<td>High&nbsp;Heat&nbsp;Index</td>
+							<td class="text-center"><#heatindexYH>&nbsp;<#tempunit></td>
+							<td class="text-center">at&nbsp;<#TheatindexYH></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table table-bordered table-condensed table-hover">
+					<tbody>
+						<tr class="info">
+							<th colspan="3">Humidity</th>
+						</tr>				
+						<tr>
+							<td class="col-sm-8 col-xs-8">High&nbsp;Humidity</td>
+							<td class="col-sm-2 col-xs-2 text-center"><#humYH>&nbsp;%</td>
+							<td class="col-sm-2 col-xs-2 text-center">at&nbsp;<#ThumYH>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>Low&nbsp;Humidity</td>
+							<td class="text-center"><#humYL>&nbsp;%</td>
+							<td class="text-center">at&nbsp;<#ThumYL></td>
+						</tr>
+					</tbody>
+				</table>		
+				<table class="table table-bordered table-condensed table-hover">
+					<tbody>
+						<tr class="info">
+							<th colspan="3">Barometer</th>
+						</tr>
+						<tr>
+							<td class="col-sm-8 col-xs-8">High&nbsp;Pressure&nbsp;(SL)</td>
+							<td class="col-sm-2 col-xs-2 text-center"><#pressYH>&nbsp;<#pressunit></td>
+							<td class="col-sm-2 col-xs-2 text-center">at&nbsp;<#TpressYH></td>
+						</tr>
+						<tr>
+							<td>Low&nbsp;Pressure&nbsp;(SL)</td>
+							<td class="text-center"><#pressYL>&nbsp;<#pressunit></td>
+							<td class="text-center">at&nbsp;<#TpressYL></td>
+						</tr>
+					</tbody>
+				</table>		
+			</div>
+			<div class="col-sm-6">
+				<table class="table table-bordered table-condensed table-hover">
+					<tbody>
+						<tr class="info">
+							<th colspan="3">Rainfall</th>
+						</tr>
+						<tr>
+							<td class="col-sm-8 col-xs-8">Rainfall&nbsp;Yesterday</td>
+							<td class="col-sm-2 col-xs-2 text-center"><#rfallY>&nbsp;<#rainunit></td>
+						<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>Rainfall&nbsp;Rate&nbsp;Max </td>
+							<td class="text-center"><#rrateYM>&nbsp;<#rainunit>/hr</td>
+							<td class="text-center">at&nbsp;<#TrrateYM></td>
+						</tr>
+						<tr>
+							<td>High&nbsp;Hourly&nbsp;Rainfall</td>
+							<td class="text-center"><#hourlyrainYH>&nbsp;<#rainunit></td>
+							<td class="text-center">at&nbsp;<#ThourlyrainYH></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table table-bordered table-condensed table-hover">
+					<tbody>
+						<tr class="info">
+							<th colspan="3">Wind</th>
+						</tr>
+						<tr>
+							<td class="col-sm-8 col-xs-8">Highest&nbsp;Gust</td>
+							<td class="col-sm-2 col-xs-2 text-center"><#wgustYM>&nbsp;<#windunit></td>
+							<td class="col-sm-2 col-xs-2 text-center">at&nbsp;<#TwgustYM></td>
+						</tr>
+						<tr>
+							<td>Highest&nbsp;Speed&nbsp;(10&nbsp;minute&nbsp;average)</td>
+							<td class="text-center"><#windYM>&nbsp;<#windunit>&nbsp;(<#Ybeaufort>)</td>
+							<td class="text-center">at&nbsp;<#TwindYM></td>
+						</tr>
+						<tr>
+							<td>Wind Run</td>
+							<td class="text-center"><#windrunY>&nbsp;<#windrununit></td>
+							<td class="text-center">&nbsp;</td>
+						</tr>
+						<tr>
+							<td>Dominant Direction</td>
+							<td class="text-center"><#domwindbearingY>&deg;&nbsp;<#domwinddirY></td>
+							<td class="text-center">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- Solar data. If you don't have a solar sensor, you may wish to delete everything from here to the next comment -->
+				<table class="table table-bordered table-condensed table-hover">
+					<tbody>								
+						<tr class="warning">
+							<th colspan="3">Solar<small>[Not recorded]</small></th>
+						</tr>			
+						<tr>
+							<td class="col-sm-8 col-xs-8">Hours&nbsp;of&nbsp;Sunshine</td>
+							<td class="col-sm-2 col-xs-2 text-center"><#YSunshineHours></td>
+							<td class="col-sm-2 col-xs-2 text-center">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- End of solar data -->
+			</div>					
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<h6 class="text-right">Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude></h6>
+				<h6 class="text-right">Page updated <#update>.</h6>
+				<h6 class="text-right">Powered by <a href="http://sandaysoft.com/products/cumulus" target="_blank">Cumulus</a> v<#version> (<#build>)</h6>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted">&copy; HudsonDarling.net 2015</p>
+		</div>
+	</footer>
+
+	<!-- jQuery and Bootstrap JavaScript-->	
+	<script
+		src="https://code.jquery.com/jquery-2.2.4.js"   
+		integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+		crossorigin="anonymous">
+	</script>
+	<script 
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
+		crossorigin="anonymous">
+	</script>
+	<!-- Custom JavaScript-->	
+	<script src="weather.js"></script>
+	<script>
+	$(document).ready(function(){
+		showQuote();		
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="<#location> weather data" />
+		<meta name="keywords" content="Cumulus, <#location> weather data, weather, data, weather station" />
+		<meta name="author" content="Chris Hudson">
+		<link rel="icon" href="../../favicon.ico">
+		
+		<title>Latham Weather</title>
+	
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+		integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		
+		<!-- Fonts -->
+		<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen:400">
+			
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="../bootstrap/css/sticky-footer-navbar.css">
+		<link rel="stylesheet" href="weather.css"><title>Latham Weather</title>
+		
+		<!-- CSS for the charts on the page -->
+		<style>
+			#chartcontainer  {
+                min-height: 700px;
+                height: 700px;
+                margin-top:30px;
+                margin-bottom: 20px;
+                background-color:white;
+            }
+		</style>
+        
+    </head>
+	<body>
+		<nav id="top" class="navbar navbar-weather navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" style="color: #E8E8E8; font-size: 22px;" href="http://weather.hudsondarling.net/index.htm">Latham Weather</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="http://weather.hudsondarling.net/index.htm"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Historical<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="http://weather.hudsondarling.net/today.htm">Today</a></li>
+								<li><a href="http://weather.hudsondarling.net/yesterday.htm">Yesterday</a></li>
+								<li><a href="http://weather.hudsondarling.net/thismonth.htm">This Month</a></li>
+								<li><a href="http://weather.hudsondarling.net/thisyear.htm">This Year</a></li>
+							</ul>
+						</li>	
+						<li class="dropdown active">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Graphics<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="http://weather.hudsondarling.net/gauges.htm">Gauges</a></li>
+								<li><a href="http://weather.hudsondarling.net/trends.htm">Trends</a></li>
+							</ul>
+						</li>	
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Records<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="http://weather.hudsondarling.net/monthlyrecord.htm">Monthly</a></li>
+								<li><a href="http://weather.hudsondarling.net/record.htm">Alltime</a></li>
+							</ul>
+						</li>	
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Testing<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="http://weather.hudsondarling.net/trendscaro.htm">Trends [Carousel]</a></li>
+								<li><a href="http://weather.hudsondarling.net/gauges-ss.htm">Gauges [Stainless Steel]</a></li>
+							</ul>
+						</li>	
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Sites <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="http://bom.gov.au/act">BOM ACT Site</a></li>
+								<li><a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=I90580966">Historical</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="http://weather.hudsondarling.net/about.htm"><span class="glyphicon glyphicon-info-sign"></span>  About</a></li>
+					</ul>
+				</div> <!--/.nav-collapse -->
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2">
+					<h4>&nbsp;</h4>
+					<h4 class ="text-info">Recent trends</h4>
+				</div>
+				<div class="col-sm-6">
+					<h6>These graphs present the temperature, pressure, rainfall, and wind speed trends for the last <#graphperiod> hours.</h6>
+					<h6>Mouse over the chart to see the values at any given time. You can add or remove data sets from the chart by clicking the entry on the chart legend.</h6>
+				</div>
+				<div class="col-sm-4">
+					<div class="alert alert-info text-center fade-in">
+						<div id="weatherquote"></div>			
+					</div>					
+				</div>
+			</div>
+			<div class="row">
+				<div class="text-center">
+					<div class="btn-group"  id="btngroup" data-toggle="buttons">
+						<label class="btn btn-primary active">
+							<input type="radio" name="options" id="temp" value="temp"> Temperature
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="options" id="dailytemp" value="dailytemp"> Daily Temp
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="options" id="press" value="press"> Pressure
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="options" id="wind" value="wind"> Wind Speed
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="options" id="windDir" value="windDir"> Wind Dir.
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="options" id="humidity" value="humidity"> Humidity
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="options" id="rain" value="rain"> Rainfall
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="options" id="dailyrain" value="dailyrain"> Daily Rain
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="options" id="solar" value="solar"> Solar
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="options" id="sunhours" value="sunhours"> Sun Hours
+						</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div id="chartcontainer">
+				</div>			
+			</div>			
+
+			<div class="row">
+				<h6 class="text-right">Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude></h6>
+				<h6 class="text-right">Charts by <a href="http://www.highcharts.com/" target="_blank">Highcharts</a></h6>
+				<h6 class="text-right">Page updated <#update>.</h6>
+				<h6 class="text-right">Powered by <a href="http://sandaysoft.com/products/cumulus" target="_blank">Cumulus</a> v<#version> (<#build>)</h6>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted">&copy; HudsonDarling.net 2015</p>
+			</div>
+		</footer>
+		
+		<!-- jQuery and Bootstrap JavaScript-->	
+		<script
+			src="https://code.jquery.com/jquery-2.2.4.js"   
+			integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+			crossorigin="anonymous">
+		</script>
+		<script 
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+			integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
+			crossorigin="anonymous">
+		</script>
+		
+		<!-- Custom JavaScript-->	
+		<script src="weather.js"></script>		
+		<script>
+		$(document).ready(function(){
+			showQuote();		
+		});
+		</script>				
+		<!-- Chart JavaScript-->	
+		<script src="lib/highstock/js/highstock.js"></script>
+        <script src="lib/highstock/js/themes/grid.js"></script>
+        <script src="js/charts.js"></script>
+	</body>
+</html>
