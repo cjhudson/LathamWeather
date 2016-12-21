@@ -9,25 +9,25 @@
 	<meta name="keywords" content="Cumulus, <#location> weather data, weather, data, weather station" />
 	<meta name="author" content="Chris Hudson">
 	<link rel="icon" href="../../favicon.ico">
-	
+
 	<title>Latham Weather</title>
-	
+
 	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	
+
 	<!-- Fonts -->
 	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen:400">
-	
+
 	<!-- Weather Icons -->
 	<link rel="stylesheet" href="css/weather-icons.min.css">
 	<link rel="stylesheet" href="css/weather-icons-wind.min.css">
-		
+
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="../bootstrap/css/sticky-footer-navbar.css">
-	<link rel="stylesheet" href="weather.css">
-	
+	<link rel="stylesheet" href="css/sticky-footer-navbar.css">
+	<link rel="stylesheet" href="css/weather.css">
+
 </head>
 
 <body>
@@ -40,41 +40,41 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" style="color: #E8E8E8; font-size: 22px;" href="http://weather.hudsondarling.net/index.htm"></i>Latham Weather</a>
+				<a class="navbar-brand" style="color: #E8E8E8; font-size: 22px;" href="index.htm"></i>Latham Weather</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="http://weather.hudsondarling.net/index.htm"><span class="fa fa-home fa-lg"></span>  Home</a></li>
+					<li class="active"><a href="index.htm"><span class="fa fa-home fa-lg"></span>  Home</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Historical<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="http://weather.hudsondarling.net/today.htm">Today</a></li>
-							<li><a href="http://weather.hudsondarling.net/yesterday.htm">Yesterday</a></li>
-							<li><a href="http://weather.hudsondarling.net/thismonth.htm">This Month</a></li>
-							<li><a href="http://weather.hudsondarling.net/thisyear.htm">This Year</a></li>
+							<li><a href="today.htm">Today</a></li>
+							<li><a href="yesterday.htm">Yesterday</a></li>
+							<li><a href="thismonth.htm">This Month</a></li>
+							<li><a href="thisyear.htm">This Year</a></li>
 						</ul>
-					</li>	
+					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Graphics<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="http://weather.hudsondarling.net/gauges.htm">Gauges</a></li>
-							<li><a href="http://weather.hudsondarling.net/trends.htm">Trends</a></li>
+							<li><a href="gauges.htm">Gauges</a></li>
+							<li><a href="trends.htm">Trends</a></li>
 						</ul>
-					</li>	
+					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Records<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="http://weather.hudsondarling.net/monthlyrecord.htm">Monthly</a></li>
-							<li><a href="http://weather.hudsondarling.net/record.htm">Alltime</a></li>
+							<li><a href="monthlyrecord.htm">Monthly</a></li>
+							<li><a href="record.htm">Alltime</a></li>
 						</ul>
-					</li>	
+					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Testing<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="http://weather.hudsondarling.net/trendscaro.htm">Trends [Carousel]</a></li>
-							<li><a href="http://weather.hudsondarling.net/gauges-ss.htm">Gauges [Stainless Steel]</a></li>
+							<li><a href="trendscaro.htm">Trends [Carousel]</a></li>
+							<li><a href="gauges-ss.htm">Gauges [Stainless Steel]</a></li>
 						</ul>
-					</li>	
+					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Sites <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
@@ -84,7 +84,7 @@
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="http://weather.hudsondarling.net/about.htm"><span class="fa fa-info-circle fa-lg"></span>  About</a></li>
+					<li><a href="about.htm"><span class="fa fa-info-circle fa-lg"></span>  About</a></li>
 				</ul>
 			</div> <!--/.nav-collapse -->
 		</div>
@@ -107,8 +107,8 @@
 			</div>
 			<div class="col-sm-4">
 				<div class="alert alert-info text-center fade-in">
-					<div id="weatherquote"></div>			
-				</div>					
+					<div id="weatherquote"></div>
+				</div>
 			</div>
 		</div>
 		<div class="row">
@@ -121,11 +121,11 @@
 						<th class="col-sm-8 col-xs-8">Outdoor Temperature</th>
 						<td class="col-sm-4 col-xs-4 text-center"><#temp><#tempunit></td>
 					</tr>
-					<tr>					
+					<tr>
 						<th>Dew Point </th>
 						<td class="text-center"><#dew><#tempunit></td>
 					</tr>
-					<tr>					
+					<tr>
 						<th>Wind Chill</th>
 						<td class="text-center"><#wchill><#tempunit></td>
 					</tr>
@@ -172,7 +172,7 @@
 						<td colspan="2" class="text-right">Last rain recorded ==>  <#LastRainTipISO></td>
 					</tr>
 				</table>
-			</div>	
+			</div>
 			<div class="col-sm-4">
 				<table class="table table-bordered table-condensed table-hover">
 					<tr class="info">
@@ -204,9 +204,9 @@
 					<tr>
 						<th>Avg Bearing</th>
 						<td class="text-center"><#avgbearing>&deg; <#wdir></td>
-					</tr>					
+					</tr>
 				</table>
-			</div>	
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-4">
@@ -222,7 +222,7 @@
 						<th><#presstrend></th>
 						<td class="text-center"><#presstrendval> <#pressunit>/hr</td>
 					</tr>
-				</table>		
+				</table>
 			</div>
 			<div class="col-sm-4">
 				<table class="table table-bordered table-condensed table-hover">
@@ -238,11 +238,11 @@
 						<td class="text-center"><#inhum>%</td>
 					</tr>
 				</table>
-			</div>	
+			</div>
 			<div class="col-sm-4">
 				<table class="table table-bordered table-condensed table-hover">
-					<tr class="warning">
-						<th colspan="2">Solar <small>[Not recorded]</small></th>
+					<tr class="info">
+						<th colspan="2">Solar</th>
 					</tr>
 					<!-- Solar data. If you don't have a solar sensor, you may wish to delete everything from here to the next comment -->
 					<tr>
@@ -255,11 +255,11 @@
 					</tr>
 					<!-- End of solar data -->
 				</table>
-			</div>	
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-6">
-				<a href="http://cumulussites.net/" target="_blank" class="text-right"><img src="http://cumulussites.net/button.php?u=Aquila" alt="Cumulus Top Weather Sites" width="162" height="55"></a>			
+				<a href="http://cumulussites.net/" target="_blank" class="text-right"><img src="http://cumulussites.net/button.php?u=Aquila" alt="Cumulus Top Weather Sites" width="162" height="55"></a>
 			</div>
 			<div class="col-sm-6">
 				<h6 class="text-right">Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude></h6>
@@ -270,22 +270,22 @@
 	</div>
 	<footer class="footer">
 		<div class="container">
-			<p class="text-muted">&copy; HudsonDarling.net 2015</p>
+			<p class="text-muted">&copy; HudsonDarling.net 2016</p>
 		</div>
 	</footer>
-	
-	<!-- jQuery and Bootstrap JavaScript-->	
+
+	<!-- jQuery and Bootstrap JavaScript-->
 	<script
-		src="https://code.jquery.com/jquery-2.2.4.js"   
+		src="https://code.jquery.com/jquery-2.2.4.js"
 		integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
 		crossorigin="anonymous">
 	</script>
-	<script 
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
-		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 		crossorigin="anonymous">
 	</script>
-	<!-- Custom JavaScript-->	
+	<!-- Custom JavaScript-->
 	<script src="weather.js"></script>
 	<script>
 	$(document).ready(function(){
