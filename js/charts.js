@@ -901,12 +901,14 @@ var doSolar = function () {
         series: [{
                 name: 'Solar Radiation',
                 type: 'area',
+                color: 'gold',
                 yAxis: 0,
                 valueDecimals: 0,
                 tooltip: {valueSuffix: 'W/m\u00B2'}
             }, {
                 name: 'Theoretical Max',
-                type: 'area',
+                type: 'line',
+                color: 'blue',
                 yAxis: 0,
                 valueDecimals: 0,
                 tooltip: {valueSuffix: 'W/m\u00B2'}
