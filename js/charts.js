@@ -138,7 +138,7 @@ var doTemp = function () {
                 name: 'Temperature',
                 zIndex: 99
             }, {
-                name: 'Inside'				
+                name: 'Inside'
             }, {
                 name: 'Apparent'
             }, {
@@ -159,9 +159,13 @@ var doTemp = function () {
                     type: 'hour',
                     text: '12h'
                 }, {
-					count: 24,
+					          count: 24,
                     type: 'hour',
-                    text: '24h'
+                    text: '1d'
+                }, {
+					          count: 48,
+                    type: 'hour',
+                    text: '2d'
                 }, {
                     type: 'all',
                     text: 'All'
@@ -279,9 +283,13 @@ var doPress = function () {
                     type: 'hour',
                     text: '12h'
                 }, {
-					count: 24,
+					          count: 24,
                     type: 'hour',
-                    text: '24h'
+                    text: '1d'
+                }, {
+					          count: 48,
+                    type: 'hour',
+                    text: '2d'
                 }, {
                     type: 'all',
                     text: 'All'
@@ -402,9 +410,13 @@ var doWindDir = function () {
                     type: 'hour',
                     text: '12h'
                 }, {
-                    count: 24,
+					          count: 24,
                     type: 'hour',
-                    text: '24h'
+                    text: '1d'
+                }, {
+					          count: 48,
+                    type: 'hour',
+                    text: '2d'
                 }, {
 					type: 'all',
                     text: 'All'
@@ -524,9 +536,13 @@ var doWind = function () {
                     type: 'hour',
                     text: '12h'
                 }, {
-					count: 24,
+					          count: 24,
                     type: 'hour',
-                    text: '24h'
+                    text: '1d'
+                }, {
+					          count: 48,
+                    type: 'hour',
+                    text: '2d'
                 }, {
                     type: 'all',
                     text: 'All'
@@ -648,9 +664,13 @@ var doRain = function () {
                     type: 'hour',
                     text: '12h'
                 }, {
-					count: 24,
+					          count: 24,
                     type: 'hour',
-                    text: '24h'
+                    text: '1d'
+                }, {
+					          count: 48,
+                    type: 'hour',
+                    text: '2d'
                 }, {
                     type: 'all',
                     text: 'All'
@@ -772,9 +792,13 @@ var doHum = function () {
                     type: 'hour',
                     text: '12h'
                 }, {
-					count: 24,
+					          count: 24,
                     type: 'hour',
-                    text: '24h'
+                    text: '1d'
+                }, {
+					          count: 48,
+                    type: 'hour',
+                    text: '2d'
                 }, {
                     type: 'all',
                     text: 'All'
@@ -903,9 +927,13 @@ var doSolar = function () {
                     type: 'hour',
                     text: '12h'
                 }, {
-					count: 24,
+					          count: 24,
                     type: 'hour',
-                    text: '24h'
+                    text: '1d'
+                }, {
+					          count: 48,
+                    type: 'hour',
+                    text: '2d'
                 }, {
                     type: 'all',
                     text: 'All'
@@ -1245,7 +1273,3 @@ var doDailyTemp = function () {
         }
     });
 };
-
-
-
-
