@@ -1,4 +1,5 @@
-var chart, config;
+var chart, config, basedir;
+basedir = 'data\\';
 
 $(document).ready(function () {
     $('.btn').change(function () {
@@ -40,7 +41,7 @@ $(document).ready(function () {
         }
     });
 
-   $.ajax({url: "graphconfig.json", dataType: 'json', success: function (result) {
+   $.ajax({url: basedir + 'graphconfig.json', dataType: 'json', success: function (result) {
             config = result;
             doTemp();
         }});
@@ -178,7 +179,7 @@ var doTemp = function () {
     chart.showLoading();
 
     $.ajax({
-        url: 'tempdata.json',
+        url: basedir + 'tempdata.json',
         dataType: 'json',
         success: function (resp) {
             chart.hideLoading();
@@ -302,7 +303,7 @@ var doPress = function () {
     chart.showLoading();
 
     $.ajax({
-        url: 'pressdata.json',
+        url: basedir + 'pressdata.json',
         dataType: 'json',
         success: function (resp) {
             chart.hideLoading();
@@ -429,7 +430,7 @@ var doWindDir = function () {
     chart.showLoading();
 
     $.ajax({
-        url: 'wdirdata.json',
+        url: basedir + 'wdirdata.json',
         dataType: 'json',
         success: function (resp) {
             chart.hideLoading();
@@ -555,7 +556,7 @@ var doWind = function () {
     chart.showLoading();
 
     $.ajax({
-        url: 'winddata.json',
+        url: basedir + 'winddata.json',
         dataType: 'json',
         success: function (resp) {
             chart.hideLoading();
@@ -683,7 +684,7 @@ var doRain = function () {
     chart.showLoading();
 
     $.ajax({
-        url: 'raindata.json',
+        url: basedir + 'raindata.json',
         dataType: 'json',
         success: function (resp) {
             chart.hideLoading();
@@ -811,7 +812,7 @@ var doHum = function () {
     chart.showLoading();
 
     $.ajax({
-        url: 'humdata.json',
+        url: basedir + 'humdata.json',
         dataType: 'json',
         success: function (resp) {
             chart.hideLoading();
@@ -948,7 +949,7 @@ var doSolar = function () {
     chart.showLoading();
 
     $.ajax({
-        url: 'solardata.json',
+        url: basedir + 'solardata.json',
         dataType: 'json',
         success: function (resp) {
             chart.hideLoading();
@@ -1050,7 +1051,7 @@ var doSunHours = function () {
     chart.showLoading();
 
     $.ajax({
-        url: 'sunhours.json',
+        url: basedir + 'sunhours.json',
         dataType: 'json',
         success: function (resp) {
             chart.hideLoading();
@@ -1150,7 +1151,7 @@ var doDailyRain = function () {
     chart.showLoading();
 
     $.ajax({
-        url: 'dailyrain.json',
+        url: basedir + 'dailyrain.json',
         dataType: 'json',
         success: function (resp) {
             chart.hideLoading();
@@ -1265,7 +1266,7 @@ var doDailyTemp = function () {
     chart.showLoading();
 
     $.ajax({
-        url: 'dailytemp.json',
+        url: basedir + 'dailytemp.json',
         dataType: 'json',
         success: function (resp) {
             chart.hideLoading();
