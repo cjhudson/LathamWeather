@@ -56,7 +56,7 @@ $(function () {
                 [<#ByMonthTempH mon=9>, <#ByMonthTempL mon=9>],
                 [<#ByMonthTempH mon=10>, <#ByMonthTempL mon=10>],
                 [<#ByMonthTempH mon=11>, <#ByMonthTempL mon=11>],
-                [<#ByMonthTempH mon=12>, <#ByMonthTempL mon=12>]                
+                [<#ByMonthTempH mon=12>, <#ByMonthTempL mon=12>]
             ]
         }]
 
