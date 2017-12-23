@@ -25,7 +25,7 @@ var q = quotes.length;
 var whichquote=Math.round(Math.random()*(q-1));
 
 function showQuote(){
-    document.getElementById('weatherquote').innerHTML = '<h5 class="text-info"><strong><em>' + quotes[whichquote] + '</em></strong></h5>';
+    document.getElementById('weatherquote').innerHTML = '<h6 class="text-dark text-center"><em>' + quotes[whichquote] + '</em></h6>';
 }
 
 var arForecast= new Array();
@@ -35,7 +35,7 @@ arForecast[2] = 'Cloudy';
 arForecast[3] = 'Rainy';
 arForecast[4] = 'Storm';
 arForecast[5] = 'Something';
-arForecast[6] = 'Another thing';
+arForecast[6] = '<#forecast>';
 
 var arForecastIcon= new Array();
 arForecastIcon[0] = 'wi-day-sunny';
@@ -43,12 +43,12 @@ arForecastIcon[1] = 'wi-day-sunny-overcast';
 arForecastIcon[2] = 'wi-cloudy';
 arForecastIcon[3] = 'wi-day-rain';
 arForecastIcon[4] = 'wi-thunderstorm';
-arForecastIcon[5] = 'wi-';
-arForecastIcon[6] = 'wi-';
+arForecastIcon[5] = 'wi-day-sunny';
+arForecastIcon[6] = 'wi-day-sunny';
 
 
 function showForecastIcon(){
 	var forecast = document.getElementById('forecast').innerText;
 	var indexForecast = arForecast.indexOf(forecast);
-    document.getElementById('forecasticon').innerHTML = '<h1 class="text-info text-center wi ' + arForecastIcon[indexForecast] + '"></h1>';
+    document.getElementById('forecasticon').innerHTML = '<h2 class="text-info text-center wi ' + arForecastIcon[indexForecast] + '"> <small>   ' + forecast +'</small></h2>';
 }
