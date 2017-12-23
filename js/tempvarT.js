@@ -8,6 +8,10 @@ $(function () {
             inverted: true
         },
 
+        credits: {
+          enabled: false
+        },
+
         title: {
             text: ''
         },
