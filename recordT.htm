@@ -39,7 +39,7 @@
 
 			<div class="navbar-collapse collapse" id="navbarcollapse">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
+					<li class="nav-item">
 						<a class="nav-link" href="index.htm"><span class="fa fa-home fa-lg"></span>  Home</a>
 					</li>
 					<li class="nav-item dropdown">
@@ -58,18 +58,17 @@
 							<a class="dropdown-item" href="charts.htm">Charts</a>
 						</div>
 					</li>
-					<li class="nav-item dropdown">
+					<li class="nav-item dropdown active">
 						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Records<span class="caret"></span></a>
 						<div class="dropdown-menu" aria-labelledby="dropdown03" role="menu">
 							<a class="dropdown-item" href="monthlyrecord.htm">Monthly</a>
-							<a class="dropdown-item" href="record.htm">Alltime</a>
+							<a class="dropdown-item active" href="record.htm">Alltime</a>
 						</div>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Testing<span class="caret"></span></a>
 						  <div class="dropdown-menu"  aria-labelledby="dropdown04" role="menu">
 							<a class="dropdown-item" href="tempvar.htm">Monthly Temp Variations</a>
-							<a class="dropdown-item" href="indexnew.htm">Bootstrap 4 Home Page</a>
 							<a class="dropdown-item" href="windmap.htm">WindMap</a>
 						</div>
 					</li>
@@ -90,18 +89,16 @@
 			</div> <!--/.nav-collapse -->
 		</div>
     </nav>
-		
+
 	<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div id="weatherquote"></div>
-				</div>
-			</div>
-		<div class="row">
-			<div class="col-sm-12">
-				<h4>All Time Records. <small>Records began on <#recordsbegandate>. Here are the extremes recorded since then.</small></h4>
-			</div>
+		<div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
+		<div class="alert alert-info" role="alert">
+			<h4 class="my-auto">All Time Records</h4>
 		</div>
+		<div class="alert alert-secondary" role="alert">
+			<h6 class="my-auto">Records began on <#recordsbegandate>. Here are the extremes recorded since then.</h6>
+		</div>
+
 		<table class="table table-bordered table-condensed table-hover">
 			<tr class="info">
 				<th colspan="3">Temperature and Humidity </th>

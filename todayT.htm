@@ -39,13 +39,13 @@
 
 			<div class="navbar-collapse collapse" id="navbarcollapse">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
+					<li class="nav-item">
 						<a class="nav-link" href="index.htm"><span class="fa fa-home fa-lg"></span>  Home</a>
 					</li>
-					<li class="nav-item dropdown">
+					<li class="nav-item dropdown active">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Historical<span class="caret"></span></a>
 						<div class="dropdown-menu" aria-labelledby="dropdown01" role="menu">
-							<a class="dropdown-item" href="today.htm">Today</a>
+							<a class="dropdown-item active" href="today.htm">Today</a>
 							<a class="dropdown-item" href="yesterday.htm">Yesterday</a>
 							<a class="dropdown-item" href="thismonth.htm">This Month</a>
 							<a class="dropdown-item" href="thisyear.htm">This Year</a>
@@ -69,7 +69,6 @@
 						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Testing<span class="caret"></span></a>
 						  <div class="dropdown-menu"  aria-labelledby="dropdown04" role="menu">
 							<a class="dropdown-item" href="tempvar.htm">Monthly Temp Variations</a>
-							<a class="dropdown-item" href="indexnew.htm">Bootstrap 4 Home Page</a>
 							<a class="dropdown-item" href="windmap.htm">WindMap</a>
 						</div>
 					</li>
@@ -90,21 +89,14 @@
 			</div> <!--/.nav-collapse -->
 		</div>
     </nav>
-		
+
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-4">
-				<h4>&nbsp;</h4>
-				<h4 class ="text-info">Today&#39;s Data</h4>
-			</div>
-			<div class="col-sm-4">
-				<h4 class="text-info">A summary of todays weather<br><small>(Since <#rollovertime> local time)</small></h4>
-			</div>
-			<div class="col-sm-4">
-				<div class="alert alert-info text-center fade-in">
-					<div id="weatherquote"></div>
-				</div>
-			</div>
+		<div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
+		<div class="alert alert-info" role="alert">
+			<h4 class="my-auto">Todays Data</h4>
+		</div>
+		<div class="alert alert-secondary" role="alert">
+			<h6 class="my-auto">A summary of todays weather. (Since <#rollovertime> local time)</h6>
 		</div>
 		<div class="row">
 			<div class="col-sm-6">

@@ -49,7 +49,7 @@
 
   			<div class="navbar-collapse collapse" id="navbarcollapse">
   				<ul class="navbar-nav mr-auto">
-  					<li class="nav-item active">
+  					<li class="nav-item">
   						<a class="nav-link" href="index.htm"><span class="fa fa-home fa-lg"></span>  Home</a>
   					</li>
   					<li class="nav-item dropdown">
@@ -61,11 +61,11 @@
   							<a class="dropdown-item" href="thisyear.htm">This Year</a>
   						</div>
   					</li>
-  					<li class="nav-item dropdown">
+  					<li class="nav-item active dropdown">
   						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Graphics<span class="caret"></span></a>
   						<div class="dropdown-menu"  aria-labelledby="dropdown02" role="menu">
   							<a class="dropdown-item" href="gauges.htm">Gauges</a>
-  							<a class="dropdown-item" href="charts.htm">Charts</a>
+  							<a class="dropdown-item active" href="charts.htm">Charts</a>
   						</div>
   					</li>
   					<li class="nav-item dropdown">
@@ -79,7 +79,6 @@
   						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Testing<span class="caret"></span></a>
   						  <div class="dropdown-menu"  aria-labelledby="dropdown04" role="menu">
   							<a class="dropdown-item" href="tempvar.htm">Monthly Temp Variations</a>
-  							<a class="dropdown-item" href="indexnew.htm">Bootstrap 4 Home Page</a>
   							<a class="dropdown-item" href="windmap.htm">WindMap</a>
   						</div>
   					</li>
@@ -101,21 +100,14 @@
   		</div>
       </nav>
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-2">
-					<h4>&nbsp;</h4>
-					<h4 class ="text-info">Recent trends</h4>
-				</div>
-				<div class="col-sm-6">
-					<h6>These graphs present the temperature, pressure, rainfall, and wind speed trends for the last <#graphperiod> hours.</h6>
-					<h6>Mouse over the chart to see the values at any given time. You can add or remove data sets from the chart by clicking the entry on the chart legend.</h6>
-				</div>
-				<div class="col-sm-4">
-					<div class="alert alert-info text-center fade-in">
-						<div id="weatherquote"></div>
-					</div>
-				</div>
-			</div>
+      <div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
+      <div class="alert alert-info" role="alert">
+        <h4 class="my-auto">Recent trends</h4>
+      </div>
+      <div class="alert alert-secondary" role="alert">
+        <h6 class="my-auto">These graphs present the temperature, pressure, rainfall, and wind speed trends for the last <#graphperiod> hours.</h6>
+        <h6 class="my-auto">Mouse over the chart to see the values at any given time. You can add or remove data sets from the chart by clicking the entry on the chart legend.</h6>
+      </div>
 			<div class="row">
 				<div class="text-center">
 					<div class="btn-group"  id="btngroup" data-toggle="buttons">
