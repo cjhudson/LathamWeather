@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="<#location> weather data" />
 	<meta name="keywords" content="Cumulus MX, Cumulus, <#location> weather data, weather, data, weather station" />
 	<meta name="author" content="Chris Hudson">
@@ -13,13 +13,11 @@
 	<title>Latham Weather</title>
 
 	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
-	<!-- Fonts -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen:400">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+  <!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Paprika" rel="stylesheet">
 
 	<!-- Weather Icons -->
 	<link rel="stylesheet" href="css/weather-icons.min.css">
@@ -27,232 +25,209 @@
 
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="css/sticky-footer-navbar.css">
-	<link rel="stylesheet" href="css/weather.css">
-
+	<link rel="stylesheet" href="css/test.css">
+	<!-- link rel="stylesheet" href="css/weather.css"-->
 </head>
 
 <body>
-	<nav id="top" class="navbar navbar-weather navbar-fixed-top">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" style="color: #E8E8E8; font-size: 22px;" href="index.htm"></i>Latham Weather</a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="index.htm"><span class="fa fa-home fa-lg"></span>  Home</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Historical<span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="today.htm">Today</a></li>
-							<li><a href="yesterday.htm">Yesterday</a></li>
-							<li><a href="thismonth.htm">This Month</a></li>
-							<li><a href="thisyear.htm">This Year</a></li>
-						</ul>
+			<a class="navbar-brand"  href="index.htm" >Latham Weather</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle navigation">
+        	<span class="navbar-toggler-icon"></span>
+  		</button>
+
+			<div class="navbar-collapse collapse" id="navbarcollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.htm"><span class="fa fa-home fa-lg"></span>  Home</a>
 					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Graphics<span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="gauges.htm">Gauges</a></li>
-							<li><a href="charts.htm">Charts</a></li>
-						</ul>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Historical<span class="caret"></span></a>
+						<div class="dropdown-menu" aria-labelledby="dropdown01" role="menu">
+							<a class="dropdown-item" href="today.htm">Today</a>
+							<a class="dropdown-item" href="yesterday.htm">Yesterday</a>
+							<a class="dropdown-item" href="thismonth.htm">This Month</a>
+							<a class="dropdown-item" href="thisyear.htm">This Year</a>
+						</div>
 					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Records<span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="monthlyrecord.htm">Monthly</a></li>
-							<li><a href="record.htm">Alltime</a></li>
-						</ul>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Graphics<span class="caret"></span></a>
+						<div class="dropdown-menu"  aria-labelledby="dropdown02" role="menu">
+							<a class="dropdown-item" href="gauges.htm">Gauges</a>
+							<a class="dropdown-item" href="charts.htm">Charts</a>
+						</div>
 					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Testing<span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="tempvar.htm">Monthly Temp Variations</a></li>
-						</ul>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Records<span class="caret"></span></a>
+						<div class="dropdown-menu" aria-labelledby="dropdown03" role="menu">
+							<a class="dropdown-item" href="monthlyrecord.htm">Monthly</a>
+							<a class="dropdown-item" href="record.htm">Alltime</a>
+						</div>
 					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Sites<span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="http://bom.gov.au/act">BOM ACT Site</a></li>
-							<li><a href="https://app.weathercloud.net/d0419553521#current">WeatherCloud</a></li>
-							<li><a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=I90580966">WeatherUnderground Historical</a></li>
-						</ul>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Testing<span class="caret"></span></a>
+						  <div class="dropdown-menu"  aria-labelledby="dropdown04" role="menu">
+							<a class="dropdown-item" href="tempvar.htm">Monthly Temp Variations</a>
+							<a class="dropdown-item" href="indexnew.htm">Bootstrap 4 Home Page</a>
+							<a class="dropdown-item" href="windmap.htm">WindMap</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other Sites<span class="caret"></span></a>
+						<div class="dropdown-menu"  aria-labelledby="dropdown05" role="menu">
+							<a class="dropdown-item" href="http://bom.gov.au/act">BOM ACT Site</a>
+							<a class="dropdown-item" href="https://app.weathercloud.net/d0419553521#current">WeatherCloud</a>
+							<a class="dropdown-item" href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=I90580966">WeatherUnderground Historical</a>
+						</div>
 					</li>
 				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="about.htm"><span class="fa fa-info-circle fa-lg"></span>  About</a></li>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+				  	<a class="nav-link" href="about.htm"><span class="fa fa-info-circle fa-lg"></span>  About</a>
+				  </li>
 				</ul>
 			</div> <!--/.nav-collapse -->
 		</div>
     </nav>
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-4">
-				<h4>&nbsp;</h4>
-				<h4>Current Conditions</h4>
-			</div>
-			<div class="col-sm-4">
-				<div class="row">
-					<div class="col-xs-6">
-						<h4 class="text-info text-center">Forecast:</h4>
-						<h4 id="forecast" class="text-info text-center"><#forecast></h4>
-					</div>
-					<div id="forecasticon" class="col-xs-6">
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="alert alert-info text-center fade-in">
-					<div id="weatherquote"></div>
-				</div>
-			</div>
+		<p style="display:none" id="forecast"><#forecast></p>
+		<div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
+		<div class="alert alert-secondary" role="alert">
+			<h5 class= "my-auto">Outlook : <#forecast></h5>
+		</div>
+		<div class="alert alert-info" role="alert">
+			<h4 class="my-auto">Current Conditions</h4>
 		</div>
 		<div class="row">
-			<div class="col-sm-4">
-				<table class="table table-bordered table-condensed table-hover">
-					<tr class="info">
-						<th colspan="2">Temperature and Humidity </th>
+			<div class="col-md-4">
+				<table class="table table-bordered table-sm table-hover">
+					<tr class="table-info">
+						<th colspan="2" class="align-middle">Temperature and Humidity </th>
 					</tr>
 					<tr>
-						<th class="col-sm-8 col-xs-8">Outdoor Temperature</th>
-						<td class="col-sm-4 col-xs-4 text-center"><#temp><#tempunit></td>
+						<td class="col-8 align-middle">Outdoor Temperature</td>
+						<td class="col-4 text-center"><#temp><#tempunit></td>
 					</tr>
 					<tr>
-						<th>Dew Point </th>
-						<td class="text-center"><#dew><#tempunit></td>
+						<td class="col-8 align-middle">Dew Point </td>
+						<td class="text-center  align-middle"><#dew><#tempunit></td>
 					</tr>
 					<tr>
-						<th>Wind Chill</th>
+						<td class="col-8 align-middle">Wind Chill</td>
 						<td class="text-center"><#wchill><#tempunit></td>
 					</tr>
 					<tr>
-						<th>Apparent Temperature</th>
+						<td class="col-8 align-middle">Apparent Temperature</td>
 						<td class="text-center"><#apptemp><#tempunit></td>
 					</tr>
 					<tr>
-						<th>Heat Index</th>
+						<td class="col-8 align-middle">Heat Index</td>
 						<td class="text-center"><#heatindex><#tempunit></td>
 					</tr>
 					<tr>
-						<th>Indoor Temperature</th>
+						<td class="col-8 align-middle">Indoor Temperature</td>
 						<td class="text-center"><#intemp><#tempunit></td>
 					</tr>
 				</table>
 			</div>
-			<div class="col-sm-4">
-				<table class="table table-bordered table-condensed table-hover">
-					<tr class="info">
-						<th colspan="2">Rainfall</th>
+			<div class="col-md-4">
+				<table class="table table-bordered table-sm table-hover">
+					<tr class="table-info">
+						<th colspan="2" class="align-middle">Rainfall</th>
 					</tr>
 					<tr>
-						<th class="col-sm-8 col-xs-8">Rain&nbsp;Today</th>
-						<td class="col-sm-4 col-xs-4 text-center"><#rfall> <#rainunit></td>
+						<td class="col-8 align-middle">Rain&nbsp;Today</td>
 					</tr>
 					<tr>
-						<th>Rain&nbsp;Rate</th>
-						<td class="text-center"><#rrate> <#rainunit></td>
+						<td class="col-8 align-middle">Rain&nbsp;Rate</td>
 					</tr>
 					<tr>
-						<th>Rain&nbsp;Last Hour</th>
-						<td class="text-center"><#rhour> <#rainunit></td>
+						<td class="col-8 align-middle">Rain&nbsp;Last Hour</td>
 					</tr>
 					<tr>
-						<th>Rain&nbsp;This&nbsp;Month</th>
-						<td class="text-center"><#rmonth> <#rainunit></td>
+						<td class="col-8 align-middle">Rain&nbsp;This&nbsp;Month</td>
 					</tr>
 					<tr>
-						<th>Rain&nbsp;This&nbsp;Year</th>
-						<td class="text-center"><#ryear> <#rainunit></td>
+						<td class="col-8 align-middle">Rain&nbsp;This&nbsp;Year</td>
 					</tr>
 					<tr>
-						<td colspan="2" class="text-right">Last rain recorded ==>  <#LastRainTipISO></td>
+						<td colspan="2" class="align-middle text-right">Last rain recorded ==>  <#LastRainTipISO></td>
 					</tr>
 				</table>
 			</div>
-			<div class="col-sm-4">
-				<table class="table table-bordered table-condensed table-hover">
-					<tr class="info">
-						<th colspan="2">Wind</th>
+			<div class="col-md-4">
+				<table class="table table-bordered table-sm table-hover">
+					<tr class="table-info">
+						<th colspan="2" class="align-middle">Wind</th>
 					</tr>
 					<tr>
-						<th class="col-sm-8 col-xs-8">Latest</th>
-						<td class="col-sm-4 col-xs-4 text-center"><#wlatest> <#windunit></td>
+						<td class="col-8 align-middle">Latest</td>
 					</tr>
 					<tr>
-						<th>Bearing</th>
-						<td class="text-center"><#bearing>&deg; <#currentwdir></td>
+						<td class="col-8 align-middle">Bearing</td>
 					</tr>
 					<tr>
-						<th>Beaufort&nbsp;<#beaufort></th>
-						<td class="text-center"><#beaudesc></td>
+						<td class="col-8 align-middle">Beaufort&nbsp;<#beaufort></td>
+						<td class="text-center align-middle"><#beaudesc></td>
 					</tr>
-					<tr class="info">
-						<th colspan="2">Last 10 mins</th>
-					</tr>
-					<tr>
-						<th>Peak Gust</th>
-						<td class="text-center"><#wgust> <#windunit></td>
+					<tr class="table-info">
+						<th colspan="2" class="align-middle">Last 10 mins</th>
 					</tr>
 					<tr>
-						<th>Average Speed</th>
-						<td class="text-center"><#wspeed> <#windunit></td>
+						<td class="col-8 align-middle">Peak Gust</td>
 					</tr>
 					<tr>
-						<th>Avg Bearing</th>
-						<td class="text-center"><#avgbearing>&deg; <#wdir></td>
+						<td class="col-8 align-middle">Average Speed</td>
+					</tr>
+					<tr>
+						<td class="col-8 align-middle">Avg Bearing</td>
 					</tr>
 				</table>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-4">
-				<table class="table table-bordered table-condensed table-hover">
-					<tr class="info">
-						<th colspan="2">Barometer</th>
+			<div class="col-md-4">
+				<table class="table table-bordered table-sm table-hover">
+					<tr class="table-info">
+						<th colspan="2" class="align-middle">Barometer</th>
 					</tr>
 					<tr>
-						<th class="col-sm-8 col-xs-8">Pressure</th>
-						<td class="col-sm-4 col-xs-4 text-center"><#press> <#pressunit></td>
+						<td class="col-8 align-middle">Pressure</td>
 					</tr>
 					<tr>
-						<th><#presstrend></th>
-						<td class="text-center"><#presstrendval> <#pressunit>/hr</td>
+						<td class="col-8 align-middle"><#presstrend></td>
 					</tr>
 				</table>
 			</div>
-			<div class="col-sm-4">
-				<table class="table table-bordered table-condensed table-hover">
-					<tr class="info">
-						<th colspan="2">Humidity</th>
+			<div class="col-md-4">
+				<table class="table table-bordered table-sm table-hover">
+					<tr class="table-info">
+						<th colspan="2" class="align-middle">Humidity</th>
 					</tr>
 					<tr>
-						<th class="col-sm-8 col-xs-8">Outdoor Humidity</th>
-						<td class="col-sm-4 col-xs-4 text-center"><#hum>%</td>
+						<td class="col-8 align-middle">Outdoor Humidity</td>
+						<td class="col-4 text-center align-middle"><#hum>%</td>
 					</tr>
 					<tr>
-						<th>Indoor Humidity</th>
-						<td class="text-center"><#inhum>%</td>
+						<td class="col-8 align-middle">Indoor Humidity</td>
+						<td class="text-center align-middle"><#inhum>%</td>
 					</tr>
 				</table>
 			</div>
-			<div class="col-sm-4">
-				<table class="table table-bordered table-condensed table-hover">
-					<tr class="info">
-						<th colspan="2">Solar</th>
+			<div class="col-md-4">
+				<table class="table table-bordered table-sm table-hover">
+					<tr class="table-info">
+						<th colspan="2" class="align-middle">Solar</th>
 					</tr>
 					<!-- Solar data. If you don't have a solar sensor, you may wish to delete everything from here to the next comment -->
 					<tr>
-						<th class="col-sm-8">Solar Radiation</th>
-						<td class="col-sm-4 text-center"><#SolarRad>W/m&sup2;</td>
+						<td class="col-8 align-middle">Solar Radiation</td>
+						<td class="col-4 text-center align-middle"><#SolarRad>W/m&sup2;</td>
 					</tr>
 					<tr>
-						<th>Evapotranspiration Today</th>
-						<td class="text-center"><#ET> <#rainunit></td>
+						<td>Evapotranspiration Today</td>
+						<td class="text-center align-middle"><#ET> <#rainunit></td>
 					</tr>
 					<!-- End of solar data -->
 				</table>
@@ -263,29 +238,24 @@
 				<a href="http://cumulussites.net/" target="_blank" class="text-right"><img src="http://cumulussites.net/button.php?u=Aquila" alt="Cumulus Top Weather Sites" width="162" height="55"></a>
 			</div>
 			<div class="col-sm-6">
-				<h6 class="text-right">Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude></h6>
-				<h6 class="text-right">Page updated <#update>.</h6>
-				<h6 class="text-right">Powered by <a href="http://sandaysoft.com/products/cumulus" target="_blank">Cumulus</a> v<#version> (<#build>)</h6>
+				<h6 class="text-right"><em>Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude></em></h6>
+				<h6 class="text-right"><em>Page updated <#update>.</em></h6>
+				<h6 class="text-right"><em>Powered by <a href="http://sandaysoft.com/products/cumulus" target="_blank">Cumulus</a> v<#version> (<#build>)</em></h6>
 			</div>
 		</div>
 	</div>
 	<footer class="footer">
 		<div class="container">
-			<p class="text-muted">&copy; LathamWeather.net 2017</p>
+			<br>
+			<p class="text-light">&copy; LathamWeather.net 2017</p>
 		</div>
 	</footer>
 
 	<!-- jQuery and Bootstrap JavaScript-->
-	<script
-		src="https://code.jquery.com/jquery-2.2.4.js"
-		integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-		crossorigin="anonymous">
-	</script>
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		crossorigin="anonymous">
-	</script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
 	<!-- Custom JavaScript-->
 	<script src="js/weather.js"></script>
 	<script>
