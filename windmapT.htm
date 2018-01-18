@@ -2,33 +2,32 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="<#location> weather data" />
-  <meta name="keywords" content="Cumulus MX, Cumulus, <#location> weather data, weather, data, weather station" />
-  <meta name="author" content="Chris Hudson">
-  <link rel="icon" href="../../favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="<#location> weather data" />
+	<meta name="keywords" content="Cumulus MX, Cumulus, <#location> weather data, weather, data, weather station" />
+	<meta name="author" content="Chris Hudson">
+	<link rel="icon" href="../../favicon.ico">
 
-  <title>Latham Weather</title>
+	<title>Latham Weather</title>
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
   <!-- Fonts -->
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Paprika|Roboto:500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=News+Cycle:400,700|Droid+Sans:400,700" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Paprika" rel="stylesheet">
 
-  <!-- Weather Icons -->
-  <link rel="stylesheet" href="css/weather-icons.min.css">
-  <link rel="stylesheet" href="css/weather-icons-wind.min.css">
+	<!-- Weather Icons -->
+	<link rel="stylesheet" href="css/weather-icons.min.css">
+	<link rel="stylesheet" href="css/weather-icons-wind.min.css">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/sticky-footer-navbar.css">
-  <link rel="stylesheet" href="css/test.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/sticky-footer-navbar.css">
+	<link rel="stylesheet" href="css/weather.css">
 
-  </head>
+</head>
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -40,7 +39,7 @@
 
   			<div class="navbar-collapse collapse" id="navbarcollapse">
   				<ul class="navbar-nav mr-auto">
-  					<li class="nav-item">
+  					<li class="nav-item active">
   						<a class="nav-link" href="index.htm"><span class="fa fa-home fa-lg"></span>  Home</a>
   					</li>
   					<li class="nav-item dropdown">
@@ -66,12 +65,12 @@
   							<a class="dropdown-item" href="record.htm">Alltime</a>
   						</div>
   					</li>
-  					<li class="nav-item active dropdown">
+  					<li class="nav-item dropdown">
   						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Testing<span class="caret"></span></a>
   						  <div class="dropdown-menu"  aria-labelledby="dropdown04" role="menu">
   							<a class="dropdown-item" href="tempvar.htm">Monthly Temp Variations</a>
-                <a class="dropdown-item" href="indexnew.htm">Bootstrap 4 Home Page</a>
-                <a class="dropdown-item" href="windmap.htm">WindMap</a>
+  							<a class="dropdown-item" href="indexnew.htm">Bootstrap 4 Home Page</a>
+  							<a class="dropdown-item" href="windmap.htm">WindMap</a>
   						</div>
   					</li>
   					<li class="nav-item dropdown">
@@ -91,6 +90,7 @@
   			</div> <!--/.nav-collapse -->
   		</div>
       </nav>
+      
 		<div class="container">
       <div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
       <div class="alert alert-secondary" role="alert">
@@ -123,8 +123,8 @@
 
     <!-- jQuery and Bootstrap JavaScript-->
   	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
   	<!-- Custom JavaScript-->
   	<script src="js/weather.js"></script>

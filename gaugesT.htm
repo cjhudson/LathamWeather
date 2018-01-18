@@ -13,13 +13,15 @@
 		<title>Latham Weather</title>
 
 		<!-- Bootstrap core CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
-		<!-- Fonts -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen:400">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+	  <!-- Fonts -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Paprika" rel="stylesheet">
+
+		<!-- Weather Icons -->
+		<link rel="stylesheet" href="css/weather-icons.min.css">
+		<link rel="stylesheet" href="css/weather-icons-wind.min.css">
 
 		<!-- Custom CSS -->
 		<link rel="stylesheet" href="css/sticky-footer-navbar.css">
@@ -31,62 +33,62 @@
 	</head>
 
 	<body>
-		<nav id="top" class="navbar navbar-weather navbar-fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" style="color: #E8E8E8; font-size: 22px;" href="index.htm"></i>Latham Weather</a>
-				</div>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="index.htm"><span class="fa fa-home fa-lg"></span>  Home</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Historical<span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="today.htm">Today</a></li>
-								<li><a href="yesterday.htm">Yesterday</a></li>
-								<li><a href="thismonth.htm">This Month</a></li>
-								<li><a href="thisyear.htm">This Year</a></li>
-							</ul>
+				<a class="navbar-brand"  href="index.htm" >Latham Weather</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle navigation">
+	        	<span class="navbar-toggler-icon"></span>
+	  		</button>
+
+				<div class="navbar-collapse collapse" id="navbarcollapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.htm"><span class="fa fa-home fa-lg"></span>  Home</a>
 						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Graphics<span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="gauges.htm">Gauges</a></li>
-								<li><a href="charts.htm">Charts</a></li>
-							</ul>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Historical<span class="caret"></span></a>
+							<div class="dropdown-menu" aria-labelledby="dropdown01" role="menu">
+								<a class="dropdown-item" href="today.htm">Today</a>
+								<a class="dropdown-item" href="yesterday.htm">Yesterday</a>
+								<a class="dropdown-item" href="thismonth.htm">This Month</a>
+								<a class="dropdown-item" href="thisyear.htm">This Year</a>
+							</div>
 						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Records<span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="monthlyrecord.htm">Monthly</a></li>
-								<li><a href="record.htm">Alltime</a></li>
-							</ul>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle"  href="#"  id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Graphics<span class="caret"></span></a>
+							<div class="dropdown-menu"  aria-labelledby="dropdown02" role="menu">
+								<a class="dropdown-item" href="gauges.htm">Gauges</a>
+								<a class="dropdown-item" href="charts.htm">Charts</a>
+							</div>
 						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Testing<span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="tempvar.htm">Monthly Temp Variations</a></li>
-								<li><a href="indexnew.htm">Bootstrap 4 Home Page</a></li>
-								<li><a href="windmap.htm">WindMap</a></li>
-							</ul>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle"  href="#"  id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Records<span class="caret"></span></a>
+							<div class="dropdown-menu" aria-labelledby="dropdown03" role="menu">
+								<a class="dropdown-item" href="monthlyrecord.htm">Monthly</a>
+								<a class="dropdown-item" href="record.htm">Alltime</a>
+							</div>
 						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Sites<span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="http://bom.gov.au/act">BOM ACT Site</a></li>
-								<li><a href="https://app.weathercloud.net/d0419553521#current">WeatherCloud</a></li>
-								<li><a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=I90580966">WeatherUnderground Historical</a></li>
-							</ul>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle"  href="#"  id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Testing<span class="caret"></span></a>
+							  <div class="dropdown-menu"  aria-labelledby="dropdown04" role="menu">
+								<a class="dropdown-item" href="tempvar.htm">Monthly Temp Variations</a>
+								<a class="dropdown-item" href="indexnew.htm">Bootstrap 4 Home Page</a>
+								<a class="dropdown-item" href="windmap.htm">WindMap</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle"  href="#"  id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other Sites<span class="caret"></span></a>
+							<div class="dropdown-menu"  aria-labelledby="dropdown05" role="menu">
+								<a class="dropdown-item" href="http://bom.gov.au/act">BOM ACT Site</a>
+								<a class="dropdown-item" href="https://app.weathercloud.net/d0419553521#current">WeatherCloud</a>
+								<a class="dropdown-item" href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=I90580966">WeatherUnderground Historical</a>
+							</div>
 						</li>
 					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="about.htm"><span class="fa fa-info-circle fa-lg"></span>  About</a></li>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+					  	<a class="nav-link" href="about.htm"><span class="fa fa-info-circle fa-lg"></span>  About</a>
+					  </li>
 					</ul>
 				</div> <!--/.nav-collapse -->
 			</div>
@@ -235,16 +237,9 @@
 		<!-- Included Scripts -->
 
 		<!-- jQuery and Bootstrap JavaScript-->
-		<script
-			src="https://code.jquery.com/jquery-2.2.4.js"
-			integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-			crossorigin="anonymous">
-		</script>
-		<script
-			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-			crossorigin="anonymous">
-		</script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
 		<!-- Custom JavaScript-->
 		<script src="js/weather.js"></script>
