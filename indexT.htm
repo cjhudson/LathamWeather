@@ -25,7 +25,7 @@
 
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="css/sticky-footer-navbar.css">
-	<link rel="stylesheet" href="css/test.css">
+	<link rel="stylesheet" href="css/weather.css">
 	<!-- link rel="stylesheet" href="css/weather.css"-->
 </head>
 
@@ -138,18 +138,23 @@
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Rain&nbsp;Today</td>
+						<td class="col-4 text-center align-middle"><#rfall>&nbsp;<#rainunit></td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Rain&nbsp;Rate</td>
+						<td class="text-center align-middle"><#rrate>&nbsp;<#rainunit></td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Rain&nbsp;Last Hour</td>
+						<td class="text-center align-middle"><#rhour>&nbsp;<#rainunit></td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Rain&nbsp;This&nbsp;Month</td>
+						<td class="text-center align-middle"><#rmonth>&nbsp;<#rainunit></td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Rain&nbsp;This&nbsp;Year</td>
+						<td class="text-center align-middle"><#ryear>&nbsp;<#rainunit></td>
 					</tr>
 					<tr>
 						<td colspan="2" class="align-middle text-right">Last rain recorded ==>  <#LastRainTipISO></td>
@@ -163,9 +168,11 @@
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Latest</td>
+						<td class="col-4 text-center align-middle"><#wlatest>&nbsp;<#windunit></td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Bearing</td>
+						<td class="text-center align-middle"><#bearing>&deg;&nbsp;<#currentwdir></td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Beaufort&nbsp;<#beaufort></td>
@@ -176,12 +183,15 @@
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Peak Gust</td>
+						<td class="text-center align-middle"><#wgust>&nbsp;<#windunit></td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Average Speed</td>
+						<td class="text-center align-middle"><#wspeed>&nbsp;<#windunit></td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Avg Bearing</td>
+						<td class="text-center align-middle"><#avgbearing>&deg;&nbsp;<#wdir></td>
 					</tr>
 				</table>
 			</div>
@@ -194,9 +204,11 @@
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Pressure</td>
+						<td class="col-4 text-center align-middle"><#press>&nbsp;<#pressunit></td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle"><#presstrend></td>
+						<td class="text-center align-middle"><#presstrendval>&nbsp;<#pressunit>/hr</td>
 					</tr>
 				</table>
 			</div>
