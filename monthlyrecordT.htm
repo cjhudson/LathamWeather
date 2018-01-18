@@ -91,173 +91,196 @@
 
 	<div class="container">
 		<div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
-		<div class="alert alert-info" role="alert">
-			<h4 class="my-auto">Monthly Records</h4>
-		</div>
-		<div class="alert alert-secondary" role="alert">
-			<h6 class="my-auto">Records began on <#recordsbegandate>. Here are the month-by-month extremes recorded since then.</h6>
-		</div>
+			<div class="alert alert-info" role="alert">
+				<h4 class="my-auto">Monthly Records</h4>
+			</div>
+			<div class="alert alert-secondary" role="alert">
+				<h6 class="my-auto">Records began on <#recordsbegandate>. Here are the month-by-month extremes recorded since then.</h6>
+			</div>
 
-		<div class="btn-group" data-toggle="buttons">
-			<button type="button" class="btn btn-default" onclick="changeData(0)">Jan</button>
-			<button type="button" class="btn btn-default" onclick="changeData(1)">Feb</button>
-			<button type="button" class="btn btn-default" onclick="changeData(2)">Mar</button>
-			<button type="button" class="btn btn-default" onclick="changeData(3)">Apr</button>
-			<button type="button" class="btn btn-default" onclick="changeData(4)">May</button>
-			<button type="button" class="btn btn-default" onclick="changeData(5)">Jun</button>
-			<button type="button" class="btn btn-default" onclick="changeData(6)">Jul</button>
-			<button type="button" class="btn btn-default" onclick="changeData(7)">Aug</button>
-			<button type="button" class="btn btn-default" onclick="changeData(8)">Sep</button>
-			<button type="button" class="btn btn-default" onclick="changeData(9)">Oct</button>
-			<button type="button" class="btn btn-default" onclick="changeData(10)">Nov</button>
-			<button type="button" class="btn btn-default" onclick="changeData(11)">Dec</button>
-		</div>
-		<table class="table table-bordered table-condensed table-hover">
-			<caption>Records for the month of <span id="MonthName">January</span></caption>
-			<tr class="info">
-				<th colspan="3">Temperature and Humidity </th>
-			</tr>
-			<tr>
-				<td>Highest&nbsp;Temperature</td>
-				<td><span id="TempH"><#ByMonthTempH mon=1></span>&nbsp;<#tempunit></td>
-				<td><span id="TempHT"><#ByMonthTempHT mon=1></span></td>
-			</tr>
-			<tr>
-				<td>Lowest&nbsp;Temperature </td>
-				<td><span id="TempL"><#ByMonthTempL mon=1></span>&nbsp;<#tempunit></td>
+			<div class="row">
+				<div class="container">
+		   		<div class="btn-group btn-group-toggle" data-toggle="buttons">
+						<label class="btn btn-info active" onclick="changeData(0)">
+							<input type="radio" checked>Jan</label>
+						<label class="btn btn-info" onclick="changeData(1)">
+							<input type="radio">Feb</label>
+						<label class="btn btn-info" onclick="changeData(2)">
+							<input type="radio">Mar</label>
+						<label class="btn btn-info" onclick="changeData(3)">
+							<input type="radio">Apr</label>
+						<label class="btn btn-info" onclick="changeData(4)">
+							<input type="radio">May</label>
+						<label class="btn btn-info" onclick="changeData(5)">
+							<input type="radio">Jun</label>
+						<label class="btn btn-info" onclick="changeData(6)">
+							<input type="radio">Jul</label>
+						<label class="btn btn-info" onclick="changeData(7)">
+							<input type="radio">Aug</label>
+						<label class="btn btn-info" onclick="changeData(8)">
+							<input type="radio">Sep</label>
+						<label class="btn btn-info" onclick="changeData(9)">
+							<input type="radio">Oct</label>
+						<label class="btn btn-info" onclick="changeData(10)">
+							<input type="radio">Nov</label>
+						<label class="btn btn-info" onclick="changeData(11)">
+							<input type="radio">Dec</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="container">
+					<table class="table table-bordered table-sm table-hover">
+						<caption>Records for the month of <span id="MonthName">January</span></caption>
+						<tr class="table-info">
+							<th colspan="3">Temperature and Humidity </th>
+						</tr>
+						<tr>
+							<td>Highest&nbsp;Temperature</td>
+						<td class="text-center align-middle"><span id="TempH"><#ByMonthTempH mon=1></span>&nbsp;<#tempunit></td>
+						<td><span id="TempHT"><#ByMonthTempHT mon=1></span></td>
+					</tr>
+					<tr>
+						<td>Lowest&nbsp;Temperature </td>
+				<td class="text-center align-middle"><span id="TempL"><#ByMonthTempL mon=1></span>&nbsp;<#tempunit></td>
 				<td><span id="TempLT"><#ByMonthTempLT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Dew&nbsp;Point</td>
-				<td><span id="DewPointH"><#ByMonthDewPointH mon=1></span>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><span id="DewPointH"><#ByMonthDewPointH mon=1></span>&nbsp;<#tempunit></td>
 				<td><span id="DewPointHT"><#ByMonthDewPointHT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Lowest&nbsp;Dew&nbsp;Point </td>
-				<td><span id="DewPointL"><#ByMonthDewPointL mon=1></span>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><span id="DewPointL"><#ByMonthDewPointL mon=1></span>&nbsp;<#tempunit></td>
 				<td><span id="DewPointLT"><#ByMonthDewPointLT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Apparent&nbsp;Temperature</td>
-				<td><span id="AppTempH"><#ByMonthAppTempH mon=1></span>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><span id="AppTempH"><#ByMonthAppTempH mon=1></span>&nbsp;<#tempunit></td>
 				<td><span id="AppTempHT"><#ByMonthAppTempHT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Lowest&nbsp;Apparent&nbsp;Temperature </td>
-				<td><span id="AppTempL"><#ByMonthAppTempL mon=1></span>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><span id="AppTempL"><#ByMonthAppTempL mon=1></span>&nbsp;<#tempunit></td>
 				<td><span id="AppTempLT"><#ByMonthAppTempLT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Lowest&nbsp;Wind&nbsp;Chill&nbsp;Temperature</td>
-				<td><span id="WChillL"><#ByMonthWChillL mon=1></span>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><span id="WChillL"><#ByMonthWChillL mon=1></span>&nbsp;<#tempunit></td>
 				<td><span id="WChillLT"><#ByMonthWChillLT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Heat&nbsp;Index</td>
-				<td><span id="HeatIndexH"><#ByMonthHeatIndexH mon=1></span>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><span id="HeatIndexH"><#ByMonthHeatIndexH mon=1></span>&nbsp;<#tempunit></td>
 				<td><span id="HeatIndexHT"><#ByMonthHeatIndexHT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Highest Minimum </td>
-				<td><span id="MinTempH"><#ByMonthMinTempH mon=1></span>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><span id="MinTempH"><#ByMonthMinTempH mon=1></span>&nbsp;<#tempunit></td>
 				<td><span id="MinTempHT"><#ByMonthMinTempHT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Lowest Maximum </td>
-				<td><span id="MaxTempL"><#ByMonthMaxTempL mon=1></span>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><span id="MaxTempL"><#ByMonthMaxTempL mon=1></span>&nbsp;<#tempunit></td>
 				<td><span id="MaxTempLT"><#ByMonthMaxTempLT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Humidity</td>
-				<td><span id="HumH"><#ByMonthHumH mon=1></span>&nbsp;%</td>
+				<td class="text-center align-middle"><span id="HumH"><#ByMonthHumH mon=1></span>&nbsp;%</td>
 				<td><span id="HumHT"><#ByMonthHumHT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Lowest&nbsp;Humidity </td>
-				<td><span id="HumL"><#ByMonthHumL mon=1></span>&nbsp;%</td>
+				<td class="text-center align-middle"><span id="HumL"><#ByMonthHumL mon=1></span>&nbsp;%</td>
 				<td><span id="HumLT"><#ByMonthHumLT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Daily&nbsp;Range</td>
-				<td><span id="HighDailyTempRange"><#ByMonthHighDailyTempRange mon=1></span>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><span id="HighDailyTempRange"><#ByMonthHighDailyTempRange mon=1></span>&nbsp;<#tempunit></td>
 				<td><span id="HighDailyTempRangeT"><#ByMonthHighDailyTempRangeT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Lowest&nbsp;Daily&nbsp;Range</td>
-				<td><span id="LowDailyTempRange"><#ByMonthLowDailyTempRange mon=1></span>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><span id="LowDailyTempRange"><#ByMonthLowDailyTempRange mon=1></span>&nbsp;<#tempunit></td>
 				<td><span id="LowDailyTempRangeT"><#ByMonthLowDailyTempRangeT mon=1></span></td>
 			</tr>
-			<tr class="info">
+			<tr class="table-info">
 				<th colspan="3">Rainfall</th>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Rain&nbsp;Rate</td>
-				<td><span id="RainRateH"><#ByMonthRainRateH mon=1></span>&nbsp;<#rainunit>/hr</td>
+				<td class="text-center align-middle"><span id="RainRateH"><#ByMonthRainRateH mon=1></span>&nbsp;<#rainunit>/hr</td>
 				<td><span id="RainRateHT"><#ByMonthRainRateHT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Hourly&nbsp;Rainfall</td>
-				<td><span id="HourlyRainH"><#ByMonthHourlyRainH mon=1></span>&nbsp;<#rainunit></td>
+				<td class="text-center align-middle"><span id="HourlyRainH"><#ByMonthHourlyRainH mon=1></span>&nbsp;<#rainunit></td>
 				<td><span id="HourlyRainHT"><#ByMonthHourlyRainHT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Daily&nbsp;Rainfall</td>
-				<td><span id="DailyRainH"><#ByMonthDailyRainH mon=1></span>&nbsp;<#rainunit></td>
+				<td class="text-center align-middle"><span id="DailyRainH"><#ByMonthDailyRainH mon=1></span>&nbsp;<#rainunit></td>
 				<td><span id="DailyRainHT"><#ByMonthDailyRainHT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Monthly&nbsp;Rainfall</td>
-				<td><span id="MonthlyRainH"><#ByMonthMonthlyRainH mon=1></span>&nbsp;<#rainunit></td>
+				<td class="text-center align-middle"><span id="MonthlyRainH"><#ByMonthMonthlyRainH mon=1></span>&nbsp;<#rainunit></td>
 				<td><span id="MonthlyRainHT"><#ByMonthMonthlyRainHT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Longest&nbsp;Dry&nbsp;Period</td>
-				<td><span id="LongestDryPeriod"><#ByMonthLongestDryPeriod mon=1></span>&nbsp;days</td>
+				<td class="text-center align-middle"><span id="LongestDryPeriod"><#ByMonthLongestDryPeriod mon=1></span>&nbsp;days</td>
 				<td><span id="LongestDryPeriodT"><#ByMonthLongestDryPeriodT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Longest&nbsp;Wet&nbsp;Period</td>
-				<td><span id="LongestWetPeriod"><#ByMonthLongestWetPeriod mon=1></span>&nbsp;days</td>
+				<td class="text-center align-middle"><span id="LongestWetPeriod"><#ByMonthLongestWetPeriod mon=1></span>&nbsp;days</td>
 				<td><span id="LongestWetPeriodT"><#ByMonthLongestWetPeriodT mon=1></span></td>
 			</tr>
-			<tr class="info">
+			<tr class="table-info">
 				<th colspan="3">Wind</th>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Wind&nbsp;Gust</td>
-				<td><span id="GustH"><#ByMonthGustH mon=1></span>&nbsp;<#windunit></td>
+				<td class="text-center align-middle"><span id="GustH"><#ByMonthGustH mon=1></span>&nbsp;<#windunit></td>
 				<td><span id="GustHT"><#ByMonthGustHT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Wind&nbsp;Speed&nbsp;Average</td>
-				<td><span id="WindH"><#ByMonthWindH mon=1></span>&nbsp;<#windunit></td>
+				<td class="text-center align-middle"><span id="WindH"><#ByMonthWindH mon=1></span>&nbsp;<#windunit></td>
 				<td><span id="WindHT"><#ByMonthWindHT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Daily Wind Run</td>
-				<td><span id="WindRunH"><#ByMonthWindRunH mon=1></span>&nbsp;<#windrununit></td>
+				<td class="text-center align-middle"><span id="WindRunH"><#ByMonthWindRunH mon=1></span>&nbsp;<#windrununit></td>
 				<td><span id="WindRunHT"><#ByMonthWindRunHT mon=1></span></td>
 			</tr>
-			<tr class="info">
+			<tr class="table-info">
 				<th colspan="3">Pressure</th>
 			</tr>
 			<tr>
 				<td>Lowest&nbsp;Pressure&nbsp;(sl) </td>
-				<td><span id="PressL"><#ByMonthPressL mon=1></span>&nbsp;<#pressunit></td>
+				<td class="text-center align-middle"><span id="PressL"><#ByMonthPressL mon=1></span>&nbsp;<#pressunit></td>
 				<td><span id="PressLT"><#ByMonthPressLT mon=1></span></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Pressure&nbsp;(sl)</td>
-				<td><span id="PressH"><#ByMonthPressH mon=1></span>&nbsp;<#pressunit></td>
+				<td class="text-center align-middle"><span id="PressH"><#ByMonthPressH mon=1></span>&nbsp;<#pressunit></td>
 				<td><span id="PressHT"><#ByMonthPressHT mon=1></span></td>
 			</tr>
 		</table>
 		<div class="row">
+			<div class="col-12">
 				<h6 class="text-right">Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude></h6>
 				<h6 class="text-right">Page updated <#update>.</h6>
 				<h6 class="text-right">Powered by <a href="http://sandaysoft.com/products/cumulus" target="_blank">Cumulus</a> v<#version> (<#build>)</h6>
 		</div>
 	</div>
+	</div>
+</div>
+</div>
 	<footer class="footer">
 		<div class="container">
 			<br>

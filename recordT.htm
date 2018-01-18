@@ -96,153 +96,158 @@
 			<h4 class="my-auto">All Time Records</h4>
 		</div>
 		<div class="alert alert-secondary" role="alert">
-			<h6 class="my-auto">Records began on <#recordsbegandate>. Here are the extremes recorded since then.</h6>
+			<h6 class="my-auto">Records began on <#recordsbegandate>. These are the extremes recorded since then.</h6>
 		</div>
-
-		<table class="table table-bordered table-condensed table-hover">
-			<tr class="info">
+   <div class="row">
+		 <div class="col-12">
+   		<table class="table table-bordered table-sm table-hover">
+			<tr class="table-info">
 				<th colspan="3">Temperature and Humidity </th>
 			</tr>
 			<tr>
-				<td>Highest&nbsp;Temperature</td>
-				<td><#tempH>&nbsp;<#tempunit></td>
-				<td><#TtempH></td>
+				<td class="w-33">Highest&nbsp;Temperature</td>
+				<td  class="text-center align-middle w-33"><#tempH>&nbsp;<#tempunit></td>
+				<td class="w-33"><#TtempH></td>
 			</tr>
 			<tr>
 				<td>Lowest&nbsp;Temperature </td>
-				<td><#tempL>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><#tempL>&nbsp;<#tempunit></td>
 				<td><#TtempL></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Dew&nbsp;Point</td>
-				<td><#dewpointH>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><#dewpointH>&nbsp;<#tempunit></td>
 				<td><#TdewpointH></td>
 			</tr>
 			<tr>
 				<td>Lowest&nbsp;Dew&nbsp;Point </td>
-				<td><#dewpointL>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><#dewpointL>&nbsp;<#tempunit></td>
 				<td><#TdewpointL></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Apparent&nbsp;Temperature</td>
-				<td><#apptempH>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><#apptempH>&nbsp;<#tempunit></td>
 				<td><#TapptempH></td>
 			</tr>
 			<tr>
 				<td>Lowest&nbsp;Apparent&nbsp;Temperature </td>
-				<td><#apptempL>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><#apptempL>&nbsp;<#tempunit></td>
 				<td><#TapptempL></td>
 			</tr>
 			<tr>
 				<td>Lowest&nbsp;Wind&nbsp;Chill&nbsp;Temperature</td>
-				<td><#wchillH>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><#wchillH>&nbsp;<#tempunit></td>
 				<td><#TwchillH></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Heat&nbsp;Index</td>
-				<td><#heatindexH>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><#heatindexH>&nbsp;<#tempunit></td>
 				<td><#TheatindexH></td>
 			</tr>
 			<tr>
 				<td>Highest Minimum </td>
-				<td><#mintempH>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><#mintempH>&nbsp;<#tempunit></td>
 				<td><#TmintempH></td>
 			</tr>
 			<tr>
 				<td>Lowest Maximum </td>
-				<td><#maxtempL>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><#maxtempL>&nbsp;<#tempunit></td>
 				<td><#TmaxtempL></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Humidity</td>
-				<td><#humH>&nbsp;%</td>
+				<td class="text-center align-middle"><#humH>&nbsp;%</td>
 				<td><#ThumH></td>
 			</tr>
 			<tr>
 				<td>Lowest&nbsp;Humidity </td>
-				<td><#humL>&nbsp;%</td>
+				<td class="text-center align-middle"><#humL>&nbsp;%</td>
 				<td><#ThumL></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Daily&nbsp;Range</td>
-				<td><#HighDailyTempRange>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><#HighDailyTempRange>&nbsp;<#tempunit></td>
 				<td><#THighDailyTempRange></td>
 			</tr>
 			<tr>
 				<td>Lowest&nbsp;Daily&nbsp;Range</td>
-				<td><#LowDailyTempRange>&nbsp;<#tempunit></td>
+				<td class="text-center align-middle"><#LowDailyTempRange>&nbsp;<#tempunit></td>
 				<td><#TLowDailyTempRange></td>
 			</tr>
-			<tr class="info">
+			<tr class="table-info">
 				<th colspan="3">Rainfall</th>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Rain&nbsp;Rate</td>
-				<td><#rrateM>&nbsp;<#rainunit>/hr</td>
+				<td class="text-center align-middle"><#rrateM>&nbsp;<#rainunit>/hr</td>
 				<td><#TrrateM></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Hourly&nbsp;Rainfall</td>
-				<td><#rfallhH>&nbsp;<#rainunit></td>
+				<td class="text-center align-middle"><#rfallhH>&nbsp;<#rainunit></td>
 				<td><#TrfallhH></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Daily&nbsp;Rainfall</td>
-				<td><#rfallH>&nbsp;<#rainunit></td>
+				<td class="text-center align-middle"><#rfallH>&nbsp;<#rainunit></td>
 				<td><#TrfallH></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Monthly&nbsp;Rainfall</td>
-				<td><#rfallmH>&nbsp;<#rainunit></td>
+				<td class="text-center align-middle"><#rfallmH>&nbsp;<#rainunit></td>
 				<td><#TrfallmH></td>
 			</tr>
 			<tr>
 				<td>Longest&nbsp;Dry&nbsp;Period</td>
-				<td><#LongestDryPeriod>&nbsp;days</td>
+				<td class="text-center align-middle"><#LongestDryPeriod>&nbsp;days</td>
 				<td><#TLongestDryPeriod></td>
 			</tr>
 			<tr>
 				<td>Longest&nbsp;Wet&nbsp;Period</td>
-				<td><#LongestWetPeriod>&nbsp;days</td>
+				<td class="text-center align-middle"><#LongestWetPeriod>&nbsp;days</td>
 				<td><#TLongestWetPeriod></td>
 			</tr>
-			<tr class="info">
+			<tr class="table-info">
 				<th colspan="3">Wind</th>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Wind&nbsp;Gust</td>
-				<td><#gustM>&nbsp;<#windunit></td>
+				<td class="text-center align-middle"><#gustM>&nbsp;<#windunit></td>
 				<td><#TgustM></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Wind&nbsp;Speed&nbsp;Average</td>
-				<td><#wspeedH>&nbsp;<#windunit></td>
+				<td class="text-center align-middle"><#wspeedH>&nbsp;<#windunit></td>
 				<td><#TwspeedH></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Daily Wind Run</td>
-				<td><#windrunH>&nbsp;<#windrununit></td>
+				<td class="text-center align-middle"><#windrunH>&nbsp;<#windrununit></td>
 				<td><#TwindrunH></td>
 			</tr>
 
-			<tr class="info">
+			<tr class="table-info">
 				<th colspan="3">Pressure</th>
 			</tr>
 			<tr>
 				<td>Lowest&nbsp;Pressure&nbsp;(sl) </td>
-				<td><#pressL>&nbsp;<#pressunit></td>
+				<td class="text-center align-middle"><#pressL>&nbsp;<#pressunit></td>
 				<td><#TpressL></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Pressure&nbsp;(sl)</td>
-				<td><#pressH>&nbsp;<#pressunit></td>
+				<td class="text-center align-middle"><#pressH>&nbsp;<#pressunit></td>
 				<td><#TpressH></td>
 			</tr>
 		</table>
+	 </div>
+	</div>
 		<div class="row">
-				<h6 class="text-right">Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude></h6>
-				<h6 class="text-right">Page updated <#update>.</h6>
-				<h6 class="text-right">Powered by <a href="http://sandaysoft.com/products/cumulus" target="_blank">Cumulus</a> v<#version> (<#build>)</h6>
+			<div class="col-12">
+				<h6 class="text-right"><em>Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude></em></h6>
+				<h6 class="text-right"><em>Page updated <#update>.</em></h6>
+				<h6 class="text-right"><em>Powered by <a href="http://sandaysoft.com/products/cumulus" target="_blank">Cumulus</a> v<#version> (<#build>)</em></h6>
+      </div>
 		</div>
 	</div>
 	<footer class="footer">

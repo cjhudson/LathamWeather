@@ -89,14 +89,15 @@
 			</div> <!--/.nav-collapse -->
 		</div>
     </nav>
+
 	<div class="container">
 		<p style="display:none" id="forecast"><#forecast></p>
 		<div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
-		<div class="alert alert-secondary" role="alert">
-			<h5 class= "my-auto">Outlook : <#forecast></h5>
-		</div>
 		<div class="alert alert-info" role="alert">
 			<h4 class="my-auto">Current Conditions</h4>
+		</div>
+		<div class="alert alert-secondary" role="alert">
+			<h6 class= "my-auto">Outlook : <#forecast></h6>
 		</div>
 		<div class="row">
 			<div class="col-md-4">
@@ -110,23 +111,23 @@
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Dew Point </td>
-						<td class="text-center  align-middle"><#dew><#tempunit></td>
+						<td class="col-4 text-center align-middle"><#dew><#tempunit></td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Wind Chill</td>
-						<td class="text-center"><#wchill><#tempunit></td>
+						<td class="col-4 text-center"><#wchill><#tempunit></td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Apparent Temperature</td>
-						<td class="text-center"><#apptemp><#tempunit></td>
+						<td class="col-4 text-center"><#apptemp><#tempunit></td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Heat Index</td>
-						<td class="text-center"><#heatindex><#tempunit></td>
+						<td class="col-4 text-center"><#heatindex><#tempunit></td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Indoor Temperature</td>
-						<td class="text-center"><#intemp><#tempunit></td>
+						<td class="col-4 text-center"><#intemp><#tempunit></td>
 					</tr>
 				</table>
 			</div>
