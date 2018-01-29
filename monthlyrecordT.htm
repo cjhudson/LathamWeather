@@ -95,12 +95,12 @@
 				<h4 class="my-auto">Monthly Records</h4>
 			</div>
 			<div class="alert alert-secondary" role="alert">
-				<h6 class="my-auto">Records began on <#recordsbegandate>. Here are the month-by-month extremes recorded since then.</h6>
+				<p class="my-auto">Records began on <#recordsbegandate>. Here are the month-by-month extremes recorded since then.</p>
 			</div>
 
 			<div class="row">
 				<div class="container">
-		   		<div class="btn-group btn-group-toggle" data-toggle="buttons">
+		   		<div class="btn-group d-flex btn-group-toggle" data-toggle="buttons">
 						<label class="btn btn-info active" onclick="changeData(0)">
 							<input type="radio" checked>Jan</label>
 						<label class="btn btn-info" onclick="changeData(1)">
@@ -273,9 +273,9 @@
 		</table>
 		<div class="row">
 			<div class="col-12">
-				<h6 class="text-right">Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude></h6>
-				<h6 class="text-right">Page updated <#update>.</h6>
-				<h6 class="text-right">Powered by <a href="http://sandaysoft.com/products/cumulus" target="_blank">Cumulus</a> v<#version> (<#build>)</h6>
+				<p class="text-right"><em>Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude><br>
+				Page updated <#update>.<br>
+				Powered by <a href="http://sandaysoft.com/products/cumulus" target="_blank">Cumulus</a> v<#version> (<#build>)</em></p>
 		</div>
 	</div>
 	</div>

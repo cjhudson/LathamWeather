@@ -105,58 +105,63 @@
         <h4 class="my-auto">Recent trends</h4>
       </div>
       <div class="alert alert-secondary" role="alert">
-        <h6 class="my-auto">These graphs present the temperature, pressure, rainfall, and wind speed trends for the last <#graphperiod> hours.</h6>
-        <h6 class="my-auto">Mouse over the chart to see the values at any given time. You can add or remove data sets from the chart by clicking the entry on the chart legend.</h6>
+        <p class="my-auto">These graphs present the temperature, pressure, rainfall, and wind speed trends for the last <#graphperiod> hours.</p>
+        <p class="my-auto">Mouse over the chart to see the values at any given time. You can add or remove data sets from the chart by clicking the entry on the chart legend.</p>
       </div>
 			<div class="row">
-				<div class="text-center">
-					<div class="btn-group"  id="btngroup" data-toggle="buttons">
-						<label class="btn btn-primary active">
-							<input type="radio" name="options" id="temp" value="temp"> Temperature
-						</label>
-						<label class="btn btn-primary">
-							<input type="radio" name="options" id="dailytemp" value="dailytemp"> Daily Temp
-						</label>
-						<label class="btn btn-primary">
-							<input type="radio" name="options" id="press" value="press"> Pressure
-						</label>
-						<label class="btn btn-primary">
-							<input type="radio" name="options" id="wind" value="wind"> Wind Speed
-						</label>
-						<label class="btn btn-primary">
-							<input type="radio" name="options" id="windDir" value="windDir"> Wind Dir.
-						</label>
-						<label class="btn btn-primary">
-							<input type="radio" name="options" id="humidity" value="humidity"> Humidity
-						</label>
-						<label class="btn btn-primary">
-							<input type="radio" name="options" id="rain" value="rain"> Rainfall
-						</label>
-						<label class="btn btn-primary">
-							<input type="radio" name="options" id="dailyrain" value="dailyrain"> Daily Rain
-						</label>
-						<label class="btn btn-primary">
-							<input type="radio" name="options" id="solar" value="solar"> Solar
-						</label>
-						<label class="btn btn-primary">
-							<input type="radio" name="options" id="sunhours" value="sunhours"> Sun Hours
-						</label>
-					</div>
-				</div>
+        <div class="container">
+				  <div class="text-center">
+					  <div class="btn-group d-flex btn-group-toggle"  id="btngroup" data-toggle="buttons">
+						  <label class="btn btn-info active">
+  							<input type="radio" name="options" id="temp" value="temp"> Temperature
+	  					</label>
+		  				<label class="btn btn-info">
+			  				<input type="radio" name="options" id="dailytemp" value="dailytemp"> Daily Temp
+				  		</label>
+					  	<label class="btn btn-info">
+						  	<input type="radio" name="options" id="press" value="press"> Pressure
+						  </label>
+  						<label class="btn btn-info">
+	  						<input type="radio" name="options" id="wind" value="wind"> Wind Speed
+		  				</label>
+			  			<label class="btn btn-info">
+				  			<input type="radio" name="options" id="windDir" value="windDir"> Wind Dir.
+					  	</label>
+						  <label class="btn btn-info">
+							  <input type="radio" name="options" id="humidity" value="humidity"> Humidity
+  						</label>
+	  					<label class="btn btn-info">
+		  					<input type="radio" name="options" id="rain" value="rain"> Rainfall
+			  			</label>
+				  		<label class="btn btn-info">
+					  		<input type="radio" name="options" id="dailyrain" value="dailyrain"> Daily Rain
+						  </label>
+						  <label class="btn btn-info">
+  							<input type="radio" name="options" id="solar" value="solar"> Solar
+	  					</label>
+		  				<label class="btn btn-info">
+			  				<input type="radio" name="options" id="sunhours" value="sunhours"> Sun Hours
+				  		</label>
+					  </div>
+				  </div>
+        </div>
 			</div>
 
+     <div class="container">
 			<div class="row">
-				<div id="chartcontainer">
+				<div id="chartcontainer" style="width:100%; height:600px;">
 				</div>
 			</div>
+     </div>
 
-			<div class="row">
-				<h6 class="text-right">Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude></h6>
-				<h6 class="text-right">Charts by <a href="http://www.highcharts.com/" target="_blank">Highcharts</a></h6>
-				<h6 class="text-right">Page updated <#update>.</h6>
-				<h6 class="text-right">Powered by <a href="http://sandaysoft.com/products/cumulus" target="_blank">Cumulus</a> v<#version> (<#build>)</h6>
-			</div>
+    <div class="container">
+			<p class="text-right"><em>Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude><br>
+			Charts by <a href="http://www.highcharts.com/" target="_blank">Highcharts</a><br>
+			Page updated <#update>.<br>
+			Powered by <a href="http://sandaysoft.com/products/cumulus" target="_blank">Cumulus</a> v<#version> (<#build>)</em></p>
 		</div>
+  </div>
+
 		<footer class="footer">
 			<div class="container">
         <br>
