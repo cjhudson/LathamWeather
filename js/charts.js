@@ -139,13 +139,17 @@ var doTemp = function () {
                 name: 'Temperature',
                 zIndex: 99
             }, {
-                name: 'Dew Point'
+                name: 'Dew Point',
+				visible: false
             }, {
-                name: 'Apparent'
+                name: 'Apparent',
+				visible: false
             }, {
-                name: 'Wind Chill'
+                name: 'Wind Chill',
+				visible: false
             }, {
-                name: 'Heat Index'
+                name: 'Heat Index',
+				visible: false
             }, {
                 name: 'Inside',
 				visible: false
@@ -781,7 +785,8 @@ var doHum = function () {
         series: [{
                 name: 'Outdoor Humidity'
             }, {
-                name: 'Indoor Humidity'
+                name: 'Indoor Humidity',
+				visible: false
             }],
         rangeSelector: {
             buttons: [{
