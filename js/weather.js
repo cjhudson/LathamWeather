@@ -54,3 +54,10 @@ function showForecastIcon(){
 	var indexForecast = arForecast.indexOf(forecast);
     document.getElementById('forecasticon').innerHTML = '<h2 class="text-info text-center wi ' + arForecastIcon[indexForecast] + '"> <small>   ' + forecast +'</small></h2>';
 }
+
+function checkIsUpdating(){
+  var updateTime = document.getElementById('lastupdate').innerText;
+  var dateUpdated = date.parse(updateTime)
+  var dateNow = date.parse()
+  document.getElementById('updatealert').innerHTML = '<div class="alert alert-warning" role="alert"><h6 class="my-auto">Caution: This page has not updated for more then 15 minutes.</h6></div>';
+}
