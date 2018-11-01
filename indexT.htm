@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,9 +14,9 @@
 	<title>Latham Weather</title>
 
 	<!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <!-- Fonts -->
+	<!-- Fonts -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Paprika" rel="stylesheet">
 
@@ -32,7 +33,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand"  href="index.htm" >Latham Weather</a>
+			<a class="navbar-brand" href="index.htm">Latham Weather</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle navigation">
         	<span class="navbar-toggler-icon"></span>
   		</button>
@@ -52,29 +53,29 @@
 						</div>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Graphics<span class="caret"></span></a>
-						<div class="dropdown-menu"  aria-labelledby="dropdown02" role="menu">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Graphics<span class="caret"></span></a>
+						<div class="dropdown-menu" aria-labelledby="dropdown02" role="menu">
 							<a class="dropdown-item" href="gauges.htm">Gauges</a>
 							<a class="dropdown-item" href="charts.htm">Charts</a>
 						</div>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Records<span class="caret"></span></a>
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Records<span class="caret"></span></a>
 						<div class="dropdown-menu" aria-labelledby="dropdown03" role="menu">
 							<a class="dropdown-item" href="monthlyrecord.htm">Monthly</a>
 							<a class="dropdown-item" href="record.htm">Alltime</a>
 						</div>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Testing<span class="caret"></span></a>
-						  <div class="dropdown-menu"  aria-labelledby="dropdown04" role="menu">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Testing<span class="caret"></span></a>
+						<div class="dropdown-menu" aria-labelledby="dropdown04" role="menu">
 							<a class="dropdown-item" href="tempvar.htm">Monthly Temp Variations</a>
 							<a class="dropdown-item" href="windmap.htm">WindMap</a>
 						</div>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other Sites<span class="caret"></span></a>
-						<div class="dropdown-menu"  aria-labelledby="dropdown05" role="menu">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other Sites<span class="caret"></span></a>
+						<div class="dropdown-menu" aria-labelledby="dropdown05" role="menu">
 							<a class="dropdown-item" href="http://bom.gov.au/act">BOM ACT Site</a>
 							<a class="dropdown-item" href="https://app.weathercloud.net/d0419553521#current">WeatherCloud</a>
 							<a class="dropdown-item" href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=I90580966">WeatherUnderground Historical</a>
@@ -83,21 +84,26 @@
 				</ul>
 				<ul class="navbar-nav">
 					<li class="nav-item">
-				  	<a class="nav-link" href="about.htm"><span class="fa fa-info-circle fa-lg"></span>  About</a>
-				  </li>
+						<a class="nav-link" href="about.htm"><span class="fa fa-info-circle fa-lg"></span>  About</a>
+					</li>
 				</ul>
-			</div> <!--/.nav-collapse -->
+			</div>
+			<!--/.nav-collapse -->
 		</div>
-    </nav>
+	</nav>
 
 	<div class="container">
-		<p style="display:none" id="forecast"><#forecast></p>
+		<p style="display:none" id="forecast">
+			<#forecast>
+		</p>
 		<div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
 		<div class="alert alert-info" role="alert">
 			<h4 class="my-auto">Current Conditions</h4>
 		</div>
 		<div class="alert alert-secondary" role="alert">
-			<p class= "my-auto">Outlook : <#forecast></p>
+			<p class="my-auto">Outlook :
+				<#forecast>
+			</p>
 		</div>
 		<div class="row">
 			<div class="col-md-4">
@@ -107,31 +113,51 @@
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Outdoor Temperature</td>
-						<td class="col-4 text-center"><#temp><#tempunit></td>
+						<td class="col-4 text-center">
+							<#temp>
+								<#tempunit>
+						</td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Temp Change Last Hour</td>
-						<td class="col-4 text-center"><#TempChangeLastHour><#tempunit>&sol;hr</td>
+						<td class="col-4 text-center">
+							<#TempChangeLastHour>
+								<#tempunit>&sol;hr</td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Dew Point </td>
-						<td class="col-4 text-center align-middle"><#dew><#tempunit></td>
+						<td class="col-4 text-center align-middle">
+							<#dew>
+								<#tempunit>
+						</td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Wind Chill</td>
-						<td class="col-4 text-center"><#wchill><#tempunit></td>
+						<td class="col-4 text-center">
+							<#wchill>
+								<#tempunit>
+						</td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Apparent Temperature</td>
-						<td class="col-4 text-center"><#apptemp><#tempunit></td>
+						<td class="col-4 text-center">
+							<#apptemp>
+								<#tempunit>
+						</td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Heat Index</td>
-						<td class="col-4 text-center"><#heatindex><#tempunit></td>
+						<td class="col-4 text-center">
+							<#heatindex>
+								<#tempunit>
+						</td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Indoor Temperature</td>
-						<td class="col-4 text-center"><#intemp><#tempunit></td>
+						<td class="col-4 text-center">
+							<#intemp>
+								<#tempunit>
+						</td>
 					</tr>
 				</table>
 			</div>
@@ -142,26 +168,43 @@
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Rain&nbsp;Today</td>
-						<td class="col-4 text-center align-middle"><#rfall>&nbsp;<#rainunit></td>
+						<td class="col-4 text-center align-middle">
+							<#rfall>&nbsp;
+								<#rainunit>
+						</td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Rain&nbsp;Rate</td>
-						<td class="text-center align-middle"><#rrate>&nbsp;<#rainunit></td>
+						<td class="text-center align-middle">
+							<#rrate>&nbsp;
+								<#rainunit>
+						</td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Rain&nbsp;Last Hour</td>
-						<td class="text-center align-middle"><#rhour>&nbsp;<#rainunit></td>
+						<td class="text-center align-middle">
+							<#rhour>&nbsp;
+								<#rainunit>
+						</td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Rain&nbsp;This&nbsp;Month</td>
-						<td class="text-center align-middle"><#rmonth>&nbsp;<#rainunit></td>
+						<td class="text-center align-middle">
+							<#rmonth>&nbsp;
+								<#rainunit>
+						</td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Rain&nbsp;This&nbsp;Year</td>
-						<td class="text-center align-middle"><#ryear>&nbsp;<#rainunit></td>
+						<td class="text-center align-middle">
+							<#ryear>&nbsp;
+								<#rainunit>
+						</td>
 					</tr>
 					<tr>
-						<td colspan="2" class="align-middle text-right">Last rain recorded ==>  <#LastRainTipISO></td>
+						<td colspan="2" class="align-middle text-right">Last rain recorded ==>
+							<#LastRainTipISO>
+						</td>
 					</tr>
 				</table>
 			</div>
@@ -172,30 +215,49 @@
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Latest</td>
-						<td class="col-4 text-center align-middle"><#wlatest>&nbsp;<#windunit></td>
+						<td class="col-4 text-center align-middle">
+							<#wlatest>&nbsp;
+								<#windunit>
+						</td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Bearing</td>
-						<td class="text-center align-middle"><#bearing>&deg;&nbsp;<#currentwdir></td>
+						<td class="text-center align-middle">
+							<#bearing>&deg;&nbsp;
+								<#currentwdir>
+						</td>
 					</tr>
 					<tr>
-						<td class="col-8 align-middle">Beaufort&nbsp;<#beaufort></td>
-						<td class="text-center align-middle"><#beaudesc></td>
+						<td class="col-8 align-middle">Beaufort&nbsp;
+							<#beaufort>
+						</td>
+						<td class="text-center align-middle">
+							<#beaudesc>
+						</td>
 					</tr>
 					<tr class="table-info">
 						<th colspan="2" class="align-middle">Last 10 mins</th>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Peak Gust</td>
-						<td class="text-center align-middle"><#wgust>&nbsp;<#windunit></td>
+						<td class="text-center align-middle">
+							<#wgust>&nbsp;
+								<#windunit>
+						</td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Average Speed</td>
-						<td class="text-center align-middle"><#wspeed>&nbsp;<#windunit></td>
+						<td class="text-center align-middle">
+							<#wspeed>&nbsp;
+								<#windunit>
+						</td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Avg Bearing</td>
-						<td class="text-center align-middle"><#avgbearing>&deg;&nbsp;<#wdir></td>
+						<td class="text-center align-middle">
+							<#avgbearing>&deg;&nbsp;
+								<#wdir>
+						</td>
 					</tr>
 				</table>
 			</div>
@@ -208,11 +270,18 @@
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Pressure</td>
-						<td class="col-4 text-center align-middle"><#press>&nbsp;<#pressunit></td>
+						<td class="col-4 text-center align-middle">
+							<#press>&nbsp;
+								<#pressunit>
+						</td>
 					</tr>
 					<tr>
-						<td class="col-8 align-middle"><#presstrend></td>
-						<td class="text-center align-middle"><#presstrendval>&nbsp;<#pressunit>/hr</td>
+						<td class="col-8 align-middle">
+							<#presstrend>
+						</td>
+						<td class="text-center align-middle">
+							<#presstrendval>&nbsp;
+								<#pressunit>/hr</td>
 					</tr>
 				</table>
 			</div>
@@ -223,11 +292,13 @@
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Outdoor Humidity</td>
-						<td class="col-4 text-center align-middle"><#hum>%</td>
+						<td class="col-4 text-center align-middle">
+							<#hum>%</td>
 					</tr>
 					<tr>
 						<td class="col-8 align-middle">Indoor Humidity</td>
-						<td class="text-center align-middle"><#inhum>%</td>
+						<td class="text-center align-middle">
+							<#inhum>%</td>
 					</tr>
 				</table>
 			</div>
@@ -239,11 +310,15 @@
 					<!-- Solar data. If you don't have a solar sensor, you may wish to delete everything from here to the next comment -->
 					<tr>
 						<td class="col-8 align-middle">Solar Radiation</td>
-						<td class="col-4 text-center align-middle"><#SolarRad>W/m&sup2;</td>
+						<td class="col-4 text-center align-middle">
+							<#SolarRad>W/m&sup2;</td>
 					</tr>
 					<tr>
 						<td>Evapotranspiration Today</td>
-						<td class="text-center align-middle"><#ET> <#rainunit></td>
+						<td class="text-center align-middle">
+							<#ET>
+								<#rainunit>
+						</td>
 					</tr>
 					<!-- End of solar data -->
 				</table>
@@ -268,17 +343,18 @@
 	</footer>
 
 	<!-- jQuery and Bootstrap JavaScript-->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 	<!-- Custom JavaScript-->
 	<script src="js/weather.js"></script>
 	<script>
-	$(document).ready(function(){
-		showQuote();
-		showForecastIcon();
-	});
+		$(document).ready(function() {
+			showQuote();
+			showForecastIcon();
+		});
 	</script>
 </body>
+
 </html>
