@@ -27,7 +27,7 @@ var q = quotes.length;
 var whichquote=Math.round(Math.random()*(q-1));
 
 function showQuote(){
-    document.getElementById('weatherquote').innerHTML = '<h6 class="text-dark text-center"><em>' + quotes[whichquote] + '</em></h6>';
+    document.getElementById('weatherquote').innerHTML = '<p class="text-dark text-center"><em>' + quotes[whichquote] + '</em></p>';
 }
 
 var arForecast= new Array();
