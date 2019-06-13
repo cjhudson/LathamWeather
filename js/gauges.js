@@ -167,7 +167,7 @@ function () {
         displayUnits = null,        //Stores the display units cookie settings
         sampleDate,
         realtimeVer,                //minimum version of the realtime JSON file required
-        programLink =  ['<a href="http://sandaysoft.com/products/cumulus" target="_blank">Cumulus</a>',
+        programLink =  ['<a href="https://cumuluswiki.wxforum.net/a/Software" target="_blank">Cumulus MX</a>',
                         '<a href="http://www.weather-display.com/" target="_blank">Weather Display</a>',
                         '<a href="http://www.ambientweather.com/virtualstation.html" target="_blank">Virtual Weather Station</a>',
                         '<a href="http://trixology.com/weathercat/" target="_blank">WeatherCat</a>',
