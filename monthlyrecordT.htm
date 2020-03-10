@@ -118,29 +118,29 @@
 				<div class="container">
 					<div class="text-center">
 		   			<div class="btn-group d-flex btn-group-toggle" data-toggle="buttons">
-							<label class="btn btn-info" onclick="changeData(0)">
+							<label class="btn btn-info" id="Jan" onclick="changeData(0)">
 								<input type="radio">Jan</label>
-							<label class="btn btn-info" onclick="changeData(1)">
+							<label class="btn btn-info" id="Feb" onclick="changeData(1)">
 								<input type="radio">Feb</label>
-							<label class="btn btn-info" onclick="changeData(2)">
+							<label class="btn btn-info" id="Mar" onclick="changeData(2)">
 								<input type="radio">Mar</label>
-							<label class="btn btn-info" onclick="changeData(3)">
+							<label class="btn btn-info" id="Apr" onclick="changeData(3)">
 								<input type="radio">Apr</label>
-							<label class="btn btn-info" onclick="changeData(4)">
+							<label class="btn btn-info" id="May" onclick="changeData(4)">
 								<input type="radio">May</label>
-							<label class="btn btn-info" onclick="changeData(5)">
+							<label class="btn btn-info" id="Jun" onclick="changeData(5)">
 								<input type="radio">Jun</label>
-							<label class="btn btn-info" onclick="changeData(6)">
+							<label class="btn btn-info" id="Jul" onclick="changeData(6)">
 								<input type="radio">Jul</label>
-							<label class="btn btn-info" onclick="changeData(7)">
+							<label class="btn btn-info" id="Aug" onclick="changeData(7)">
 								<input type="radio">Aug</label>
-							<label class="btn btn-info" onclick="changeData(8)">
+							<label class="btn btn-info" id="Sep" onclick="changeData(8)">
 								<input type="radio">Sep</label>
-							<label class="btn btn-info" onclick="changeData(9)">
+							<label class="btn btn-info" id="Oct" onclick="changeData(9)">
 								<input type="radio">Oct</label>
-							<label class="btn btn-info" onclick="changeData(10)">
+							<label class="btn btn-info" id="Nov" onclick="changeData(10)">
 								<input type="radio">Nov</label>
-							<label class="btn btn-info" onclick="changeData(11)">
+							<label class="btn btn-info" id="Dec" onclick="changeData(11)">
 								<input type="radio">Dec</label>
 						</div>
 					</div>
@@ -427,8 +427,17 @@
 			document.getElementById('PressHT').innerHTML = highpressT[month];
 		}
 
-		// If you want the page to display the current month when it opens,
-		// remove the "//" from the start of the next line
+		function thismonth() {
+		    var arr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+		    var currentMonth = new Date().getMonth();
+
+		    return (arr[currentMonth]);
+		}
+
+		var month = '[id="' + thismonth() +'"]'; // we take the current month from the array and save it in a variable
+
+		$(month).button('toggle');
+
 		changeData(+'<#month>' - 1);
 	</script>
 </body>
