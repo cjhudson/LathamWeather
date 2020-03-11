@@ -1,276 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="<#location> weather data" />
-		<meta name="keywords" content="Cumulus MX, Cumulus, <#location> weather data, weather, data, weather station" />
-		<meta name="author" content="Chris Hudson">
-		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-	  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-	  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-	  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-	  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-	  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-	  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-	  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-	  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-	  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-	  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-	  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	  <link rel="manifest" href="/manifest.json">
-	  <meta name="msapplication-TileColor" content="#ffffff">
-	  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-	  <meta name="theme-color" content="#ffffff">
 
-		<title>Latham Weather</title>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="<#location> weather data" />
+	<meta name="keywords" content="Cumulus MX, Cumulus, <#location> weather data, weather, data, weather station" />
+	<meta name="author" content="Chris Hudson">
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 
-		<!-- Bootstrap core CSS -->
-	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>Latham Weather</title>
 
-	  <!-- Fonts -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Paprika" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-		<!-- Weather Icons -->
-		<link rel="stylesheet" href="css/weather-icons.min.css">
-		<link rel="stylesheet" href="css/weather-icons-wind.min.css">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Paprika" rel="stylesheet">
 
-		<!-- Custom CSS -->
-		<link rel="stylesheet" href="css/sticky-footer-navbar.css">
-		<link rel="stylesheet" href="css/weather.css">
+	<!-- Weather Icons -->
+	<link rel="stylesheet" href="css/weather-icons.min.css">
+	<link rel="stylesheet" href="css/weather-icons-wind.min.css">
 
-		<!-- Gauges CSS -->
-		<link rel="stylesheet" href="css/gauges.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/sticky-footer-navbar.css">
+	<link rel="stylesheet" href="css/weather.css">
 
-	</head>
+	<!-- Gauges CSS -->
+	<link rel="stylesheet" href="css/gauges.css">
 
-	<body>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-			<div class="container">
-				<a class="navbar-brand"  href="index.htm" >Latham Weather</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle navigation">
-	        	<span class="navbar-toggler-icon"></span>
-	  		</button>
+</head>
 
-				<div class="navbar-collapse collapse" id="navbarcollapse">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="index.htm"><span class="fa fa-home fa-lg"></span>  Home</a>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Historical<span class="caret"></span></a>
-							<div class="dropdown-menu" aria-labelledby="dropdown01" role="menu">
-								<a class="dropdown-item" href="today.htm">Today</a>
-								<a class="dropdown-item" href="yesterday.htm">Yesterday</a>
-								<a class="dropdown-item" href="thismonth.htm">This Month</a>
-								<a class="dropdown-item" href="thisyear.htm">This Year</a>
-							</div>
-						</li>
-						<li class="nav-item dropdown active">
-							<a class="nav-link dropdown-toggle"  href="#"  id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Graphics<span class="caret"></span></a>
-							<div class="dropdown-menu"  aria-labelledby="dropdown02" role="menu">
-								<a class="dropdown-item active" href="gauges.htm">Gauges</a>
-								<a class="dropdown-item" href="charts.htm">Recent Trends</a>
-								<a class="dropdown-item" href="tempvar.htm">Monthly Temp Variations</a>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle"  href="#"  id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Records<span class="caret"></span></a>
-							<div class="dropdown-menu" aria-labelledby="dropdown03" role="menu">
-								<a class="dropdown-item" href="monthlyrecord.htm">Monthly</a>
-								<a class="dropdown-item" href="record.htm">Alltime</a>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle"  href="#"  id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Testing<span class="caret"></span></a>
-							  <div class="dropdown-menu"  aria-labelledby="dropdown04" role="menu">
-								<a class="dropdown-item" href="windmap.htm">WindMap</a>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle"  href="#"  id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other Sites<span class="caret"></span></a>
-							<div class="dropdown-menu"  aria-labelledby="dropdown05" role="menu">
-								<a class="dropdown-item" href="http://bom.gov.au/act" target="_blank" rel="noopener">BOM ACT Site</a>
-								<a class="dropdown-item" href="https://app.weathercloud.net/d0419553521#current" target="_blank" rel="noopener">WeatherCloud</a>
-								<a class="dropdown-item" href="https://www.wunderground.com/dashboard/pws/I90580966" target="_blank" rel="noopener">WeatherUnderground Historical</a>
-							</div>
-						</li>
-					</ul>
-					<ul class="navbar-nav">
-						<li class="nav-item">
-					  	<a class="nav-link" href="about.htm"><span class="fa fa-info-circle fa-lg"></span>  About</a>
-					  </li>
-					</ul>
-				</div> <!--/.nav-collapse -->
-			</div>
-	    </nav>
-
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
-			<div class="alert alert-info" role="alert">
-				<h4 class="my-auto">Weather Gauges</h4>
+			<a class="navbar-brand" href="index.htm">Latham Weather</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="navbar-collapse collapse" id="navbarcollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.htm"><span class="fa fa-home fa-lg"></span> Home</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Historical<span class="caret"></span></a>
+						<div class="dropdown-menu" aria-labelledby="dropdown01" role="menu">
+							<a class="dropdown-item" href="today.htm">Today</a>
+							<a class="dropdown-item" href="yesterday.htm">Yesterday</a>
+							<a class="dropdown-item" href="thismonth.htm">This Month</a>
+							<a class="dropdown-item" href="thisyear.htm">This Year</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown active">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Graphics<span class="caret"></span></a>
+						<div class="dropdown-menu" aria-labelledby="dropdown02" role="menu">
+							<a class="dropdown-item active" href="gauges.htm">Gauges</a>
+							<a class="dropdown-item" href="charts.htm">Recent Trends</a>
+							<a class="dropdown-item" href="tempvar.htm">Monthly Temp Variations</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Records<span class="caret"></span></a>
+						<div class="dropdown-menu" aria-labelledby="dropdown03" role="menu">
+							<a class="dropdown-item" href="monthlyrecord.htm">Monthly</a>
+							<a class="dropdown-item" href="record.htm">Alltime</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Testing<span class="caret"></span></a>
+						<div class="dropdown-menu" aria-labelledby="dropdown04" role="menu">
+							<a class="dropdown-item" href="windmap.htm">WindMap</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other Sites<span class="caret"></span></a>
+						<div class="dropdown-menu" aria-labelledby="dropdown05" role="menu">
+							<a class="dropdown-item" href="http://bom.gov.au/act" target="_blank" rel="noopener">BOM ACT Site</a>
+							<a class="dropdown-item" href="https://app.weathercloud.net/d0419553521#current" target="_blank" rel="noopener">WeatherCloud</a>
+							<a class="dropdown-item" href="https://www.wunderground.com/dashboard/pws/I90580966" target="_blank" rel="noopener">WeatherUnderground Historical</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="about.htm"><span class="fa fa-info-circle fa-lg"></span> About</a>
+					</li>
+				</ul>
 			</div>
-			<div class="alert alert-secondary" role="alert">
-				<p class="my-auto"></p>
-			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="container">
+		<div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
+		<div class="alert alert-info" role="alert">
 			<div class="row">
-					<div class="col-sm-4">
-					<div class="alert alert-info">
-						<table class="table table-sm">
-							<tr>
-								<td id="lang_temperature">Temperature</td>
-								<td>
-									<input id="rad_unitsTemp1" type="radio" name="rad_unitsTemp" value="C" checked onclick="gauges.setUnits(this);"><label id="lab_unitsTemp1" for="rad_unitsTemp1">&deg;C</label>
-									<input id="rad_unitsTemp2" type="radio" name="rad_unitsTemp" value="F" onclick="gauges.setUnits(this);"><label id="lab_unitsTemp2" for="rad_unitsTemp2">&deg;F</label>
-								</td>
-							</tr>
-							<tr>
-								<td id="lang_rainfall">Rainfall</td>
-								<td>
-									<input id="rad_unitsRain1" type="radio" name="rad_unitsRain" value="mm" checked onclick="gauges.setUnits(this);"><label id="lab_unitsRain1" for="rad_unitsRain1">mm</label>
-									<input id="rad_unitsRain2" type="radio" name="rad_unitsRain" value="in" onclick="gauges.setUnits(this);"><label id="lab_unitsRain2" for="rad_unitsRain2">Inch</label>
-								</td>
-							</tr>
-							<tr>
-								<td id="lang_pressure">Pressure</td>
-								<td>
-									<input id="rad_unitsPress1" type="radio" name="rad_unitsPress" value="hPa" checked onclick="gauges.setUnits(this);"><label id="lab_unitsPress1" for="rad_unitsPress1">hPa</label>
-									<input id="rad_unitsPress2" type="radio" name="rad_unitsPress" value="inHg" onclick="gauges.setUnits(this);"><label id="lab_unitsPress2" for="rad_unitsPress2">inHg</label>
-									<input id="rad_unitsPress3" type="radio" name="rad_unitsPress" value="mb" onclick="gauges.setUnits(this);"><label id="lab_unitsPress3" for="rad_unitsPress3">mb</label>
-									<input id="rad_unitsPress4" type="radio" name="rad_unitsPress" value="kPa" onclick="gauges.setUnits(this);"><label id="lab_unitsPress4" for="rad_unitsPress4">kPa</label>
-								</td>
-							</tr>
-							<tr>
-								<td id="lang_windSpeed">Wind Speed</td>
-								<td>
-									<input id="rad_unitsWind4" type="radio" name="rad_unitsWind" value="km/h" checked onclick="gauges.setUnits(this);"><label id="lab_unitsWind4" for="rad_unitsWind4">km/h</label>
-									<input id="rad_unitsWind3" type="radio" name="rad_unitsWind" value="m/s" onclick="gauges.setUnits(this);"><label id="lab_unitsWind3" for="rad_unitsWind3">m/s</label>
-									<input id="rad_unitsWind1" type="radio" name="rad_unitsWind" value="mph" onclick="gauges.setUnits(this);"><label id="lab_unitsWind1" for="rad_unitsWind1">mph</label>
-									<input id="rad_unitsWind2" type="radio" name="rad_unitsWind" value="kts" onclick="gauges.setUnits(this);"><label id="lab_unitsWind2" for="rad_unitsWind2">knots</label>
-								</td>
-							</tr>
-							<tr>
-								<td id="lang_cloudbase">Cloud Base</td>
-								<td>
-									<input id="rad_unitsCloudBase1" type="radio" name="rad_unitsCloud" value="m" checked onclick="gauges.setUnits(this);"><label id="lab_unitsCloudBase1" for="rad_unitsCloudBase1">m</label>
-									<input id="rad_unitsCloudBase2" type="radio" name="rad_unitsCloud" value="ft" onclick="gauges.setUnits(this);"><label id="lab_unitsCloudBase2" for="rad_unitsCloudBase2">ft</label>
-								</td>
-							</tr>
-						</table>
-					</div>
+				<div class="col-md-10">
+					<h4 class="my-auto text-left">Realtime Gauges</h4>
 				</div>
-			</div>
-			<noscript>
-				<h2 style="color:red; text-align:center">&gt;&gt;This pages requires JavaScript enabling in your browser.&lt;&lt;<br>&gt;&gt;Please enable scripting it to enjoy this site at its best.&lt;&lt;</h2>
-			</noscript>
-			<div class="row">
-				<canvas id="canvas_led" width="25" height="25"></canvas>&nbsp;&nbsp;&nbsp;
-				<canvas id="canvas_status" width="550" height="25"></canvas>&nbsp;&nbsp;
-				<canvas id="canvas_timer" width="70" height="25"></canvas>
-			</div>
-			<div class="row">
-				<div class="gauge">
-					<div id="tip_0">
-						<canvas id="canvas_temp" class="gaugeSizeStd"></canvas>
-					</div>
-					<input id="rad_temp1" type="radio" name="rad_temp" value="out" checked onclick="gauges.doTemp(this);"><label id="lab_temp1" for="rad_temp1">Outside</label>
-					<input id="rad_temp2" type="radio" name="rad_temp" value="in" onclick="gauges.doTemp(this);"><label id="lab_temp2" for="rad_temp2">Inside</label>
-				</div>
-				<div class="gauge">
-					<div id="tip_1">
-						<canvas id="canvas_dew" class="gaugeSizeStd"></canvas>
-					</div>
-					<input id="rad_dew1" type="radio" name="rad_dew" value="dew" onclick="gauges.doDew(this);"><label id="lab_dew1" for="rad_dew1">Dew Point</label>
-					<input id="rad_dew2" type="radio" name="rad_dew" value="app" checked onclick="gauges.doDew(this);"><label id="lab_dew2" for="rad_dew2">Apparent</label>
-					<br>
-					<input id="rad_dew3" type="radio" name="rad_dew" value="wnd" onclick="gauges.doDew(this);"><label id="lab_dew3" for="rad_dew3">Wind Chill</label>
-					<input id="rad_dew4" type="radio" name="rad_dew" value="hea" onclick="gauges.doDew(this);"><label id="lab_dew4" for="rad_dew4">Heat Index</label>
-					<br>
-					<input id="rad_dew5" type="radio" name="rad_dew" value="hum" onclick="gauges.doDew(this);"><label id="lab_dew5" for="rad_dew5">Humidex</label>
-				</div>
-				<div class="gauge">
-					<div id="tip_4">
-						<canvas id="canvas_hum" class="gaugeSizeStd"></canvas>
-					</div>
-					<input id="rad_hum1" type="radio" name="rad_hum" value="out" checked onclick="gauges.doHum(this);"><label id="lab_hum1" for="rad_hum1">Outside</label>
-					<input id="rad_hum2" type="radio" name="rad_hum" value="in" onclick="gauges.doHum(this);"><label id="lab_hum2" for="rad_hum2">Inside</label>
-				</div>
-				<div id="tip_5" class="gauge">
-					<canvas id="canvas_baro" class="gaugeSizeStd"></canvas>
-				</div>
-			</div>
-			<div class="row">
-				<div id="tip_6" class="gauge">
-					<canvas id="canvas_wind" class="gaugeSizeStd"></canvas>
-				</div>
-				<div id="tip_7" class="gauge">
-					<canvas id="canvas_dir" class="gaugeSizeStd"></canvas>
-				</div>
-				<div id="tip_10" class="gauge">
-					<canvas id="canvas_rose" class="gaugeSizeStd"></canvas>
-				</div>
-				<div id="tip_11" class="gauge">
-					<canvas id="canvas_cloud" class="gaugeSizeStd"></canvas>
-				</div>
-			</div>
-			<div class="row">
-				<div id="tip_2" class="gauge">
-					<canvas id="canvas_rain" class="gaugeSizeStd"></canvas>
-				</div>
-				<div id="tip_3" class="gauge">
-					<canvas id="canvas_rrate" class="gaugeSizeStd"></canvas>
-				</div>
-				<div id="tip_8" class="gauge">
-					<canvas id="canvas_uv" class="gaugeSizeStd"></canvas>
-				</div>
-				<div id="tip_9" class="gauge">
-					<canvas id="canvas_solar" class="gaugeSizeStd"></canvas>
+				<div class="col-md-2 text-right">
+					<button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#SettingsModal">
+						<span class="fa fa-cog"></span>&nbsp;Settings
+					</button>
 				</div>
 			</div>
 		</div>
-		<div class="container">
-
-			<!-- Credits -->
-			<p class="text-right"><em>Scripts: Mark Crossley - version <span id="scriptVer"></span><br>
-			Gauges: Gerrit Grunwald's <a href="http://harmoniccode.blogspot.com" target="_blank">SteelSeries</a> <a href="https://github.com/HanSolo/SteelSeries-Canvas">JavaScript library</a><br>
-			Wind Rose: <a href="http://www.rgraph.net/">RGraph</a><br>
-			A cookie is used to store your UoM and gauge preferences<br>
-			Page updated <#update><br>
-			Powered by <a href="https://cumuluswiki.wxforum.net/a/Software" target="_blank">Cumulus MX</a> v<#version> (<#build>)</em></p>
-		</div>
-		<footer class="footer">
+	</div>
+	<noscript>
+		<h2 style="color:red; text-align:center">&gt;&gt;This pages requires JavaScript enabled in your browser.&lt;&lt;<br>&gt;&gt;Please enable scripting it to enjoy this site at its best.&lt;&lt;</h2>
+	</noscript>
+	<div class="container">
+		<div class="row">
 			<div class="container">
-				<br>
-				<p class="text-light">&copy; LathamWeather.net 2019</p>
+				<div class="text-center">
+					<canvas id="canvas_led" width="25" height="25"></canvas>&nbsp;&nbsp;&nbsp;
+					<canvas id="canvas_status" width="400" height="25"></canvas>&nbsp;&nbsp;
+					<canvas id="canvas_timer" width="70" height="25"></canvas>
+				</div>
 			</div>
-		</footer>
+		</div>
+		<div class="row">
+			<div class="container">
+				<div class="text-center">
+					<div class="gauge">
+						<div id="tip_0">
+							<canvas id="canvas_temp" class="gaugeSizeStd"></canvas>
+						</div>
+						<input id="rad_temp1" type="radio" name="rad_temp" value="out" checked onclick="gauges.doTemp(this);"><label id="lab_temp1" for="rad_temp1">Outside</label>
+						<input id="rad_temp2" type="radio" name="rad_temp" value="in" onclick="gauges.doTemp(this);"><label id="lab_temp2" for="rad_temp2">Inside</label>
+					</div>
+					<div class="gauge">
+						<div id="tip_1">
+							<canvas id="canvas_dew" class="gaugeSizeStd"></canvas>
+						</div>
+						<input id="rad_dew1" type="radio" name="rad_dew" value="dew" onclick="gauges.doDew(this);"><label id="lab_dew1" for="rad_dew1">Dew Point</label>
+						<input id="rad_dew2" type="radio" name="rad_dew" value="app" checked onclick="gauges.doDew(this);"><label id="lab_dew2" for="rad_dew2">Apparent</label>
+						<br>
+						<input id="rad_dew3" type="radio" name="rad_dew" value="wnd" onclick="gauges.doDew(this);"><label id="lab_dew3" for="rad_dew3">Wind Chill</label>
+						<input id="rad_dew4" type="radio" name="rad_dew" value="hea" onclick="gauges.doDew(this);"><label id="lab_dew4" for="rad_dew4">Heat Index</label>
+						<br>
+						<input id="rad_dew5" type="radio" name="rad_dew" value="hum" onclick="gauges.doDew(this);"><label id="lab_dew5" for="rad_dew5">Humidex</label>
+					</div>
+					<div class="gauge">
+						<div id="tip_4">
+							<canvas id="canvas_hum" class="gaugeSizeStd"></canvas>
+						</div>
+						<input id="rad_hum1" type="radio" name="rad_hum" value="out" checked onclick="gauges.doHum(this);"><label id="lab_hum1" for="rad_hum1">Outside</label>
+						<input id="rad_hum2" type="radio" name="rad_hum" value="in" onclick="gauges.doHum(this);"><label id="lab_hum2" for="rad_hum2">Inside</label>
+					</div>
+					<div id="tip_5" class="gauge">
+						<canvas id="canvas_baro" class="gaugeSizeStd"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="container">
+				<div class="text-center">
+					<div id="tip_6" class="gauge">
+						<canvas id="canvas_wind" class="gaugeSizeStd"></canvas>
+					</div>
+					<div id="tip_7" class="gauge">
+						<canvas id="canvas_dir" class="gaugeSizeStd"></canvas>
+					</div>
+					<div id="tip_10" class="gauge">
+						<canvas id="canvas_rose" class="gaugeSizeStd"></canvas>
+					</div>
+					<div id="tip_11" class="gauge">
+						<canvas id="canvas_cloud" class="gaugeSizeStd"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
 
-		<!-- Included Scripts -->
+		<div class="row">
+			<div class="container">
+				<div class="text-center">
+					<div id="tip_2" class="gauge">
+						<canvas id="canvas_rain" class="gaugeSizeStd"></canvas>
+					</div>
+					<div id="tip_3" class="gauge">
+						<canvas id="canvas_rrate" class="gaugeSizeStd"></canvas>
+					</div>
+					<div id="tip_8" class="gauge">
+						<canvas id="canvas_uv" class="gaugeSizeStd"></canvas>
+					</div>
+					<div id="tip_9" class="gauge">
+						<canvas id="canvas_solar" class="gaugeSizeStd"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
 
-		<!-- jQuery and Bootstrap JavaScript-->
-		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<!-- Credits -->
+		<p class="text-right"><em>Scripts: Mark Crossley - version <span id="scriptVer"></span><br>
+				Gauges: Gerrit Grunwald's <a href="http://harmoniccode.blogspot.com" target="_blank">SteelSeries</a> <a href="https://github.com/HanSolo/SteelSeries-Canvas">JavaScript library</a><br>
+				Wind Rose: <a href="http://www.rgraph.net/">RGraph</a><br>
+				A cookie is used to store your UoM and gauge preferences<br>
+				Page updated <#update><br>
+					Powered by <a href="https://cumuluswiki.wxforum.net/a/Software" target="_blank">Cumulus MX</a> v<#version> (<#build>)</em></p>
+	</div>
 
-		<!-- Custom JavaScript-->
-		<script src="js/weather.js"></script>
-		<script>
-		$(document).ready(function(){
+	<!-- Modals -->
+	<div class="modal fade" id="SettingsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Settings</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<table class="table table-sm">
+						<tr>
+							<td id="lang_temperature">Temperature</td>
+							<td>
+								<input id="rad_unitsTemp1" type="radio" name="rad_unitsTemp" value="C" checked onclick="gauges.setUnits(this);"><label id="lab_unitsTemp1" for="rad_unitsTemp1">&deg;C</label>
+								<input id="rad_unitsTemp2" type="radio" name="rad_unitsTemp" value="F" onclick="gauges.setUnits(this);"><label id="lab_unitsTemp2" for="rad_unitsTemp2">&deg;F</label>
+							</td>
+						</tr>
+						<tr>
+							<td id="lang_rainfall">Rainfall</td>
+							<td>
+								<input id="rad_unitsRain1" type="radio" name="rad_unitsRain" value="mm" checked onclick="gauges.setUnits(this);"><label id="lab_unitsRain1" for="rad_unitsRain1">mm</label>
+								<input id="rad_unitsRain2" type="radio" name="rad_unitsRain" value="in" onclick="gauges.setUnits(this);"><label id="lab_unitsRain2" for="rad_unitsRain2">Inch</label>
+							</td>
+						</tr>
+						<tr>
+							<td id="lang_pressure">Pressure</td>
+							<td>
+								<input id="rad_unitsPress1" type="radio" name="rad_unitsPress" value="hPa" checked onclick="gauges.setUnits(this);"><label id="lab_unitsPress1" for="rad_unitsPress1">hPa</label>
+								<input id="rad_unitsPress2" type="radio" name="rad_unitsPress" value="inHg" onclick="gauges.setUnits(this);"><label id="lab_unitsPress2" for="rad_unitsPress2">inHg</label>
+								<input id="rad_unitsPress3" type="radio" name="rad_unitsPress" value="mb" onclick="gauges.setUnits(this);"><label id="lab_unitsPress3" for="rad_unitsPress3">mb</label>
+								<input id="rad_unitsPress4" type="radio" name="rad_unitsPress" value="kPa" onclick="gauges.setUnits(this);"><label id="lab_unitsPress4" for="rad_unitsPress4">kPa</label>
+							</td>
+						</tr>
+						<tr>
+							<td id="lang_windSpeed">Wind Speed</td>
+							<td>
+								<input id="rad_unitsWind4" type="radio" name="rad_unitsWind" value="km/h" checked onclick="gauges.setUnits(this);"><label id="lab_unitsWind4" for="rad_unitsWind4">km/h</label>
+								<input id="rad_unitsWind3" type="radio" name="rad_unitsWind" value="m/s" onclick="gauges.setUnits(this);"><label id="lab_unitsWind3" for="rad_unitsWind3">m/s</label>
+								<input id="rad_unitsWind1" type="radio" name="rad_unitsWind" value="mph" onclick="gauges.setUnits(this);"><label id="lab_unitsWind1" for="rad_unitsWind1">mph</label>
+								<input id="rad_unitsWind2" type="radio" name="rad_unitsWind" value="kts" onclick="gauges.setUnits(this);"><label id="lab_unitsWind2" for="rad_unitsWind2">knots</label>
+							</td>
+						</tr>
+						<tr>
+							<td id="lang_cloudbase">Cloud Base</td>
+							<td>
+								<input id="rad_unitsCloudBase1" type="radio" name="rad_unitsCloud" value="m" checked onclick="gauges.setUnits(this);"><label id="lab_unitsCloudBase1" for="rad_unitsCloudBase1">m</label>
+								<input id="rad_unitsCloudBase2" type="radio" name="rad_unitsCloud" value="ft" onclick="gauges.setUnits(this);"><label id="lab_unitsCloudBase2" for="rad_unitsCloudBase2">ft</label>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<br>
+			<p class="text-light">&copy; LathamWeather.net 2019</p>
+		</div>
+	</footer>
+
+	<!-- Included Scripts -->
+
+	<!-- jQuery and Bootstrap JavaScript-->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<!-- Custom JavaScript-->
+	<script src="js/weather.js"></script>
+	<script>
+		$(document).ready(function() {
 			showQuote();
 		});
-		</script>
-		<!-- Combined steelseries.js & tween.js -->
-		<script src="js/steelseries_tween.min.js"></script>
-		<!-- Once you have customised this scripts to your requirements you should minimise and concatenate them into a single file in the same order as below -->
-		<script src="js/language.min.js"></script>
-		<script src="js/gauges.js"></script>
-		<!--Optional Wind Rose scripts -->
-		<script src="js/RGraph.common.core.min.js"></script>
-		<script src="js/RGraph.rose.min.js"></script>
+	</script>
+	<!-- Combined steelseries.js & tween.js -->
+	<script src="js/steelseries_tween.min.js"></script>
+	<!-- Once you have customised this scripts to your requirements you should minimise and concatenate them into a single file in the same order as below -->
+	<script src="js/language.min.js"></script>
+	<script src="js/gauges.js"></script>
+	<!--Optional Wind Rose scripts -->
+	<script src="js/RGraph.common.core.min.js"></script>
+	<script src="js/RGraph.rose.min.js"></script>
 
-	</body>
+</body>
+
 </html>
