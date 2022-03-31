@@ -128,36 +128,33 @@
 			<div class="row">
         <div class="container">
 				  <div class="text-center">
-					  <div class="btn-group d-flex btn-group-toggle"  id="btngroup" data-toggle="buttons">
-						  <label class="btn btn-info active">
-  							<input type="radio" name="options" id="temp" value="temp" checked> Temperature
-	  					</label>
-		  				<label class="btn btn-info">
-			  				<input type="radio" name="options" id="dailytemp" value="dailytemp"> Daily Temp
-				  		</label>
-					  	<label class="btn btn-info">
-						  	<input type="radio" name="options" id="press" value="press"> Pressure
-						  </label>
-  						<label class="btn btn-info">
-	  						<input type="radio" name="options" id="wind" value="wind"> Wind Speed
-		  				</label>
+					  <div class="btn-group d-flex btn-group-toggle"  id="btngroup" data-bs-toggle="buttons">
+              <input type="radio" class="btn-check" name="options" id="temp" value="temp" checked active onclick="changeData(0)">
+              <label class="btn btn-info" for="temp">Temperature</label>
+              <input type="radio" class="btn-check" name="options" id="dailytemp" value="dailytemp">
+		  				<label class="btn btn-info" for="dailytemp">Daily Temp</label>
+              <input type="radio" class="btn-check" name="options" id="pressure" value="press" onclick=dopress()>
+              <label class="btn btn-info" for="pressure">Pressure</label>
+	  					<input type="radio" class="btn-check" name="options" id="wind" value="wind">
+  						<label class="btn btn-info" for="wind">Wind Speed</label>
+
 			  			<label class="btn btn-info">
-				  			<input type="radio" name="options" id="windDir" value="windDir"> Wind Dir.
+				  			<input type="radio" class="btn-check" name="options" id="windDir" value="windDir"> Wind Dir.
 					  	</label>
 						  <label class="btn btn-info">
-							  <input type="radio" name="options" id="humidity" value="humidity"> Humidity
+							  <input type="radio" class="btn-check" name="options" id="humidity" value="humidity"> Humidity
   						</label>
 	  					<label class="btn btn-info">
-		  					<input type="radio" name="options" id="rain" value="rain"> Rainfall
+		  					<input type="radio" class="btn-check" name="options" id="rain" value="rain"> Rainfall
 			  			</label>
 				  		<label class="btn btn-info">
-					  		<input type="radio" name="options" id="dailyrain" value="dailyrain"> Daily Rain
+					  		<input type="radio" class="btn-check" name="options" id="dailyrain" value="dailyrain"> Daily Rain
 						  </label>
 						  <label class="btn btn-info">
-  							<input type="radio" name="options" id="solar" value="solar"> Solar
+  							<input type="radio" class="btn-check" name="options" id="solar" value="solar"> Solar
 	  					</label>
 		  				<label class="btn btn-info">
-			  				<input type="radio" name="options" id="sunhours" value="sunhours"> Sun Hours
+			  				<input type="radio" class="btn-check" name="options" id="sunhours" value="sunhours"> Sun Hours
 				  		</label>
 					  </div>
 				  </div>
