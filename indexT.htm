@@ -171,6 +171,13 @@
 						</td>
 					</tr>
 					<tr class="d-flex">
+						<td class="col-8 align-middle">Feels Like <sup color="blue">New</sup></td>
+						<td class="col-4 text-center">
+							<#feelslike>
+								<#tempunit>
+						</td>
+					</tr>
+					<tr class="d-flex">
 						<td class="col-8 align-middle">Heat Index</td>
 						<td class="col-4 text-center">
 							<#heatindex>
@@ -308,6 +315,12 @@
 							<#presstrendval>&nbsp;
 								<#pressunit>/hr</td>
 					</tr>
+					<tr class="d-flex">
+						<td class="col-8 align-middle">Pressure change last 3 hours <sup color="blue">New</sup></td>
+						<td class="col-4 text-center align-middle">
+							<#PressChangeLast3Hours>&nbsp;
+								<#pressunit>/hr</td>
+					</tr>
 				</table>
 			</div>
 			<div class="col-md-4">
@@ -324,6 +337,12 @@
 						<td class="col-8 align-middle">Indoor Humidity</td>
 						<td class="col-4 text-center align-middle">
 							<#inhum>%</td>
+					</tr>
+					<tr class="d-flex">
+						<td class="col-8 align-middle">Humidity Index <sup color="blue">New</sup></td>
+						<td class="col-4 text-center">
+							<#humidex>
+						</td>
 					</tr>
 				</table>
 			</div>
