@@ -114,6 +114,7 @@
 		</div>
 		<div class="alert alert-secondary" role="alert">
 			<p class="my-auto">Records began on <#recordsbegandate>. These are the extremes recorded since then.</p>
+			<p class="my-auto">Note: Feels Like and Humidex records began on May 21 2022.</p>
 		</div>
    <div class="row">
 		 <div class="col-12">
@@ -147,9 +148,19 @@
 				<td><#TapptempH></td>
 			</tr>
 			<tr>
-				<td>Lowest&nbsp;Apparent&nbsp;Temperature </td>
+				<td>Lowest&nbsp;Apparent&nbsp;Temperature</td>
 				<td class="text-center align-middle"><#apptempL>&nbsp;<#tempunit></td>
 				<td><#TapptempL></td>
+			</tr>
+			<tr>
+				<td>Highest&nbsp;Feels&nbsp;Like</td>
+				<td class="text-center align-middle"><#feelslikeH>&nbsp;<#tempunit></td>
+				<td><#TfeelslikeH></td>
+			</tr>
+			<tr>
+				<td>Lowest&nbsp;Feels&nbsp;Like</td>
+				<td class="text-center align-middle"><#feelslikeL>&nbsp;<#tempunit></td>
+				<td><#TfeelslikeL></td>
 			</tr>
 			<tr>
 				<td>Lowest&nbsp;Wind&nbsp;Chill&nbsp;Temperature</td>
@@ -170,16 +181,6 @@
 				<td>Lowest Maximum </td>
 				<td class="text-center align-middle"><#maxtempL>&nbsp;<#tempunit></td>
 				<td><#TmaxtempL></td>
-			</tr>
-			<tr>
-				<td>Highest&nbsp;Humidity</td>
-				<td class="text-center align-middle"><#humH>&nbsp;%</td>
-				<td><#ThumH></td>
-			</tr>
-			<tr>
-				<td>Lowest&nbsp;Humidity </td>
-				<td class="text-center align-middle"><#humL>&nbsp;%</td>
-				<td><#ThumL></td>
 			</tr>
 			<tr>
 				<td>Highest&nbsp;Daily&nbsp;Range</td>
@@ -242,7 +243,24 @@
 				<td class="text-center align-middle"><#windrunH>&nbsp;<#windrununit></td>
 				<td><#TwindrunH></td>
 			</tr>
-
+			<tr class="table-info">
+				<th colspan="3">Humidity</th>
+			</tr>
+			<tr>
+				<td>Highest&nbsp;Humidity</td>
+				<td class="text-center align-middle"><#humH>&nbsp;%</td>
+				<td><#ThumH></td>
+			</tr>
+			<tr>
+				<td>Lowest&nbsp;Humidity </td>
+				<td class="text-center align-middle"><#humL>&nbsp;%</td>
+				<td><#ThumL></td>
+			</tr>
+			<tr>
+				<td>Highest&nbsp;Humidex</td>
+				<td class="text-center align-middle"><#humidexH></td>
+				<td><#ThumidexH></td>
+			</tr>
 			<tr class="table-info">
 				<th colspan="3">Pressure</th>
 			</tr>

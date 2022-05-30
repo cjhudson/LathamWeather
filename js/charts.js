@@ -907,21 +907,24 @@ var doSolar = function () {
         series: [{
                 name: 'Solar Radiation',
                 type: 'area',
-                color: 'gold',
+                color: 'rgb(255,165,0)',
                 yAxis: 0,
                 valueDecimals: 0,
+                fillOpacity: 0.5,
                 tooltip: {valueSuffix: 'W/m\u00B2'}
             }, {
                 name: 'Theoretical Max',
-                type: 'line',
-                color: 'blue',
+                type: 'area',
+                color: 'rgb(128,128,128)',
                 yAxis: 0,
                 valueDecimals: 0,
+                fillOpacity: 0.2,
                 tooltip: {valueSuffix: 'W/m\u00B2'}
             }, {
                 name: 'UV Index',
                 type: 'line',
                 yAxis: 1,
+                fillOpacity: 0.2,
                 valueDecimals: config.uv.decimals,
                 tooltip: {valueSuffix: ''}
             }],

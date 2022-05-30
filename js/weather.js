@@ -22,6 +22,9 @@ quotes[19] = '"Autumn carries more gold in its pocket than all the other seasons
 quotes[20] = '"Do what we can, summer will have its flies" - Ralph Waldo Emerson';
 quotes[21] = '“The sun did not shine. It was too wet to play. So we sat in the house. All that cold, cold, wet day.” ― Dr. Seuss, The Cat in the Hat';
 quotes[22] = '“Don’t knock the weather. If it didn’t change once in a while, nine out of ten people couldn’t start a conversation.”  ― Kim Hubbard';
+quotes[23] = '"You don’t need a weatherman to know which way the wind blows." - Dylan';
+quotes[24] = '"There is no such thing as bad weather, only different kinds of good weather." - John Ruskin';
+quotes[25] = '"Climate is what we expect, weather is what we get." - Mark Twain';
 
 var q = quotes.length;
 var whichquote=Math.round(Math.random()*(q-1));
