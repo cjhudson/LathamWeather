@@ -43,13 +43,16 @@
     	<link rel="stylesheet" href="css/sticky-footer-navbar.css">
     	<link rel="stylesheet" href="css/weather.css">
 
-      <style>
-	  		#chartcontainer  {
+		  <!-- CSS for the charts on the page -->
+		  <style>
+			  #chartcontainer  {
+                  min-height: 700px;
+                  height: 700px;
                   margin-top:30px;
                   margin-bottom: 20px;
                   background-color:white;
               }
-		  </style>
+	  	</style>
 
     </head>
 	<body>
@@ -74,13 +77,13 @@
   							<a class="dropdown-item" href="thisyear.htm">This Year</a>
   						</div>
   					</li>
-  					<li class="nav-item dropdown">
+  					<li class="nav-item active dropdown">
   						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown02" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Graphics<span class="caret"></span></a>
   						<div class="dropdown-menu"  aria-labelledby="dropdown02" role="menu">
   							<a class="dropdown-item" href="gauges.htm">Gauges</a>
   							<a class="dropdown-item" href="charts.htm">Recent Trends</a>
-                <a class="dropdown-item" href="historic.htm">Historic Charts</a>
-								<a class="dropdown-item active" href="tempvar.htm">Monthly Temp Variations</a>
+                <a class="dropdown-item active" href="historic.htm">Historic Charts</a>
+              	<a class="dropdown-item" href="tempvar.htm">Monthly Temp Variations</a>
   						</div>
   					</li>
   					<li class="nav-item dropdown">
@@ -90,7 +93,7 @@
   							<a class="dropdown-item" href="record.htm">Alltime</a>
   						</div>
   					</li>
-  					<li class="nav-item dropdown active">
+  					<li class="nav-item dropdown">
   						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown04" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Testing<span class="caret"></span></a>
   						  <div class="dropdown-menu"  aria-labelledby="dropdown04" role="menu">
   							<a class="dropdown-item" href="windmap.htm">WindMap</a>
@@ -114,41 +117,61 @@
   			</div> <!--/.nav-collapse -->
   		</div>
       </nav>
-
 		<div class="container">
       <div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
-  		<div class="alert alert-info" role="alert">
-  			<h4 class="my-auto">Monthly variations in temperature observed in Latham, Australian Capital Territory.</h4>
-  		</div>
-  		<div class="alert alert-secondary" role="alert">
-  			<p class="my-auto">Records began on <#recordsbegandate>.</p>
-  		</div>
-
+      <div class="alert alert-info" role="alert">
+        <h4 class="my-auto">Historic trends</h4>
+      </div>
+      <div class="alert alert-secondary" role="alert">
+        <p class="my-auto">These graphs present longer term trends. Records began on 04 December 2016.  Feels Like and Humidex records bagan 21 May 2022.</p>
+        <p class="my-auto">Mouse over the chart to see the values at any given time. You can add or remove data sets from the chart by clicking the entry on the chart legend.</p>
+      </div>
 			<div class="row">
-				<div id="chartcontainer" style="width:100%; height:600px;"></div>
-			</div>
-
-			<div class="row">
-        <div class="col-sm-12">
-				      <p class="text-end"><em>Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude><br>
-				      Chart by <a href="http://www.highcharts.com/" target="_blank" rel="noopener">Highcharts</a><br>
-				      Page updated <#update>.<br>
-				      Powered by <a href="https://cumuluswiki.wxforum.net/a/Software" target="_blank" rel="noopener">Cumulus MX</a> v<#version> (<#build>)</em></p>
+        <div class="container">
+				  <div class="text-center">
+					  <div class="btn-group d-flex btn-group-toggle"  id="btngroup" data-bs-toggle="buttons">
+              <input type="radio" class="btn-check" name="options" id="temp" value="temp" checked active onclick="changeGraph('temp');">
+              <label class="btn btn-info" for="temp">Temperature</label>
+              <input type="radio" class="btn-check" name="options" id="pressure" value="press" onclick="changeGraph('press');">
+              <label class="btn btn-info" for="pressure">Pressure</label>
+	  					<input type="radio" class="btn-check" name="options" id="wind" value="wind" onclick="changeGraph('wind');">
+  						<label class="btn btn-info" for="wind">Wind Speed</label>
+              <input type="radio" class="btn-check" name="options" id="humidity" value="humidity" onclick="changeGraph('humidity');">
+              <label class="btn btn-info" for="humidity">Humidity</label>
+              <input type="radio" class="btn-check" name="options" id="rain" value="rain" onclick="changeGraph('rain');">
+              <label class="btn btn-info" for="rain">Rainfall</label>
+              <input type="radio" class="btn-check" name="options" id="solar" value="solar" onclick="changeGraph('solar');">
+              <label class="btn btn-info" for="solar">Solar</label>
+					  </div>
+				  </div>
         </div>
 			</div>
+
+     <div class="container">
+			<div class="row">
+				<div id="chartcontainer" style="width:100%; height:600px;">
+				</div>
+			</div>
+     </div>
+
+    <div class="container">
+			<p class="text-end"><em>Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude><br>
+			Charts by <a href="https://www.highcharts.com/" target="_blank" rel="noopener">Highcharts</a><br>
+			Page updated <#update>.<br>
+			Powered by <a href="https://cumuluswiki.wxforum.net/a/Software" target="_blank" rel="noopener">Cumulus MX</a> v<#version> (<#build>)</em></p>
 		</div>
+  </div>
 
 		<footer class="footer">
 			<div class="container">
         <br>
-				<p class="text-light">&copy; LathamWeather.net 2022</p>
+  			<p class="text-light">&copy; LathamWeather.net 2022</p>
 			</div>
 		</footer>
 
     <!-- jQuery and Bootstrap JavaScript-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   	<!-- Custom JavaScript-->
   	<script src="js/weather.js"></script>
   	<script>
@@ -157,8 +180,8 @@
   	});
   	</script>
 		<!-- Chart JavaScript-->
-		 <script src="http://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="js/tempvar.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/themes/grid.js"></script>
+    <script src="js/historiccharts.js"></script>
 	</body>
 </html>
