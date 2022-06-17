@@ -423,7 +423,7 @@ var doWindDir = function () {
                     type: 'hour',
                     text: '2d'
                 }, {
-					type: 'all',
+					          type: 'all',
                     text: 'All'
                 }],
             inputEnabled: false

@@ -55,7 +55,7 @@
       </button>
 
       <div class="navbar-collapse collapse" id="navbarcollapse">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav me-auto">
           <li class="nav-item active">
             <a class="nav-link" href="../index.htm"><span class="fa fa-home fa-lg"></span> Home</a>
           </li>
@@ -137,7 +137,7 @@
 
       </div>
       <div class="col-sm-6">
-        <p class="text-right"><em>Latitude <#latitude> Longitude <#longitude> Elevation <#altitude><br>
+        <p class="text-end"><em>Latitude <#latitude> Longitude <#longitude> Elevation <#altitude><br>
                   Page updated <#update>.<br>
                     Powered by <a href="https://cumuluswiki.wxforum.net/a/Software" target="_blank" rel="noopener">Cumulus MX</a> v<#version> (<#build>)</em></p>
       </div>
