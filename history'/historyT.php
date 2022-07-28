@@ -33,7 +33,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
   <!-- Fonts -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/c3f5da6441.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Paprika" rel="stylesheet">
 
   <!-- Weather Icons -->
@@ -57,7 +57,7 @@
       <div class="navbar-collapse collapse" id="navbarcollapse">
         <ul class="navbar-nav me-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="../index.htm"><span class="fa fa-home fa-lg"></span> Home</a>
+            <a class="nav-link" href="../index.htm"><i class="fa-solid fa-house-chimney fa-lg"></i> Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Historical<span class="caret"></span></a>
@@ -102,7 +102,7 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="about.htm"><span class="fa fa-info-circle fa-lg"></span> About</a>
+            <a class="nav-link" href="about.htm"><i class="fa-solid fa-circle-info fa-lg"></i> About</a>
           </li>
         </ul>
       </div>

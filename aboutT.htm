@@ -32,7 +32,7 @@
 	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
 	  <!-- Fonts -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/c3f5da6441.js" crossorigin="anonymous"></script>
 		<link href="https://fonts.googleapis.com/css?family=Paprika" rel="stylesheet">
 
 		<!-- Weather Icons -->
@@ -56,7 +56,7 @@
 				<div class="navbar-collapse collapse" id="navbarcollapse">
 					<ul class="navbar-nav me-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="index.htm"><span class="fa fa-home fa-lg"></span>  Home</a>
+							<a class="nav-link" href="index.htm"><i class="fa-solid fa-house-chimney fa-lg"></i>  Home</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Historical<span class="caret"></span></a>
@@ -102,7 +102,7 @@
 					</ul>
 					<ul class="navbar-nav">
 						<li class="nav-item active">
-					  	<a class="nav-link" href="about.htm"><span class="fa fa-info-circle fa-lg"></span>  About</a>
+					  	<a class="nav-link" href="about.htm"><i class="fa-solid fa-circle-info fa-lg"></i>  About</a>
 					  </li>
 					</ul>
 				</div> <!--/.nav-collapse -->
@@ -175,41 +175,43 @@
 		<div class="row">
 			<div class="col-md-6">
 				<h5><strong>Credits</strong></h5>
-				<p>The CSS and Javascript framework for the website is based on <a href="http://getbootstrap.com">Twitter Bootstrap 5</a></p>
-				<p>The fern image above was taken by my Flickr alterego <a href="http://www.flickr.com/photos/28469131@N00/">CJHudson</a>.</p>
-				<p>Raspberry Pi is a trademark of the <a href="http://www.raspberrypi.org">Raspberry Pi Foundation</a></p>
-				<p>Scripts used on the Gauges page are from Mark Crossley - version <span id="scriptVer"></span></p>
-				<p>The gauges are from <a href="http://harmoniccode.blogspot.com">Gerrit Grunwald's</a> <a href="https://github.com/HanSolo/SteelSeries-Canvas">SteelSeries JavaScript library</a></p>
-				<p>The Wind Rose is from <a href="http://www.rgraph.net/">RGraph</a></p>
-				<p>Cookies are used to store your Units of Measurement and gauge preferences.</p>
+				<ul>
+					<li>The CSS and Javascript framework for the website is based on <a href="http://getbootstrap.com">Twitter Bootstrap 5</a></li>
+					<li>The fern image above was taken by my Flickr alterego <a href="http://www.flickr.com/photos/28469131@N00/">CJHudson</a>.</li>
+					<li>Raspberry Pi is a trademark of the <a href="http://www.raspberrypi.org">Raspberry Pi Foundation</a></li>
+					<li>Scripts used on the Gauges page are from Mark Crossley - version <span id="scriptVer">2.5.15</span></li>
+					<li>The gauges are from <a href="http://harmoniccode.blogspot.com">Gerrit Grunwald's</a> <a href="https://github.com/HanSolo/SteelSeries-Canvas">SteelSeries JavaScript library</a></li>
+					<li>The Wind Rose is from <a href="http://www.rgraph.net/">RGraph</a></li>
+					<li>Cookies are used to store your Units of Measurement and gauge preferences.</li>
+				</ul>
 			</div>
 			<div class="col-md-6">
 				<h5><strong>Work Underway</strong></h5>
 					<p>Updates to underlying software</p>
 				<h5><strong>Future Plans</strong></h5>
-					<p>Am considering changing the theme of the page yet again.  I have been inspired by the new local interface of CumulusMX.  Some changes may be subtle. Some may be "more interesting".</p>
+				<ul>
+					<li>Am considering changing the theme of the page.</li>
+					<li>Website hosting to move to AWS</li>
+					<li>Data currently stored locally to move to AWS SQL instance</li>
+				</ul>
 				<h5><strong>Previous Changes</strong></h5>
+
+				<h6><strong>July 2022</strong></h6>
+				<ul>
+					<li>Upgrade to CumulusMX v3.19.3</li>
+					<li>Upgrade to FontAwesome 6.1.2</li>
+				</ul>
 				<h6><strong>June 2022</strong></h6>
 				<ul>
 					<li>Upgrade to CumulusMX v3.17.0</li>
-				</ul>
-				<ul>
 					<li>Upgrade to CumulusMX v3.12.0</li>
 				</ul>
 				<h6><strong>May 2022</strong></h6>
 				<ul>
 					<li>Addition of new historic trends charts</li>
-				</ul>
-				<ul>
 					<li>Upgrade to CumulusMX v3.9.6</li>
-				</ul>
-				<ul>
 					<li>Upgrade Raspberry Pi to Raspbian Bullseye release - needed Mono v5.0 so made the jump from Stretch to Bullseye</li>
-				</ul>
-				<ul>
 					<li>Upgrade to CumulusMX v3.7.0</li>
-				</ul>
-				<ul>
 					<li>Upgrade to CumulusMX v3.5.1</li>
 				</ul>
 				<h6><strong>Jan 2022</strong></h6>
@@ -223,6 +225,10 @@
 				<h6><strong>Jan 2018</strong></h6>
 				<ul>
 					<li>Upgrade to Bootstrap 4 and change to dark theme.</li>
+				</ul>
+				<h6><strong>Jan 2017</strong></h6>
+				<ul>
+					<li>Hosting moved from iiNet to GoDaddy.</li>
 				</ul>
 				<h6><strong>Dec 2016</strong></h6>
 				<ul>
@@ -282,6 +288,7 @@
 	</footer>
 
 	<!-- jQuery and Bootstrap JavaScript-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 	<!-- Custom JavaScript-->
 	<script src="js/weather.js"></script>

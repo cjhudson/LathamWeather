@@ -33,7 +33,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
 	<!-- Fonts -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/c3f5da6441.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Paprika" rel="stylesheet">
 
 	<!-- Weather Icons -->
@@ -60,7 +60,7 @@
 			<div class="navbar-collapse collapse" id="navbarcollapse">
 				<ul class="navbar-nav me-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="index.htm"><span class="fa fa-home fa-lg"></span> Home</a>
+						<a class="nav-link" href="index.htm"><i class="fa-solid fa-house-chimney fa-lg"></i> Home</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Historical<span class="caret"></span></a>
@@ -106,7 +106,7 @@
 				</ul>
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link" href="about.htm"><span class="fa fa-info-circle fa-lg"></span> About</a>
+						<a class="nav-link" href="about.htm"><i class="fa-solid fa-circle-info fa-lg"></i> About</a>
 					</li>
 				</ul>
 			</div>
@@ -123,7 +123,7 @@
 				</div>
 				<div class="col-md-2 text-end">
 					<button type="button" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#SettingsModal">
-						<span class="fa fa-cog"></span>&nbsp;Settings
+						<i class="fa-solid fa-gear"></i>&nbsp;Settings
 					</button>
 				</div>
 			</div>
@@ -149,27 +149,16 @@
 						<div id="tip_0">
 							<canvas id="canvas_temp" class="gaugeSizeStd"></canvas>
 						</div>
-						<input id="rad_temp1" type="radio" name="rad_temp" value="out" checked onclick="gauges.doTemp(this);"><label id="lab_temp1" for="rad_temp1">Outside</label>
-						<input id="rad_temp2" type="radio" name="rad_temp" value="in" onclick="gauges.doTemp(this);"><label id="lab_temp2" for="rad_temp2">Inside</label>
 					</div>
 					<div class="gauge">
 						<div id="tip_1">
 							<canvas id="canvas_dew" class="gaugeSizeStd"></canvas>
 						</div>
-						<input id="rad_dew1" type="radio" name="rad_dew" value="dew" onclick="gauges.doDew(this);"><label id="lab_dew1" for="rad_dew1">Dew Point</label>
-						<input id="rad_dew2" type="radio" name="rad_dew" value="app" checked onclick="gauges.doDew(this);"><label id="lab_dew2" for="rad_dew2">Apparent</label>
-						<br>
-						<input id="rad_dew3" type="radio" name="rad_dew" value="wnd" onclick="gauges.doDew(this);"><label id="lab_dew3" for="rad_dew3">Wind Chill</label>
-						<input id="rad_dew4" type="radio" name="rad_dew" value="hea" onclick="gauges.doDew(this);"><label id="lab_dew4" for="rad_dew4">Heat Index</label>
-						<br>
-						<input id="rad_dew5" type="radio" name="rad_dew" value="hum" onclick="gauges.doDew(this);"><label id="lab_dew5" for="rad_dew5">Humidex</label>
 					</div>
 					<div class="gauge">
 						<div id="tip_4">
 							<canvas id="canvas_hum" class="gaugeSizeStd"></canvas>
 						</div>
-						<input id="rad_hum1" type="radio" name="rad_hum" value="out" checked onclick="gauges.doHum(this);"><label id="lab_hum1" for="rad_hum1">Outside</label>
-						<input id="rad_hum2" type="radio" name="rad_hum" value="in" onclick="gauges.doHum(this);"><label id="lab_hum2" for="rad_hum2">Inside</label>
 					</div>
 					<div id="tip_5" class="gauge">
 						<canvas id="canvas_baro" class="gaugeSizeStd"></canvas>
@@ -218,13 +207,13 @@
 	<div class="container">
 
 		<!-- Credits -->
-		<p class="text-end"><em>Scripts: Mark Crossley - version <span id="scriptVer"></span><br>
-				Gauges: Gerrit Grunwald's <a href="http://harmoniccode.blogspot.com" target="_blank" rel="noopener">SteelSeries</a> <a href="https://github.com/HanSolo/SteelSeries-Canvas">JavaScript library</a><br>
-				Wind Rose: <a href="http://www.rgraph.net/">RGraph</a><br>
-				A cookie is used to store your UoM and gauge preferences<br>
-				Page updated <#update><br>
-					Powered by <a href="https://cumuluswiki.wxforum.net/a/Software" target="_blank" rel="noopener">Cumulus MX</a> v<#version> (<#build>)</em></p>
-	</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<p class="text-end"><em>Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude><br>
+				Page updated <#update>.<br>
+				Powered by <a href="https://cumuluswiki.wxforum.net/a/Software" target="_blank" rel="noopener">Cumulus MX</a> v<#version> (<#build>)</em></p>
+			</div>
+		</div>
 
 	<!-- Modals -->
 	<div class="modal fade" id="SettingsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -236,7 +225,7 @@
 				<div class="modal-body">
 					<table class="table table-sm table-hover">
 						<tr>
-							<td id="lang_temperature">Temperature</td>
+							<td id="lang_temperature">Temperature Units</td>
 							<td>
 								<input id="rad_unitsTemp1" type="radio" name="rad_unitsTemp" value="C" checked onclick="gauges.setUnits(this);"><label id="lab_unitsTemp1" for="rad_unitsTemp1">&deg;C</label>
 								<input id="rad_unitsTemp2" type="radio" name="rad_unitsTemp" value="F" onclick="gauges.setUnits(this);"><label id="lab_unitsTemp2" for="rad_unitsTemp2">&deg;F</label>
@@ -272,6 +261,32 @@
 							<td>
 								<input id="rad_unitsCloudBase1" type="radio" name="rad_unitsCloud" value="m" checked onclick="gauges.setUnits(this);"><label id="lab_unitsCloudBase1" for="rad_unitsCloudBase1">m</label>
 								<input id="rad_unitsCloudBase2" type="radio" name="rad_unitsCloud" value="ft" onclick="gauges.setUnits(this);"><label id="lab_unitsCloudBase2" for="rad_unitsCloudBase2">ft</label>
+							</td>
+						</tr>
+						<tr>
+							<td id="lang_temperature">Temperature Location</td>
+							<td>
+								<input id="rad_temp1" type="radio" name="rad_temp" value="out" checked onclick="gauges.doTemp(this);"><label id="lab_temp1" for="rad_temp1">Outside</label>
+								<input id="rad_temp2" type="radio" name="rad_temp" value="in" onclick="gauges.doTemp(this);"><label id="lab_temp2" for="rad_temp2">Inside</label>
+							</td>
+						</tr>
+						<tr>
+							<td id="lang_temperature">Alternative Temperature</td>
+							<td>
+								<input id="rad_dew1" type="radio" name="rad_dew" value="dew" onclick="gauges.doDew(this);"><label id="lab_dew1" for="rad_dew1">Dew Point</label>
+								<input id="rad_dew2" type="radio" name="rad_dew" value="app" checked onclick="gauges.doDew(this);"><label id="lab_dew2" for="rad_dew2">Apparent</label>
+								<br>
+								<input id="rad_dew3" type="radio" name="rad_dew" value="wnd" onclick="gauges.doDew(this);"><label id="lab_dew3" for="rad_dew3">Wind Chill</label>
+								<input id="rad_dew4" type="radio" name="rad_dew" value="hea" onclick="gauges.doDew(this);"><label id="lab_dew4" for="rad_dew4">Heat Index</label>
+								<br>
+								<input id="rad_dew5" type="radio" name="rad_dew" value="hum" onclick="gauges.doDew(this);"><label id="lab_dew5" for="rad_dew5">Humidex</label>
+							</td>
+						</tr>
+						<tr>
+							<td id="lang_temperature">Humidity Location</td>
+							<td>
+								<input id="rad_hum1" type="radio" name="rad_hum" value="out" checked onclick="gauges.doHum(this);"><label id="lab_hum1" for="rad_hum1">Outside</label>
+								<input id="rad_hum2" type="radio" name="rad_hum" value="in" onclick="gauges.doHum(this);"><label id="lab_hum2" for="rad_hum2">Inside</label>
 							</td>
 						</tr>
 					</table>
