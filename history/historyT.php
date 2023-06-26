@@ -43,7 +43,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../css/sticky-footer-navbar.css">
   <link rel="stylesheet" href="../css/weather.css">
-  <link rel="stylesheet" href="../css/WU-HistoryTan.css" />
+  <link rel="stylesheet" href="../css/WU-HistoryBlue.css" />
 </head>
 
 <body>
@@ -117,11 +117,6 @@
       <#update>
     </p>
     <div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
-    <!--
-  <div class="alert alert-danger" role="alert">
-    <h6 class="my-auto">Wind data is not available at the moment due to cockatoos eating anenometer cable.</h6>
-  </div>
-  -->
     <div id="updatealert"></div>
     <div class="alert alert-info" role="alert">
       <h4 class="my-auto">Historical Data</h4>

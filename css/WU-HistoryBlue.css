@@ -13,7 +13,7 @@ For background images.  http://lab.rails2u.com/bgmaker/ and http://www.ogim.4u2g
 /* -------------------------------------- */
 
 /* Basic Setup and commonly used elements */
-#wuwrap { background-color: #EEE; color: #000; font-size: 11px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; margin-top: 0px; margin-left: 0px; margin-right: 0px; text-align: left;}
+#wuwrap { color: #000; font-size: 11px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; margin-top: 0px; margin-left: 0px; margin-right: 0px; text-align: left;}
 
 /* These control the "general links throuout the page */
 #wuwrap a { color: #213F9A; text-decoration: underline; }

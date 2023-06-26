@@ -356,7 +356,7 @@ if ($mode == 1) {
 		<tr class="vaT">
 		<td class="full">
 			<table cellspacing="0" cellpadding="0" class="colorTop">
-			<tr>
+			<tr class="table-info">
 			<td class="hLeft"></td>
 			<td class="hCenter vaM" ><?php echo $bannerphrase; ?></td>
 			<td id="unitmenu" class="hMenu taL nobr vaM  noprint myMenu" style="padding-top: 3px">

@@ -73,7 +73,7 @@
 						<div class="dropdown-menu" aria-labelledby="dropdown02" role="menu">
 							<a class="dropdown-item" href="gauges.htm">Gauges</a>
 							<a class="dropdown-item" href="charts.htm">Recent Trends</a>
-							<a class="dropdown-item" href="historic.htm">Historic Charts<sup color="blue">New</sup></a>
+							<a class="dropdown-item" href="historic.htm">Historic Charts</a>
 							<a class="dropdown-item" href="tempvar.htm">Monthly Temp Variations</a>
 						</div>
 					</li>
@@ -117,257 +117,258 @@
 		<p style="display:none" id="lastupdate"><#update></p>
 		<div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
 
-		<div class="alert alert-dismissible alert-danger">
-  		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-			New data has been added to some pages due to a new version of CumulusMX software. Changed data items are indicated by a <sup color="blue">New</sup> tag.<br>
-		</div>
+	<!-- <div class="alert alert-dismissible alert-danger">
+		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+		New data has been added to some pages due to a new version of CumulusMX software. Changed data items are indicated by a <sup color="blue">New</sup> tag.<br>
+	</div> -->
 
-		<div id="updatealert"></div>
-		<div class="alert alert-info" role="alert">
-			<h4 class="my-auto">Current Conditions</h4>
+	<div id="updatealert"></div>
+	<div class="alert alert-info" role="alert">
+		<h4 class="my-auto">Current Conditions</h4>
+	</div>
+	<div class="alert alert-secondary" role="alert">
+		<p class="my-auto">Outlook :
+			<#forecast>
+		</p>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<table class="table table-bordered table-sm table-hover">
+				<tr class="table-info">
+					<th colspan="2" class="align-middle">Temperature and Humidity </th>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Outdoor Temperature</td>
+					<td class="col-4 text-center">
+						<#temp>
+							<#tempunit>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Temp Change Last Hour</td>
+					<td class="col-4 text-center">
+						<#TempChangeLastHour>
+							<#tempunit>&sol;hr</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Dew Point </td>
+					<td class="col-4 text-center align-middle">
+						<#dew>
+							<#tempunit>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Wind Chill</td>
+					<td class="col-4 text-center">
+						<#wchill>
+							<#tempunit>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Apparent Temperature</td>
+					<td class="col-4 text-center">
+						<#apptemp>
+							<#tempunit>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Feels Like</td>
+					<td class="col-4 text-center">
+						<#feelslike>
+							<#tempunit>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Heat Index</td>
+					<td class="col-4 text-center">
+						<#heatindex>
+							<#tempunit>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Indoor Temperature</td>
+					<td class="col-4 text-center">
+						<#intemp>
+							<#tempunit>
+					</td>
+				</tr>
+			</table>
 		</div>
-		<div class="alert alert-secondary" role="alert">
-			<p class="my-auto">Outlook :
-				<#forecast>
-			</p>
+		<div class="col-md-4">
+			<table class="table table-bordered table-sm table-hover">
+				<tr class="table-info">
+					<th colspan="2" class="align-middle">Rainfall</th>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Rain&nbsp;Today</td>
+					<td class="col-4 text-center align-middle">
+						<#rfall>&nbsp;
+							<#rainunit>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Rain&nbsp;Rate</td>
+					<td class="col-4 text-center align-middle">
+						<#rrate>&nbsp;
+							<#rainunit>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Rain&nbsp;Last Hour</td>
+					<td class="col-4 text-center align-middle">
+						<#rhour>&nbsp;
+							<#rainunit>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Rain&nbsp;This&nbsp;Month</td>
+					<td class="col-4 text-center align-middle">
+						<#rmonth>&nbsp;
+							<#rainunit>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Rain&nbsp;This&nbsp;Year</td>
+					<td class="col-4 text-center align-middle">
+						<#ryear>&nbsp;
+							<#rainunit>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="align-middle text-end">Last rain recorded ==>
+						<#LastRainTipISO>
+					</td>
+				</tr>
+			</table>
 		</div>
-		<div class="row">
-			<div class="col-md-4">
-				<table class="table table-bordered table-sm table-hover">
-					<tr class="table-info">
-						<th colspan="2" class="align-middle">Temperature and Humidity </th>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Outdoor Temperature</td>
-						<td class="col-4 text-center">
-							<#temp>
-								<#tempunit>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Temp Change Last Hour</td>
-						<td class="col-4 text-center">
-							<#TempChangeLastHour>
-								<#tempunit>&sol;hr</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Dew Point </td>
-						<td class="col-4 text-center align-middle">
-							<#dew>
-								<#tempunit>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Wind Chill</td>
-						<td class="col-4 text-center">
-							<#wchill>
-								<#tempunit>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Apparent Temperature</td>
-						<td class="col-4 text-center">
-							<#apptemp>
-								<#tempunit>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Feels Like <sup color="blue">New</sup></td>
-						<td class="col-4 text-center">
-							<#feelslike>
-								<#tempunit>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Heat Index</td>
-						<td class="col-4 text-center">
-							<#heatindex>
-								<#tempunit>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Indoor Temperature</td>
-						<td class="col-4 text-center">
-							<#intemp>
-								<#tempunit>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div class="col-md-4">
-				<table class="table table-bordered table-sm table-hover">
-					<tr class="table-info">
-						<th colspan="2" class="align-middle">Rainfall</th>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Rain&nbsp;Today</td>
-						<td class="col-4 text-center align-middle">
-							<#rfall>&nbsp;
-								<#rainunit>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Rain&nbsp;Rate</td>
-						<td class="col-4 text-center align-middle">
-							<#rrate>&nbsp;
-								<#rainunit>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Rain&nbsp;Last Hour</td>
-						<td class="col-4 text-center align-middle">
-							<#rhour>&nbsp;
-								<#rainunit>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Rain&nbsp;This&nbsp;Month</td>
-						<td class="col-4 text-center align-middle">
-							<#rmonth>&nbsp;
-								<#rainunit>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Rain&nbsp;This&nbsp;Year</td>
-						<td class="col-4 text-center align-middle">
-							<#ryear>&nbsp;
-								<#rainunit>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2" class="align-middle text-end">Last rain recorded ==>
-							<#LastRainTipISO>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div class="col-md-4">
-				<table class="table table-bordered table-sm table-hover">
-					<tr class="table-info">
-						<th colspan="2" class="align-middle">Wind</th>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Latest</td>
-						<td class="col-4 text-center align-middle">
-							<#wlatest>&nbsp;
-								<#windunit>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Bearing</td>
-						<td class="col-4 text-center align-middle">
-							<#bearing>&deg;&nbsp;
-								<#currentwdir>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Beaufort&nbsp;
-							<#beaufort>
-						</td>
-						<td class="col-4 text-center align-middle">
-							<#beaudesc>
-						</td>
-					</tr>
-					<tr class="table-info">
-						<th colspan="2" class="align-middle">Last 10 mins</th>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Peak Gust</td>
-						<td class="col-4 text-center align-middle">
-							<#wgust>&nbsp;
-								<#windunit>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Average Speed</td>
-						<td class="col-4 text-center align-middle">
-							<#wspeed>&nbsp;
-								<#windunit>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Avg Bearing</td>
-						<td class="col-4 text-center align-middle">
-							<#avgbearing>&deg;&nbsp;
-								<#wdir>
-						</td>
-					</tr>
-				</table>
-			</div>
+		<div class="col-md-4">
+			<table class="table table-bordered table-sm table-hover">
+				<tr class="table-info">
+					<th colspan="2" class="align-middle">Wind</th>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Latest</td>
+					<td class="col-4 text-center align-middle">
+						<#wlatest>&nbsp;
+							<#windunit>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Bearing</td>
+					<td class="col-4 text-center align-middle">
+						<#bearing>&deg;&nbsp;
+							<#currentwdir>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Beaufort&nbsp;
+						<#beaufort>
+					</td>
+					<td class="col-4 text-center align-middle">
+						<#beaudesc>
+					</td>
+				</tr>
+				<tr class="table-info">
+					<th colspan="2" class="align-middle">Last 10 mins</th>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Peak Gust</td>
+					<td class="col-4 text-center align-middle">
+						<#wgust>&nbsp;
+							<#windunit>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Average Speed</td>
+					<td class="col-4 text-center align-middle">
+						<#wspeed>&nbsp;
+							<#windunit>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Avg Bearing</td>
+					<td class="col-4 text-center align-middle">
+						<#avgbearing>&deg;&nbsp;
+							<#wdir>
+					</td>
+				</tr>
+			</table>
 		</div>
-		<div class="row">
-			<div class="col-md-4">
-				<table class="table table-bordered table-sm table-hover">
-					<tr class="table-info">
-						<th colspan="2" class="align-middle">Barometer</th>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Pressure</td>
-						<td class="col-4 text-center align-middle">
-							<#press>&nbsp;
-								<#pressunit>
-						</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">
-							<#presstrend>
-						</td>
-						<td class="col-4 text-center align-middle">
-							<#presstrendval>&nbsp;
-								<#pressunit>/hr</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Pressure change last 3 hours <sup color="blue">New</sup></td>
-						<td class="col-4 text-center align-middle">
-							<#PressChangeLast3Hours>&nbsp;
-								<#pressunit>/hr</td>
-					</tr>
-				</table>
-			</div>
-			<div class="col-md-4">
-				<table class="table table-bordered table-sm table-hover">
-					<tr class="table-info">
-						<th colspan="2" class="align-middle">Humidity</th>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Outdoor Humidity</td>
-						<td class="col-4 text-center align-middle">
-							<#hum>%</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Indoor Humidity</td>
-						<td class="col-4 text-center align-middle">
-							<#inhum>%</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Humidex <sup color="blue">New</sup></td>
-						<td class="col-4 text-center">
-							<#humidex>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div class="col-md-4">
-				<table class="table table-bordered table-sm table-hover">
-					<tr class="table-info">
-						<th colspan="2" class="align-middle">Solar</th>
-					</tr>
-					<!-- Solar data. If you don't have a solar sensor, you may wish to delete everything from here to the next comment -->
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Solar Radiation</td>
-						<td class="col-4 text-center align-middle">
-							<#SolarRad>W/m&sup2;</td>
-					</tr>
-					<tr class="d-flex">
-						<td class="col-8 align-middle">Evapotranspiration Today</td>
-						<td class="col-4 text-center align-middle">
-							<#ET>
-								<#rainunit>
-						</td>
-					</tr>
-					<!-- End of solar data -->
-				</table>
-			</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<table class="table table-bordered table-sm table-hover">
+				<tr class="table-info">
+					<th colspan="2" class="align-middle">Barometer</th>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Pressure</td>
+					<td class="col-4 text-center align-middle">
+						<#press>&nbsp;
+							<#pressunit>
+					</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">
+						<#presstrend>
+					</td>
+					<td class="col-4 text-center align-middle">
+						<#presstrendval>&nbsp;
+							<#pressunit>/hr</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Pressure change last 3 hours</td>
+					<td class="col-4 text-center align-middle">
+						<#PressChangeLast3Hours>&nbsp;
+							<#pressunit>/hr</td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<table class="table table-bordered table-sm table-hover">
+				<tr class="table-info">
+					<th colspan="2" class="align-middle">Humidity</th>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Outdoor Humidity</td>
+					<td class="col-4 text-center align-middle">
+						<#hum>%</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Indoor Humidity</td>
+					<td class="col-4 text-center align-middle">
+						<#inhum>%</td>
+				</tr>
+				<tr class="d-flex">
+					<td class="col-8 align-middle">Humidex</td>
+					<td class="col-4 text-center">
+						<#humidex>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<table class="table table-bordered table-sm table-hover">
+				<tr class="table-info">
+					<th colspan="2" class="align-middle">Solar</th>
+				</tr>
+				<!-- Solar data. If you don't have a solar sensor, you may wish to delete everything from here to the next comment -->
+		<tr class="d-flex">
+			<td class="col-8 align-middle">Solar Radiation</td>
+			<td class="col-4 text-center align-middle">
+				<#SolarRad>W/m&sup2;
+			</td>
+		</tr>
+		<tr class="d-flex">
+			<td class="col-8 align-middle">Evapotranspiration Today</td>
+			<td class="col-4 text-center align-middle">
+				<#ET>
+					<#rainunit>
+			</td>
+		</tr>
+		<!-- End of solar data -->
+		</table>
+	</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-6">
@@ -383,7 +384,7 @@
 	<footer class="footer">
 		<div class="container">
 			<br>
-			<p class="text-light">&copy; LathamWeather.net 2022</p>
+			<p class="text-light">&copy; LathamWeather.net 2023</p>
 		</div>
 	</footer>
 
