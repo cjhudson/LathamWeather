@@ -86,7 +86,7 @@ For background images.  http://lab.rails2u.com/bgmaker/ and http://www.ogim.4u2g
 /* The tabs for daily, weekly etc. */
 #wuwrap #typeTable { margin-top: 10px; }
 #wuwrap #typeTable TD { width: 20%; text-align: center; padding: 2px; }
-#wuwrap #typeTable TD.activeTab { color: #000; border-top: 1px solid #A2A2A2; border-right: 1px solid #A2A2A2; border-left: 1px solid #A2A2A2; font-weight: bold; background: #FFF url(./wuicons/GrayGradient.png) repeat-x top; font-size: 13px; }
+#wuwrap #typeTable TD.activeTab { color: #000; border-top: 1px solid #A2A2A2; border-right: 1px solid #A2A2A2; border-left: 1px solid #A2A2A2; font-weight: bold; background: #FFF url(../images/wuicons/GrayGradient.png) repeat-x top; font-size: 13px; }
 #wuwrap #typeTable TD.inactiveTab { border-bottom: 1px solid #A2A2A2; }
 #wuwrap #typeTable TD.inactiveTab A { color: #5D5D5D; }
 
@@ -98,7 +98,7 @@ For background images.  http://lab.rails2u.com/bgmaker/ and http://www.ogim.4u2g
 
 /* The lower table when in "today" mode */
 #wuwrap .dailyTable { width: 100%; }
-#wuwrap .dailyTable THEAD TR TD { padding: 5px; background-color: #CCC; color: #000; font-weight: bold; border-top: 1px solid #EEE; border-left: 1px solid #EEE; border-right: 1px solid #999; border-bottom: 1px solid #999; background-image: url(./wuicons/mgray50.png); background-repeat: repeat-x; }
+#wuwrap .dailyTable THEAD TR TD { padding: 5px; background-color: #CCC; color: #000; font-weight: bold; border-top: 1px solid #EEE; border-left: 1px solid #EEE; border-right: 1px solid #999; border-bottom: 1px solid #999; background-image: url(../images/wuicons/mgray50.png); background-repeat: repeat-x; }
 #wuwrap .dailyTable TBODY TR TD { color: #333; padding: 1px; padding-left: 5px; padding: 5px; border-bottom: 1px solid #CCC; }
 #wuwrap .dailyTable TBODY TR:hover TD { background-color: #FFC; }
 
@@ -131,6 +131,6 @@ For background images.  http://lab.rails2u.com/bgmaker/ and http://www.ogim.4u2g
 
 
 /* Wunderground logo */
-#wuwrap .logo { height: 25px; width: 53px; background-image: url(./wuicons/logo_footer.gif); background-repeat: no-repeat; }
+#wuwrap .logo { height: 25px; width: 53px; background-image: url(../images/wuicons/logo_footer.gif); background-repeat: no-repeat; }
 
 /* End WU-History.css */

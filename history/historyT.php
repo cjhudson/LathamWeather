@@ -134,7 +134,7 @@
       <div class="col-sm-6">
         <p class="text-end"><em>Latitude <#latitude> Longitude <#longitude> Elevation <#altitude><br>
                   Page updated <#update>.<br>
-                    Powered by <a href="https://cumuluswiki.wxforum.net/a/Software" target="_blank" rel="noopener">Cumulus MX</a> v<#version> (<#build>)</em></p>
+                    Powered by <a href="https://cumuluswiki.org/a/Software" target="_blank" rel="noopener">Cumulus MX</a> v<#version> (<#build>)</em></p>
       </div>
     </div>
   </div>
@@ -151,7 +151,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
   <!-- Custom JavaScript-->
-  <script src="../js/weather.js"></script>
+  <script src="../../js/weather.js"></script>
   <script>
     $(document).ready(function() {
       showQuote();
