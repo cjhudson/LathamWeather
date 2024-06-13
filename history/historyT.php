@@ -88,6 +88,7 @@
             <div class="dropdown-menu" aria-labelledby="dropdown04" role="menu">
               <a class="dropdown-item" href="../chartsannual.htm">Annual Charts</a>
               <a class="dropdown-item" href="../windmap.htm">WindMap</a>
+              <a class="dropdown-item" href="../webcam.htm">Weather Cam</a>
               <a class="dropdown-item" href="history.php">History</a>
             </div>
           </li>
@@ -141,7 +142,7 @@
   <footer class="footer">
     <div class="container">
       <br>
-      <p class="text-light">&copy; LathamWeather.net 2021</p>
+      <p class="text-light">&copy; LathamWeather.net 2024</p>
     </div>
   </footer>
 

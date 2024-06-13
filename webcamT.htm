@@ -85,9 +85,10 @@
   					<li class="nav-item dropdown active">
   						<a class="nav-link dropdown-toggle"  href="#"  id="dropdown04" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Testing<span class="caret"></span></a>
   						  <div class="dropdown-menu"  aria-labelledby="dropdown04" role="menu">
-  							<a class="dropdown-item" href="windmap.htm">WindMap</a>
-                <a class="dropdown-item" href="history/history.php">History</a>
-                <a class="dropdown-item active" href="webcam.htm">WebCam</a>
+							<a class="dropdown-item" href="chartsannual.htm">Annual Charts</a>
+							<a class="dropdown-item" href="webcam.htm">Weather Cam</a>
+							<a class="dropdown-item" href="windmap.htm">WindMap</a>
+              				<a class="dropdown-item" href="history/history.php">History</a>
   						</div>
   					</li>
   					<li class="nav-item dropdown">
@@ -111,20 +112,31 @@
 		<div class="container">
       <div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
       <div class="alert alert-info" role="alert">
-  			<h4 class="my-auto">WebCam</h4>
+  			<h4 class="my-auto">Weather Cam</h4>
   		</div>
   		<div class="alert alert-error" role="alert">
-  			<p class="my-auto">Not Yet Available</p>
+  			<p class="my-auto">This page is very much beta</p>
   		</div>
+      	<div class="row">
+			<div class="col-sm-6">
+          		<h5><strong>Current View</strong></h5>
+				<br>
+               	<div class="embed-responsive embed-responsive-16by9">
+                  <img src="images/latest.png" width="600" height="400" border="0" alt="Live weather cam image" />
+			    </div>          		
+		  	</div>
+			<div class="col-sm-6">
+				<h5><strong>Timelapse of Yesterday</strong></h5>
+		  		<div class="embed-responsive embed-responsive-16by9">
+					<video width="600" height="400" controls autoplay muted>
+		  			<source src="images/yesterday.mp4" type="video/mp4">
+					</video>
+				</div>
+		  </div>
+	  </div>
       <div class="row">
-          <div class="container">
-               <div class="embed-responsive embed-responsive-16by9">
-                  <img src="webcam.jpg" width="200" height="200" border="0" alt="Live webcam image" />
-			         </div>
-          </div>
-      </div>
-      <div class="row">
-      <div class="col-sm-12">
+      	<div class="col-sm-12">
+				<br>
 				<p class="text-end"><em>Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude><br>
 				Page updated <#update>.<br>
 				Powered by <a href="https://cumuluswiki.org/a/Software" target="_blank">Cumulus MX</a> v<#version> (<#build>)</em></p>
@@ -134,7 +146,7 @@
 		<footer class="footer">
       <div class="container">
   			<br>
-  			<p class="text-light">&copy; LathamWeather.net 2021</p>
+  			<p class="text-light">&copy; LathamWeather.net 2024</p>
   		</div>
 		</footer>
 
