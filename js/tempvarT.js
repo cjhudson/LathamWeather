@@ -22,7 +22,7 @@ $(function () {
 
         yAxis: {
             title: {
-                text: 'Temperature ( °C )'
+                text: 'Temperature (°C)'
             }
         },
 
