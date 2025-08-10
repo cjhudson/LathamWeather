@@ -22,12 +22,12 @@ $(function () {
 
         yAxis: {
             title: {
-                text: 'Temperature (°C)'
+                text: 'Temperature (\u00B0C)'
             }
         },
 
         tooltip: {
-            valueSuffix: '°C'
+            valueSuffix: '\u00B0C'
         },
 
         plotOptions: {
@@ -35,7 +35,7 @@ $(function () {
                 dataLabels: {
                     enabled: true,
                     formatter: function () {
-                        return this.y + '°C';
+                        return this.y + '\u00B0C';
                     },
                     y: 0
                 }
