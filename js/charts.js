@@ -1,52 +1,5 @@
-var chart, config, basedir;
-basedir = 'data\\';
-
-$(document).ready(function () {
-    $('.btn').change(function () {
-
-        var myRadio = $('input[name=options]');
-        var checkedValue = myRadio.filter(':checked').val();
-
-        switch (checkedValue) {
-            case 'temp':
-                doTemp();
-                break;
-            case 'dailytemp':
-                doDailyTemp();
-                break;
-            case 'press':
-                doPress();
-                break;
-            case 'wind':
-                doWind();
-                break;
-            case 'windDir':
-                doWindDir();
-                break;
-            case 'rain':
-                doRain();
-                break;
-            case 'dailyrain':
-                doDailyRain();
-                break;
-            case 'humidity':
-                doHum();
-                break;
-            case 'solar':
-                doSolar();
-                break;
-            case 'sunhours':
-                doSunHours();
-                break;
-        }
-    });
-
-   $.ajax({url: basedir + 'graphconfig.json', dataType: 'json', success: function (result) {
-            config = result;
-            doTemp();
-        }});
-});
-
+let config;
+const basedir = 'data/';
 
 var doTemp = function () {
     var freezing = config.temp.units === 'C' ? 0 : 32;
@@ -186,19 +139,21 @@ var doTemp = function () {
     chart = new Highcharts.StockChart(options);
     chart.showLoading();
 
-    $.ajax({
-        url: basedir + 'tempdata.json',
-        dataType: 'json',
-        success: function (resp) {
-            chart.hideLoading();
-            chart.series[0].setData(resp.temp);
-            chart.series[1].setData(resp.dew);
-            chart.series[2].setData(resp.apptemp);
-            chart.series[3].setData(resp.wchill);
-            chart.series[4].setData(resp.heatindex);
-            chart.series[5].setData(resp.intemp);
-        }
-    });
+    fetch(basedir + 'tempdata.json')
+      .then(resp => resp.json())
+      .then(resp => {
+          chart.hideLoading();
+          chart.series[0].setData(resp.temp);
+          chart.series[1].setData(resp.dew);
+          chart.series[2].setData(resp.apptemp);
+          chart.series[3].setData(resp.wchill);
+          chart.series[4].setData(resp.heatindex);
+          chart.series[5].setData(resp.intemp);
+      })
+      .catch(err => {
+          chart.hideLoading();
+          console.error('Error loading tempdata.json', err);
+      });
 };
 
 var doPress = function () {
@@ -314,14 +269,16 @@ var doPress = function () {
     chart = new Highcharts.StockChart(options);
     chart.showLoading();
 
-    $.ajax({
-        url: basedir + 'pressdata.json',
-        dataType: 'json',
-        success: function (resp) {
-            chart.hideLoading();
-            chart.series[0].setData(resp.press);
-        }
-    });
+    fetch(basedir + 'pressdata.json')
+      .then(resp => resp.json())
+      .then(resp => {
+          chart.hideLoading();
+          chart.series[0].setData(resp.press);          
+      })
+      .catch(err => {
+          chart.hideLoading();
+          console.error('Error loading pressdata.json', err);
+      });
 };
 
 var compassP = function (deg) {
@@ -445,15 +402,17 @@ var doWindDir = function () {
     chart = new Highcharts.StockChart(options);
     chart.showLoading();
 
-    $.ajax({
-        url: basedir + 'wdirdata.json',
-        dataType: 'json',
-        success: function (resp) {
+    fetch(basedir + 'wdirdata.json')
+        .then(resp => resp.json())
+        .then(resp => {
             chart.hideLoading();
             chart.series[0].setData(resp.bearing);
             chart.series[1].setData(resp.avgbearing);
-        }
-    });
+        })
+        .catch(err => {
+            chart.hideLoading();
+            console.error('Error loading wdirdata.json', err);
+        });
 };
 
 
@@ -575,15 +534,17 @@ var doWind = function () {
     chart = new Highcharts.StockChart(options);
     chart.showLoading();
 
-    $.ajax({
-        url: basedir + 'winddata.json',
-        dataType: 'json',
-        success: function (resp) {
+    fetch(basedir + 'winddata.json')
+        .then(resp => resp.json())
+        .then(resp => {
             chart.hideLoading();
             chart.series[0].setData(resp.wspeed);
-            chart.series[1].setData(resp.wgust);
-        }
-    });
+            chart.series[1].setData(resp.wgust);            
+        })
+        .catch(err => {
+            chart.hideLoading();
+            console.error('Error loading solardata.json', err);
+        });    
 };
 
 var doRain = function () {
@@ -707,15 +668,17 @@ var doRain = function () {
     chart = new Highcharts.StockChart(options);
     chart.showLoading();
 
-    $.ajax({
-        url: basedir + 'raindata.json',
-        dataType: 'json',
-        success: function (resp) {
+    fetch(basedir + 'raindata.json')
+        .then(resp => resp.json())
+        .then(resp => {
             chart.hideLoading();
             chart.series[0].setData(resp.rrate);
-            chart.series[1].setData(resp.rfall);
-        }
-    });
+            chart.series[1].setData(resp.rfall);            
+        })
+        .catch(err => {
+            chart.hideLoading();
+            console.error('Error loading raindata.json', err);
+        });
 };
 
 
@@ -840,15 +803,17 @@ var doHum = function () {
     chart = new Highcharts.StockChart(options);
     chart.showLoading();
 
-    $.ajax({
-        url: basedir + 'humdata.json',
-        dataType: 'json',
-        success: function (resp) {
+    fetch(basedir + 'humdata.json')
+        .then(resp => resp.json())
+        .then(resp => {
             chart.hideLoading();
             chart.series[0].setData(resp.hum);
             chart.series[1].setData(resp.inhum);
-        }
-    });
+        })
+        .catch(err => {
+            chart.hideLoading();
+            console.error('Error loading humdata.json', err);
+        });
 };
 
 var doSolar = function () {
@@ -984,16 +949,18 @@ var doSolar = function () {
     chart = new Highcharts.StockChart(options);
     chart.showLoading();
 
-    $.ajax({
-        url: basedir + 'solardata.json',
-        dataType: 'json',
-        success: function (resp) {
+    fetch(basedir + 'solardata.json')
+        .then(resp => resp.json())
+        .then(resp => {
             chart.hideLoading();
             chart.series[0].setData(resp.SolarRad);
             chart.series[1].setData(resp.CurrentSolarMax);
             chart.series[2].setData(resp.UV);
-        }
-    });
+        })
+        .catch(err => {
+            chart.hideLoading();
+            console.error('Error loading solardata.json', err);
+        });
 };
 
 var doSunHours = function () {
@@ -1086,14 +1053,16 @@ var doSunHours = function () {
     chart = new Highcharts.Chart(options);
     chart.showLoading();
 
-    $.ajax({
-        url: basedir + 'sunhours.json',
-        dataType: 'json',
-        success: function (resp) {
+    fetch(basedir + 'sunhours.json')
+        .then(resp => resp.json())
+        .then(resp => {
             chart.hideLoading();
             chart.series[0].setData(resp.sunhours);
-        }
-    });
+        })
+        .catch(err => {
+            chart.hideLoading();
+            console.error('Error loading sunhours.json', err);
+        });    
 };
 
 var doDailyRain = function () {
@@ -1186,14 +1155,16 @@ var doDailyRain = function () {
     chart = new Highcharts.Chart(options);
     chart.showLoading();
 
-    $.ajax({
-        url: basedir + 'dailyrain.json',
-        dataType: 'json',
-        success: function (resp) {
+    fetch(basedir + 'dailyrain.json')
+        .then(resp => resp.json())
+        .then(resp => {
             chart.hideLoading();
-            chart.series[0].setData(resp.dailyrain);
-        }
-    });
+            chart.series[0].setData(resp.dailyrain);           
+        })
+        .catch(err => {
+            chart.hideLoading();
+            console.error('Error loading dailyrain.json', err);
+        });
 };
 
 var doDailyTemp = function () {
@@ -1301,14 +1272,46 @@ var doDailyTemp = function () {
     chart = new Highcharts.StockChart(options);
     chart.showLoading();
 
-    $.ajax({
-        url: basedir + 'dailytemp.json',
-        dataType: 'json',
-        success: function (resp) {
+    fetch(basedir + 'dailytemp.json')
+        .then(resp => resp.json())
+        .then(resp => {
             chart.hideLoading();
             chart.series[0].setData(resp.avgtemp);
             chart.series[1].setData(resp.mintemp);
             chart.series[2].setData(resp.maxtemp);
-        }
-    });
+        })
+        .catch(err => {
+            chart.hideLoading();
+            console.error('Error loading dailytemp.json', err);
+        });
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+  const radios = document.querySelectorAll('input[name="options"]');
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      const value = document.querySelector('input[name="options"]:checked').value;
+      switch (value) {
+        case 'temp': doTemp(); break;
+        case 'dailytemp': doDailyTemp(); break;
+        case 'press': doPress(); break;
+        case 'wind': doWind(); break;
+        case 'windDir': doWindDir(); break;
+        case 'rain': doRain(); break;
+        case 'dailyrain': doDailyRain(); break;
+        case 'humidity': doHum(); break;
+        case 'solar': doSolar(); break;
+        case 'sunhours': doSunHours(); break;
+      }
+    });
+  });
+
+  // Load graph config
+  fetch('data/graphconfig.json')
+    .then(resp => resp.json())
+    .then(result => {
+      config = result;
+      doTemp(); // load initial chart
+    })
+    .catch(err => console.error('Error loading graphconfig.json', err));
+});

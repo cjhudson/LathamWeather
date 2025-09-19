@@ -100,3 +100,17 @@ function checkIsUpdating() {
     updateAlertElem.innerHTML = '';
   }
 }
+// Handle page loading
+document.addEventListener('DOMContentLoaded', () => {
+  // Show a random weather quote
+  showQuote();
+
+  // Show forecast icon (if forecast element exists)
+  if (document.getElementById('forecast')) {
+    showForecastIcon();
+  }
+
+  // Check if page is updating
+  checkIsUpdating();
+  setInterval(checkIsUpdating, 3 * 60 * 1000);
+});

@@ -117,48 +117,50 @@
   			</div> <!--/.nav-collapse -->
   		</div>
       </nav>
-		<div class="container">
-      <div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
-      <div class="alert alert-info" role="alert">
-        <h4 class="my-auto">Annual trends</h4>
-      </div>
-      <div class="alert alert-secondary" role="alert">
-        <p class="my-auto">These graphs present the temperature, pressure, rainfall and wind speed trends on an annual bases.</p>
-        <p class="my-auto">Mouse over the chart to see the values at any given time. You can add or remove data sets from the chart by clicking the entry on the chart legend.</p>
-      </div>
-      <div class="form-group">
-        <div class="row">
-				  <div class="col">
-            <label for="selyear" >Select Year</label>
-            <select class="form-control" id="selyear">
-                <option>2019</option>
-                <option>2020</option>
-            </select>
-				  </div>
-				  <div class="col">
-            <label for="selmonth">Select Month</label>
-            <select class="form-control" id="selmonth">
-                <option>Jan</option>
-                <option>Feb</option>
-                <option>Mar</option>
-                <option>Apr</option>
-                <option>May</option>
-                <option>Jun</option>
-                <option>July</option>
-                <option>Aug</option>
-                <option>Sep</option>
-                <option>Oct</option>
-                <option>Nov</option>
-                <option>Dec</option>
-            </select>
-				  </div>
-			  </div>
-      </div>
-			<div class="row">
-        <div class="container">
-				  <div class="text-center">
-					  <div class="btn-group d-flex btn-group-toggle"  id="btngroup" data-toggle="buttons">
-						  <label class="btn btn-info active">
+	<div class="container">
+    	<p style="display:none" id="lastupdate"><#year>-<#month>-<#day>T<#timehhmmss></p>
+		<div id="updatealert"></div>
+		<div id="weatherquote" style="font-family: 'Paprika', serif;"></div>
+      	<div class="alert alert-info" role="alert">
+        	<h4 class="my-auto">Annual trends</h4>
+      	</div>
+      	<div class="alert alert-secondary" role="alert">
+        	<p class="my-auto">These graphs present the temperature, pressure, rainfall and wind speed trends on an annual bases.</p>
+        	<p class="my-auto">Mouse over the chart to see the values at any given time. You can add or remove data sets from the chart by clicking the entry on the chart legend.</p>
+      	</div>
+      	<div class="form-group">
+	        <div class="row">
+				<div class="col">
+            		<label for="selyear" >Select Year</label>
+            		<select class="form-control" id="selyear">
+                		<option>2019</option>
+                		<option>2020</option>
+            		</select>
+				</div>
+				<div class="col">
+            		<label for="selmonth">Select Month</label>
+            		<select class="form-control" id="selmonth">
+                		<option>Jan</option>
+                		<option>Feb</option>
+                		<option>Mar</option>
+                		<option>Apr</option>
+                		<option>May</option>
+                		<option>Jun</option>
+                		<option>July</option>
+                		<option>Aug</option>
+                		<option>Sep</option>
+                		<option>Oct</option>
+                		<option>Nov</option>
+                		<option>Dec</option>
+            		</select>
+				</div>
+			</div>
+    	</div>
+		<div class="row">
+        	<div class="container">
+				<div class="text-center">
+					<div class="btn-group d-flex btn-group-toggle"  id="btngroup" data-toggle="buttons">
+						<label class="btn btn-info active">
   							<input type="radio" name="options" id="temp" value="temp" checked> Temperature
 	  					</label>
 		  				<label class="btn btn-info">
@@ -166,23 +168,23 @@
 				  		</label>
 					  	<label class="btn btn-info">
 						  	<input type="radio" name="options" id="press" value="press"> Pressure
-						  </label>
+						</label>
   						<label class="btn btn-info">
 	  						<input type="radio" name="options" id="wind" value="wind"> Wind Speed
 		  				</label>
 			  			<label class="btn btn-info">
 				  			<input type="radio" name="options" id="windDir" value="windDir"> Wind Dir.
 					  	</label>
-						  <label class="btn btn-info">
-							  <input type="radio" name="options" id="humidity" value="humidity"> Humidity
+						<label class="btn btn-info">
+							<input type="radio" name="options" id="humidity" value="humidity"> Humidity
   						</label>
 	  					<label class="btn btn-info">
 		  					<input type="radio" name="options" id="rain" value="rain"> Rainfall
 			  			</label>
 				  		<label class="btn btn-info">
 					  		<input type="radio" name="options" id="dailyrain" value="dailyrain"> Daily Rain
-						  </label>
-						  <label class="btn btn-info">
+						</label>
+						<label class="btn btn-info">
   							<input type="radio" name="options" id="solar" value="solar"> Solar
 	  					</label>
 		  				<label class="btn btn-info">
@@ -191,14 +193,14 @@
 					  </div>
 				  </div>
         </div>
-			</div>
+	</div>
 
-     <div class="container">
-			<div class="row">
-				<div id="chartcontainer" style="width:100%; height:600px;">
-				</div>
+    <div class="container">
+		<div class="row">
+			<div id="chartcontainer" style="width:100%; height:600px;">
 			</div>
-     </div>
+		</div>
+    </div>
 
     <div class="container">
 			<p class="text-end"><em>Latitude <#latitude>  Longitude <#longitude>  Elevation <#altitude><br>
@@ -220,14 +222,6 @@
 
 	<!-- Custom JavaScript-->
 	<script src="js/weather.js"></script>
-	<script>
-  		document.addEventListener('DOMContentLoaded', () => {
-    	showQuote();
-    	checkIsUpdating();
-
-	    setInterval(checkIsUpdating, 3 * 60 * 1000);
-  		});
-	</script>
 	
 	<!-- Chart JavaScript-->
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
