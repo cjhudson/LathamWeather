@@ -94,7 +94,9 @@ function checkIsUpdating() {
   if (diffMs > fifteenMinutesMs) {
     updateAlertElem.innerHTML = `
       <div class="alert alert-warning" role="alert">
-        <h6 class="my-auto">Caution: This page has not updated for more than 15 minutes.</h6>
+        <h6 class="my-auto">
+          Caution: This page has not updated for more than 15 minutes - <a href="javascript:location.reload()">click here to refresh</a>. 
+        </h6>
       </div>`;
   } else {
     updateAlertElem.innerHTML = '';
